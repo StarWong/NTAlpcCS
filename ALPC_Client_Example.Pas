@@ -40,11 +40,11 @@ begin
         P.Push(@a,4);
         p.Push(@b,4);
         p.Finalize;
-        Log(IntToHex(Cardinal(P),8));
-        Log(IntToHex(Cardinal(@(P.dataSection[0])),8));
+        Printf(IntToHex(Cardinal(P),8));
+        Printf(IntToHex(Cardinal(@(P.client.dataSection[0])),8));
         Invoke;
         P:=ServerViewer;
-        if P.location.server.onError = False then
+        if P.client.location.server.onError = False then
         begin
           Result:=Pinteger(P.return(0))^;
         end

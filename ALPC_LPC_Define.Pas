@@ -261,20 +261,6 @@ PUNICODE_STRING = ^UNICODE_STRING;
     // fix TBufferCache to algined with 4 size
 
 
-    TArgument_ = record
-     funcid:ULONG;
-     do_return:BOOL
-    end;
-    TResult_ = record
-    error:BOOL
-    end;
-    TAuth = record
-    Key:UInt64;
-    FnPathID:Cardinal;
-    end;
-     PAuth = ^TAuth;
-
-
      _Arguments_Client =packed  record
      functionID:Cardinal;
      In_Arguments:PPointer;
@@ -319,7 +305,18 @@ PUNICODE_STRING = ^UNICODE_STRING;
      PViewCache = ^ViewCache;
 
 
-
+    TArgument_ = record
+     funcid:ULONG;
+     do_return:BOOL
+    end;
+    TResult_ = record
+    error:BOOL
+    end;
+    TAuth = record
+    Key:UInt64;
+    FnPathID:Cardinal;
+    end;
+     PAuth = ^TAuth;
 
     TInfo_ =record
     case integer of
@@ -346,7 +343,7 @@ PUNICODE_STRING = ^UNICODE_STRING;
 
      PDataCache = ^DataCache;
      DataCache = _DataCache;
-    {
+     {
      _ViewHeader = record
        DataLength:Cardinal;
      end;
@@ -358,9 +355,39 @@ PUNICODE_STRING = ^UNICODE_STRING;
      header:DataCache;
      ViewBase:Pointer
      end;
+
      PViewCache = ^ViewCache;
      ViewCache = _ViewCache;
-      }
+    }
+{$REGION 'ViewDetail'}
+     type
+     PHashTable = ^THashTable;
+     THashTable = array[0..40] of Byte; //sha1 39+1
+    _ViewDetail = packed record
+
+     activeDataSize:Cardinal;
+
+     location : packed record
+     case Integer of
+     0:
+     (
+      client : packed record
+      functionID:Cardinal;//
+      hashTable:THashTable
+      end;
+     );
+     1:
+     (
+      server : packed record
+      onError:LongBool;
+      end;
+     )
+     end;
+     dataSection:array[0..0] of Byte;
+     end;
+     ViewDetail = _ViewDetail;
+{$ENDREGION}
+
   ALPC_MESSAGE_INFORMATION_CLASS = Cardinal;
 
 

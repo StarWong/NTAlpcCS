@@ -50,8 +50,6 @@
 			<DCCReference Include="ALPC_Base.Pas"/>
 			<DCCReference Include="ALPC_Client.Pas"/>
 			<DCCReference Include="ALPC_LPC_Define.Pas"/>
-			<DCCReference Include="Logger.pas"/>
-			<DCCReference Include="Base64.pas"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>

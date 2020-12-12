@@ -1,5 +1,7 @@
 unit ALPC_Client;
 interface
+uses
+ALPC_LPC_Define;
 type
 TAuth = record
 Key:UInt64;
@@ -11,34 +13,11 @@ PAuth = ^TAuth;
 
 
     _ViewCache = packed record
-
-     activeDataSize:Cardinal;
-
-     location : packed record
-     case Integer of
-     0:
-     (
-      client : packed record
-      functionID:Cardinal;
-      end;
-     );
-     1:
-     (
-      server : packed record
-      onError:LongBool;
-      end;
-     )
-     end;
-     dataSection:array[0..0] of Byte;
-     {$REGION 'Methods Client'}
+      client:ViewDetail;
      procedure SetID(const functionID:Cardinal);
      procedure Push(addr:Pointer;size:Cardinal;IsPointer:LongBool = False);overload;
      procedure Initialize;
      procedure Finalize;
-     {$ENDREGION}
-     {$REGION 'Methods Server'}
-
-     {$ENDREGION}
      function return(index:Cardinal):Pointer;
      end;
 
@@ -59,7 +38,7 @@ ClientViewer:TViewer;
 ServerViewer:TViewer;
 Invoke:TInvoke;
 implementation
-uses ALPC_Base,ALPC_LPC_Define;
+uses ALPC_Base;
 type
 
 TClient = class(AlpcTransportBase)
@@ -109,7 +88,7 @@ function _ViewCache.return(index:Cardinal):Pointer;
 var
 P:array of Cardinal;
 begin
-       P:=@(Self.dataSection[0]);
+       P:=@(Self.client.dataSection[0]);
        Result:=PByte(P) + P[index];
 end;
 
@@ -125,7 +104,7 @@ end;
 
 procedure _ViewCache.Initialize;
 begin
-       Self.activeDataSize:=0;
+       Self.client.activeDataSize:=0;
        PInteger(@in_List[0])^:=0; //reset in counts
 end;
 
@@ -136,7 +115,7 @@ P:array of Cardinal;
 begin
 if PCardinal(@in_List[0])^ > 0 then
 begin
-P:= @(Self.dataSection[0]);
+P:= @(Self.client.dataSection[0]);
 P[0]:=PCardinal(@in_List[0])^*4;
 if in_List[1].IsPointer then
 begin
@@ -161,14 +140,14 @@ begin
      Move(in_List[I+1].addr^,(PByte(P) + P[I])^,in_List[I+1].size);
      end;
 end;
-    Self.activeDataSize:= P[I - 1] + in_List[I].size;
+    Self.client.activeDataSize:= P[I - 1] + in_List[I].size;
 end;
 
 end;
 
 procedure _ViewCache.SetID(const functionID:Cardinal);
 begin
-  Self.location.client.functionID:=functionID;
+  Self.client.location.client.functionID:=functionID;
 end;
 
 
@@ -282,7 +261,7 @@ function GetBaseOffSet:Integer;
 var
 V:_ViewCache;
 begin
-  baseOffSet:=UINT64(@(V.dataSection)) - UINT64(@V);
+  baseOffSet:=UINT64(@(V.client.dataSection)) - UINT64(@V);
 end;
 
 
