@@ -8,224 +8,225 @@
   resources were bound to the produced executable.
 */
 
-#define HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter 65152
-#define HlpBlake2SConfig_SInvalidHashSize 65153
-#define HlpBlake2SConfig_SInvalidKeyLength 65154
-#define HlpBlake2SConfig_SInvalidPersonalisationLength 65155
-#define HlpBlake2SConfig_SInvalidSaltLength 65156
-#define HlpBlake2STreeConfig_SInvalidFanOutParameter 65157
-#define HlpBlake2STreeConfig_SInvalidMaxDepthParameter 65158
-#define HlpBlake2STreeConfig_SInvalidNodeDepthParameter 65159
-#define HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter 65160
-#define HlpBlake2STreeConfig_SInvalidNodeOffsetParameter 65161
-#define HlpHash_SInvalidBufferSize 65168
-#define HlpHash_SUnAssignedStream 65169
-#define HlpHash_SFileNotExist 65170
-#define HlpHash_SCloneNotYetImplemented 65171
-#define HlpHashResult_SImpossibleRepresentationInt32 65172
-#define HlpHashResult_SImpossibleRepresentationUInt8 65173
-#define HlpHashResult_SImpossibleRepresentationUInt16 65174
-#define HlpHashResult_SImpossibleRepresentationUInt32 65175
-#define HlpHashResult_SImpossibleRepresentationUInt64 65176
-#define HlpBlake2BConfig_SInvalidHashSize 65177
-#define HlpBlake2BConfig_SInvalidKeyLength 65178
-#define HlpBlake2BConfig_SInvalidPersonalisationLength 65179
-#define HlpBlake2BConfig_SInvalidSaltLength 65180
-#define HlpBlake2BTreeConfig_SInvalidFanOutParameter 65181
-#define HlpBlake2BTreeConfig_SInvalidMaxDepthParameter 65182
-#define HlpBlake2BTreeConfig_SInvalidNodeDepthParameter 65183
-#define RzBorder_sRzColorBtnShadow 65184
-#define RzBorder_sRzColorGrayText 65185
-#define RzBorder_sRzColorBtnText 65186
-#define RzBorder_sRzColorInactiveCaptionText 65187
-#define RzBorder_sRzColorBtnHighlight 65188
-#define RzBorder_sRzColor3DDkShadow 65189
-#define RzBorder_sRzColor3DLight 65190
-#define RzBorder_sRzColorInfoText 65191
-#define RzBorder_sRzColorInfoBk 65192
-#define RzBorder_sRzColorHotLight 65193
-#define RzBorder_sRzColorGradientActiveCaption 65194
-#define RzBorder_sRzColorGradientInactiveCaption 65195
-#define RzBorder_sRzColorMenuHighlight 65196
-#define RzBorder_sRzColorMenuBar 65197
-#define HlpConverters_SEncodingInstanceNil 65198
-#define HlpHash_SIndexOutOfRange 65199
-#define RzBorder_sRzColorScrollBar 65200
-#define RzBorder_sRzColorBackground 65201
-#define RzBorder_sRzColorActiveCaption 65202
-#define RzBorder_sRzColorInactiveCaption 65203
-#define RzBorder_sRzColorMenu 65204
-#define RzBorder_sRzColorWindow 65205
-#define RzBorder_sRzColorWindowFrame 65206
-#define RzBorder_sRzColorMenuText 65207
-#define RzBorder_sRzColorWindowText 65208
-#define RzBorder_sRzColorCaptionText 65209
-#define RzBorder_sRzColorActiveBorder 65210
-#define RzBorder_sRzColorInactiveBorder 65211
-#define RzBorder_sRzColorAppWorkSpace 65212
-#define RzBorder_sRzColorHighlight 65213
-#define RzBorder_sRzColorHighlightText 65214
-#define RzBorder_sRzColorBtnFace 65215
-#define RzBorder_sRzColorPink 65216
-#define RzBorder_sRzColorGold 65217
-#define RzBorder_sRzColorYellow 65218
-#define RzBorder_sRzColorBrightGreen 65219
-#define RzBorder_sRzColorTurquoise 65220
-#define RzBorder_sRzColorSkyBlue 65221
-#define RzBorder_sRzColorPlum 65222
-#define RzBorder_sRzColorGray25 65223
-#define RzBorder_sRzColorRose 65224
-#define RzBorder_sRzColorTan 65225
-#define RzBorder_sRzColorLightYellow 65226
-#define RzBorder_sRzColorLightGreen 65227
-#define RzBorder_sRzColorLightTurquoise 65228
-#define RzBorder_sRzColorPaleBlue 65229
-#define RzBorder_sRzColorLavender 65230
-#define RzBorder_sRzColorWhite 65231
-#define RzBorder_sRzColorDarkRed 65232
-#define RzBorder_sRzColorOrange 65233
-#define RzBorder_sRzColorDarkYellow 65234
-#define RzBorder_sRzColorGreen 65235
-#define RzBorder_sRzColorTeal 65236
-#define RzBorder_sRzColorBlue 65237
-#define RzBorder_sRzColorBlueGray 65238
-#define RzBorder_sRzColorGray50 65239
-#define RzBorder_sRzColorRed 65240
-#define RzBorder_sRzColorLightOrange 65241
-#define RzBorder_sRzColorLime 65242
-#define RzBorder_sRzColorSeaGreen 65243
-#define RzBorder_sRzColorAqua 65244
-#define RzBorder_sRzColorLightBlue 65245
-#define RzBorder_sRzColorViolet 65246
-#define RzBorder_sRzColorGray40 65247
-#define Consts_SUTF7Encoding 65248
-#define Consts_SWindowsVistaRequired 65249
-#define Consts_SXPThemesRequired 65250
-#define Consts_STaskDlgButtonCaption 65251
-#define Consts_STaskDlgRadioButtonCaption 65252
-#define Consts_SInvalidTaskDlgButtonCaption 65253
-#define RzCommon_sRzCannotLoadCustomFraming 65254
-#define RzCommon_sRzCannotSaveCustomFraming 65255
-#define RzBorder_sRzColorBlack 65256
-#define RzBorder_sRzColorBrown 65257
-#define RzBorder_sRzColorOliveGreen 65258
-#define RzBorder_sRzColorDarkGreen 65259
-#define RzBorder_sRzColorDarkTeal 65260
-#define RzBorder_sRzColorDarkBlue 65261
-#define RzBorder_sRzColorIndigo 65262
-#define RzBorder_sRzColorGray80 65263
-#define Consts_SIconToClipboard 65264
-#define Consts_SCannotOpenClipboard 65265
-#define Consts_SInvalidMemoSize 65266
-#define Consts_SInvalidPrinterOp 65267
-#define Consts_SNoDefaultPrinter 65268
-#define Consts_SDuplicateMenus 65269
-#define Consts_SDockedCtlNeedsName 65270
-#define Consts_SDockTreeRemoveError 65271
-#define Consts_SDockZoneNotFound 65272
-#define Consts_SDockZoneHasNoCtl 65273
-#define Consts_SDockZoneVersionConflict 65274
-#define Consts_SANSIEncoding 65275
-#define Consts_SASCIIEncoding 65276
-#define Consts_SUnicodeEncoding 65277
-#define Consts_SBigEndianEncoding 65278
-#define Consts_SUTF8Encoding 65279
-#define Consts_SmkcPgUp 65280
-#define Consts_SmkcPgDn 65281
-#define Consts_SmkcEnd 65282
-#define Consts_SmkcHome 65283
-#define Consts_SmkcLeft 65284
-#define Consts_SmkcUp 65285
-#define Consts_SmkcRight 65286
-#define Consts_SmkcDown 65287
-#define Consts_SmkcIns 65288
-#define Consts_SmkcDel 65289
-#define Consts_SmkcShift 65290
-#define Consts_SmkcCtrl 65291
-#define Consts_SmkcAlt 65292
-#define Consts_SOutOfRange 65293
-#define Consts_sAllFilter 65294
-#define Consts_SInvalidClipFmt 65295
-#define Consts_SMsgDlgNo 65296
-#define Consts_SMsgDlgOK 65297
-#define Consts_SMsgDlgCancel 65298
-#define Consts_SMsgDlgHelp 65299
-#define Consts_SMsgDlgAbort 65300
-#define Consts_SMsgDlgRetry 65301
-#define Consts_SMsgDlgIgnore 65302
-#define Consts_SMsgDlgAll 65303
-#define Consts_SMsgDlgNoToAll 65304
-#define Consts_SMsgDlgYesToAll 65305
-#define Consts_SMsgDlgClose 65306
-#define Consts_SmkcBkSp 65307
-#define Consts_SmkcTab 65308
-#define Consts_SmkcEsc 65309
-#define Consts_SmkcEnter 65310
-#define Consts_SmkcSpace 65311
-#define Consts_SCloseButton 65312
-#define Consts_SIgnoreButton 65313
-#define Consts_SRetryButton 65314
-#define Consts_SAbortButton 65315
-#define Consts_SAllButton 65316
-#define Consts_SCannotDragForm 65317
-#define Consts_SVMetafiles 65318
-#define Consts_SVEnhMetafiles 65319
-#define Consts_SVIcons 65320
-#define Consts_SVBitmaps 65321
-#define Consts_SVTIFFImages 65322
-#define Consts_SMsgDlgWarning 65323
-#define Consts_SMsgDlgError 65324
-#define Consts_SMsgDlgInformation 65325
-#define Consts_SMsgDlgConfirm 65326
-#define Consts_SMsgDlgYes 65327
-#define Consts_SMenuNotFound 65328
-#define Consts_SNoTimers 65329
-#define Consts_SNotPrinting 65330
-#define Consts_SPrinting 65331
-#define Consts_SPrinterIndexError 65332
-#define Consts_SInvalidPrinter 65333
-#define Consts_SDeviceOnPort 65334
-#define Consts_SGroupIndexTooLow 65335
-#define Consts_SNoMDIForm 65336
-#define Consts_SImageCanvasNeedsBitmap 65337
-#define Consts_SControlParentSetToSelf 65338
-#define Consts_SOKButton 65339
-#define Consts_SCancelButton 65340
-#define Consts_SYesButton 65341
-#define Consts_SNoButton 65342
-#define Consts_SHelpButton 65343
-#define Consts_SInvalidImageList 65344
-#define Consts_SReplaceImage 65345
-#define Consts_SImageIndexError 65346
-#define Consts_SImageReadFail 65347
-#define Consts_SImageWriteFail 65348
-#define Consts_SWindowDCError 65349
-#define Consts_SWindowClass 65350
-#define Consts_SCannotFocus 65351
-#define Consts_SParentRequired 65352
-#define Consts_SParentGivenNotAParent 65353
-#define Consts_SMDIChildNotVisible 65354
-#define Consts_SVisibleChanged 65355
-#define Consts_SCannotShowModal 65356
-#define Consts_SPropertyOutOfRange 65357
-#define Consts_SMenuIndexError 65358
-#define Consts_SMenuReinserted 65359
+#define HlpBlake2BTreeConfig_SInvalidNodeDepthParameter 65152
+#define HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter 65153
+#define HlpBlake2SConfig_SInvalidHashSize 65154
+#define HlpBlake2SConfig_SInvalidKeyLength 65155
+#define HlpBlake2SConfig_SInvalidPersonalisationLength 65156
+#define HlpBlake2SConfig_SInvalidSaltLength 65157
+#define HlpBlake2STreeConfig_SInvalidFanOutParameter 65158
+#define HlpBlake2STreeConfig_SInvalidMaxDepthParameter 65159
+#define HlpBlake2STreeConfig_SInvalidNodeDepthParameter 65160
+#define HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter 65161
+#define HlpBlake2STreeConfig_SInvalidNodeOffsetParameter 65162
+#define HlpHash_SIndexOutOfRange 65168
+#define HlpHash_SInvalidBufferSize 65169
+#define HlpHash_SUnAssignedStream 65170
+#define HlpHash_SFileNotExist 65171
+#define HlpHash_SCloneNotYetImplemented 65172
+#define HlpHashResult_SImpossibleRepresentationInt32 65173
+#define HlpHashResult_SImpossibleRepresentationUInt8 65174
+#define HlpHashResult_SImpossibleRepresentationUInt16 65175
+#define HlpHashResult_SImpossibleRepresentationUInt32 65176
+#define HlpHashResult_SImpossibleRepresentationUInt64 65177
+#define HlpBlake2BConfig_SInvalidHashSize 65178
+#define HlpBlake2BConfig_SInvalidKeyLength 65179
+#define HlpBlake2BConfig_SInvalidPersonalisationLength 65180
+#define HlpBlake2BConfig_SInvalidSaltLength 65181
+#define HlpBlake2BTreeConfig_SInvalidFanOutParameter 65182
+#define HlpBlake2BTreeConfig_SInvalidMaxDepthParameter 65183
+#define RzBorder_sRzColorBtnFace 65184
+#define RzBorder_sRzColorBtnShadow 65185
+#define RzBorder_sRzColorGrayText 65186
+#define RzBorder_sRzColorBtnText 65187
+#define RzBorder_sRzColorInactiveCaptionText 65188
+#define RzBorder_sRzColorBtnHighlight 65189
+#define RzBorder_sRzColor3DDkShadow 65190
+#define RzBorder_sRzColor3DLight 65191
+#define RzBorder_sRzColorInfoText 65192
+#define RzBorder_sRzColorInfoBk 65193
+#define RzBorder_sRzColorHotLight 65194
+#define RzBorder_sRzColorGradientActiveCaption 65195
+#define RzBorder_sRzColorGradientInactiveCaption 65196
+#define RzBorder_sRzColorMenuHighlight 65197
+#define RzBorder_sRzColorMenuBar 65198
+#define HlpConverters_SEncodingInstanceNil 65199
+#define RzBorder_sRzColorWhite 65200
+#define RzBorder_sRzColorScrollBar 65201
+#define RzBorder_sRzColorBackground 65202
+#define RzBorder_sRzColorActiveCaption 65203
+#define RzBorder_sRzColorInactiveCaption 65204
+#define RzBorder_sRzColorMenu 65205
+#define RzBorder_sRzColorWindow 65206
+#define RzBorder_sRzColorWindowFrame 65207
+#define RzBorder_sRzColorMenuText 65208
+#define RzBorder_sRzColorWindowText 65209
+#define RzBorder_sRzColorCaptionText 65210
+#define RzBorder_sRzColorActiveBorder 65211
+#define RzBorder_sRzColorInactiveBorder 65212
+#define RzBorder_sRzColorAppWorkSpace 65213
+#define RzBorder_sRzColorHighlight 65214
+#define RzBorder_sRzColorHighlightText 65215
+#define RzBorder_sRzColorGray40 65216
+#define RzBorder_sRzColorPink 65217
+#define RzBorder_sRzColorGold 65218
+#define RzBorder_sRzColorYellow 65219
+#define RzBorder_sRzColorBrightGreen 65220
+#define RzBorder_sRzColorTurquoise 65221
+#define RzBorder_sRzColorSkyBlue 65222
+#define RzBorder_sRzColorPlum 65223
+#define RzBorder_sRzColorGray25 65224
+#define RzBorder_sRzColorRose 65225
+#define RzBorder_sRzColorTan 65226
+#define RzBorder_sRzColorLightYellow 65227
+#define RzBorder_sRzColorLightGreen 65228
+#define RzBorder_sRzColorLightTurquoise 65229
+#define RzBorder_sRzColorPaleBlue 65230
+#define RzBorder_sRzColorLavender 65231
+#define RzBorder_sRzColorGray80 65232
+#define RzBorder_sRzColorDarkRed 65233
+#define RzBorder_sRzColorOrange 65234
+#define RzBorder_sRzColorDarkYellow 65235
+#define RzBorder_sRzColorGreen 65236
+#define RzBorder_sRzColorTeal 65237
+#define RzBorder_sRzColorBlue 65238
+#define RzBorder_sRzColorBlueGray 65239
+#define RzBorder_sRzColorGray50 65240
+#define RzBorder_sRzColorRed 65241
+#define RzBorder_sRzColorLightOrange 65242
+#define RzBorder_sRzColorLime 65243
+#define RzBorder_sRzColorSeaGreen 65244
+#define RzBorder_sRzColorAqua 65245
+#define RzBorder_sRzColorLightBlue 65246
+#define RzBorder_sRzColorViolet 65247
+#define Consts_SUTF8Encoding 65248
+#define Consts_SUTF7Encoding 65249
+#define Consts_SWindowsVistaRequired 65250
+#define Consts_SXPThemesRequired 65251
+#define Consts_STaskDlgButtonCaption 65252
+#define Consts_STaskDlgRadioButtonCaption 65253
+#define Consts_SInvalidTaskDlgButtonCaption 65254
+#define RzCommon_sRzCannotLoadCustomFraming 65255
+#define RzCommon_sRzCannotSaveCustomFraming 65256
+#define RzBorder_sRzColorBlack 65257
+#define RzBorder_sRzColorBrown 65258
+#define RzBorder_sRzColorOliveGreen 65259
+#define RzBorder_sRzColorDarkGreen 65260
+#define RzBorder_sRzColorDarkTeal 65261
+#define RzBorder_sRzColorDarkBlue 65262
+#define RzBorder_sRzColorIndigo 65263
+#define Consts_SInvalidClipFmt 65264
+#define Consts_SIconToClipboard 65265
+#define Consts_SCannotOpenClipboard 65266
+#define Consts_SInvalidMemoSize 65267
+#define Consts_SInvalidPrinterOp 65268
+#define Consts_SNoDefaultPrinter 65269
+#define Consts_SDuplicateMenus 65270
+#define Consts_SDockedCtlNeedsName 65271
+#define Consts_SDockTreeRemoveError 65272
+#define Consts_SDockZoneNotFound 65273
+#define Consts_SDockZoneHasNoCtl 65274
+#define Consts_SDockZoneVersionConflict 65275
+#define Consts_SANSIEncoding 65276
+#define Consts_SASCIIEncoding 65277
+#define Consts_SUnicodeEncoding 65278
+#define Consts_SBigEndianEncoding 65279
+#define Consts_SmkcSpace 65280
+#define Consts_SmkcPgUp 65281
+#define Consts_SmkcPgDn 65282
+#define Consts_SmkcEnd 65283
+#define Consts_SmkcHome 65284
+#define Consts_SmkcLeft 65285
+#define Consts_SmkcUp 65286
+#define Consts_SmkcRight 65287
+#define Consts_SmkcDown 65288
+#define Consts_SmkcIns 65289
+#define Consts_SmkcDel 65290
+#define Consts_SmkcShift 65291
+#define Consts_SmkcCtrl 65292
+#define Consts_SmkcAlt 65293
+#define Consts_SOutOfRange 65294
+#define Consts_sAllFilter 65295
+#define Consts_SMsgDlgYes 65296
+#define Consts_SMsgDlgNo 65297
+#define Consts_SMsgDlgOK 65298
+#define Consts_SMsgDlgCancel 65299
+#define Consts_SMsgDlgHelp 65300
+#define Consts_SMsgDlgAbort 65301
+#define Consts_SMsgDlgRetry 65302
+#define Consts_SMsgDlgIgnore 65303
+#define Consts_SMsgDlgAll 65304
+#define Consts_SMsgDlgNoToAll 65305
+#define Consts_SMsgDlgYesToAll 65306
+#define Consts_SMsgDlgClose 65307
+#define Consts_SmkcBkSp 65308
+#define Consts_SmkcTab 65309
+#define Consts_SmkcEsc 65310
+#define Consts_SmkcEnter 65311
+#define Consts_SHelpButton 65312
+#define Consts_SCloseButton 65313
+#define Consts_SIgnoreButton 65314
+#define Consts_SRetryButton 65315
+#define Consts_SAbortButton 65316
+#define Consts_SAllButton 65317
+#define Consts_SCannotDragForm 65318
+#define Consts_SVMetafiles 65319
+#define Consts_SVEnhMetafiles 65320
+#define Consts_SVIcons 65321
+#define Consts_SVBitmaps 65322
+#define Consts_SVTIFFImages 65323
+#define Consts_SMsgDlgWarning 65324
+#define Consts_SMsgDlgError 65325
+#define Consts_SMsgDlgInformation 65326
+#define Consts_SMsgDlgConfirm 65327
+#define Consts_SMenuReinserted 65328
+#define Consts_SMenuNotFound 65329
+#define Consts_SNoTimers 65330
+#define Consts_SNotPrinting 65331
+#define Consts_SPrinting 65332
+#define Consts_SPrinterIndexError 65333
+#define Consts_SInvalidPrinter 65334
+#define Consts_SDeviceOnPort 65335
+#define Consts_SGroupIndexTooLow 65336
+#define Consts_SNoMDIForm 65337
+#define Consts_SImageCanvasNeedsBitmap 65338
+#define Consts_SControlParentSetToSelf 65339
+#define Consts_SOKButton 65340
+#define Consts_SCancelButton 65341
+#define Consts_SYesButton 65342
+#define Consts_SNoButton 65343
+#define Consts_SInvalidImageSize 65344
+#define Consts_SInvalidImageList 65345
+#define Consts_SReplaceImage 65346
+#define Consts_SImageIndexError 65347
+#define Consts_SImageReadFail 65348
+#define Consts_SImageWriteFail 65349
+#define Consts_SWindowDCError 65350
+#define Consts_SWindowClass 65351
+#define Consts_SCannotFocus 65352
+#define Consts_SParentRequired 65353
+#define Consts_SParentGivenNotAParent 65354
+#define Consts_SMDIChildNotVisible 65355
+#define Consts_SVisibleChanged 65356
+#define Consts_SCannotShowModal 65357
+#define Consts_SPropertyOutOfRange 65358
+#define Consts_SMenuIndexError 65359
 #define RTLConsts_SNoTopics 65360
 #define RTLConsts_SNothingFound 65361
 #define RTLConsts_SArgumentOutOfRange 65362
-#define RTLConsts_SGenericDuplicateItem 65363
-#define Consts_SInvalidBitmap 65364
-#define Consts_SInvalidIcon 65365
-#define Consts_SInvalidMetafile 65366
-#define Consts_SInvalidPixelFormat 65367
-#define Consts_SInvalidImage 65368
-#define Consts_SChangeIconSize 65369
-#define Consts_SChangeWicSize 65370
-#define Consts_SUnknownExtension 65371
-#define Consts_SUnknownClipboardFormat 65372
-#define Consts_SOutOfResources 65373
-#define Consts_SNoCanvasHandle 65374
-#define Consts_SInvalidImageSize 65375
+#define RTLConsts_SGenericItemNotFound 65363
+#define RTLConsts_SGenericDuplicateItem 65364
+#define Consts_SInvalidBitmap 65365
+#define Consts_SInvalidIcon 65366
+#define Consts_SInvalidMetafile 65367
+#define Consts_SInvalidPixelFormat 65368
+#define Consts_SInvalidImage 65369
+#define Consts_SChangeIconSize 65370
+#define Consts_SChangeWicSize 65371
+#define Consts_SUnknownExtension 65372
+#define Consts_SUnknownClipboardFormat 65373
+#define Consts_SOutOfResources 65374
+#define Consts_SNoCanvasHandle 65375
 #define RTLConsts_SThreadExternalWait 65376
 #define RTLConsts_SThreadStartError 65377
 #define RTLConsts_SParamIsNegative 65378
@@ -388,6 +389,7 @@
 #define SysConst_SInvalidPointer 65535
 STRINGTABLE
 BEGIN
+	HlpBlake2BTreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2B"
 	HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter,	"InnerHashSize Value Should be Between [0 .. 64] for Blake2B"
 	HlpBlake2SConfig_SInvalidHashSize,	"BLAKE2S HashSize must be restricted to one of the following [1 .. 32], \"%d\""
 	HlpBlake2SConfig_SInvalidKeyLength,	"\"Key\" Length Must Not Be Greater Than 32, \"%d\""
@@ -398,6 +400,7 @@ BEGIN
 	HlpBlake2STreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2S"
 	HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter,	"InnerHashSize Value Should be Between [0 .. 32] for Blake2S"
 	HlpBlake2STreeConfig_SInvalidNodeOffsetParameter,	"NodeOffset Value Should be Between [0 .. (2^48-1)] for Blake2S"
+	HlpHash_SIndexOutOfRange,	"Current Index Is Out Of Range"
 	HlpHash_SInvalidBufferSize,	"\"BufferSize\" Must Be Greater Than Zero"
 	HlpHash_SUnAssignedStream,	"Input Stream Is Unassigned"
 	HlpHash_SFileNotExist,	"Specified File Not Found"
@@ -413,7 +416,7 @@ BEGIN
 	HlpBlake2BConfig_SInvalidSaltLength,	"\"Salt\" Length Must Be Equal To 16, \"%d\""
 	HlpBlake2BTreeConfig_SInvalidFanOutParameter,	"FanOut Value Should be Between [0 .. 255] for Blake2B"
 	HlpBlake2BTreeConfig_SInvalidMaxDepthParameter,	"FanOut Value Should be Between [1 .. 255] for Blake2B"
-	HlpBlake2BTreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2B"
+	RzBorder_sRzColorBtnFace,	"Button Face"
 	RzBorder_sRzColorBtnShadow,	"Button Shadow"
 	RzBorder_sRzColorGrayText,	"Gray Text"
 	RzBorder_sRzColorBtnText,	"Button Text"
@@ -429,7 +432,7 @@ BEGIN
 	RzBorder_sRzColorMenuHighlight,	"Menu Highlight"
 	RzBorder_sRzColorMenuBar,	"Menu Bar"
 	HlpConverters_SEncodingInstanceNil,	"Encoding Instance Cannot Be Nil"
-	HlpHash_SIndexOutOfRange,	"Current Index Is Out Of Range"
+	RzBorder_sRzColorWhite,	"White"
 	RzBorder_sRzColorScrollBar,	"Scroll Bar"
 	RzBorder_sRzColorBackground,	"Background"
 	RzBorder_sRzColorActiveCaption,	"Active Caption"
@@ -445,7 +448,7 @@ BEGIN
 	RzBorder_sRzColorAppWorkSpace,	"App WorkSpace"
 	RzBorder_sRzColorHighlight,	"Highlight"
 	RzBorder_sRzColorHighlightText,	"Highlight Text"
-	RzBorder_sRzColorBtnFace,	"Button Face"
+	RzBorder_sRzColorGray40,	"Gray 40%"
 	RzBorder_sRzColorPink,	"Pink"
 	RzBorder_sRzColorGold,	"Gold"
 	RzBorder_sRzColorYellow,	"Yellow"
@@ -461,7 +464,7 @@ BEGIN
 	RzBorder_sRzColorLightTurquoise,	"Light Turquoise"
 	RzBorder_sRzColorPaleBlue,	"Pale Blue"
 	RzBorder_sRzColorLavender,	"Lavender"
-	RzBorder_sRzColorWhite,	"White"
+	RzBorder_sRzColorGray80,	"Gray 80%"
 	RzBorder_sRzColorDarkRed,	"Dark Red"
 	RzBorder_sRzColorOrange,	"Orange"
 	RzBorder_sRzColorDarkYellow,	"Dark Yellow"
@@ -477,7 +480,7 @@ BEGIN
 	RzBorder_sRzColorAqua,	"Aqua"
 	RzBorder_sRzColorLightBlue,	"Light Blue"
 	RzBorder_sRzColorViolet,	"Violet"
-	RzBorder_sRzColorGray40,	"Gray 40%"
+	Consts_SUTF8Encoding,	"UTF-8"
 	Consts_SUTF7Encoding,	"UTF-7"
 	Consts_SWindowsVistaRequired,	"%s requires Windows Vista or later"
 	Consts_SXPThemesRequired,	"%s requires themes to be enabled"
@@ -493,7 +496,7 @@ BEGIN
 	RzBorder_sRzColorDarkTeal,	"Dark Teal"
 	RzBorder_sRzColorDarkBlue,	"Dark Blue"
 	RzBorder_sRzColorIndigo,	"Indigo"
-	RzBorder_sRzColorGray80,	"Gray 80%"
+	Consts_SInvalidClipFmt,	"Invalid clipboard format"
 	Consts_SIconToClipboard,	"Clipboard does not support Icons"
 	Consts_SCannotOpenClipboard,	"Cannot open clipboard: %s"
 	Consts_SInvalidMemoSize,	"Text exceeds memo capacity"
@@ -509,7 +512,7 @@ BEGIN
 	Consts_SASCIIEncoding,	"ASCII"
 	Consts_SUnicodeEncoding,	"Unicode"
 	Consts_SBigEndianEncoding,	"Big Endian Unicode"
-	Consts_SUTF8Encoding,	"UTF-8"
+	Consts_SmkcSpace,	"Space"
 	Consts_SmkcPgUp,	"PgUp"
 	Consts_SmkcPgDn,	"PgDn"
 	Consts_SmkcEnd,	"End"
@@ -525,7 +528,7 @@ BEGIN
 	Consts_SmkcAlt,	"Alt+"
 	Consts_SOutOfRange,	"Value must be between %d and %d"
 	Consts_sAllFilter,	"All"
-	Consts_SInvalidClipFmt,	"Invalid clipboard format"
+	Consts_SMsgDlgYes,	"&Yes"
 	Consts_SMsgDlgNo,	"&No"
 	Consts_SMsgDlgOK,	"OK"
 	Consts_SMsgDlgCancel,	"Cancel"
@@ -541,7 +544,7 @@ BEGIN
 	Consts_SmkcTab,	"Tab"
 	Consts_SmkcEsc,	"Esc"
 	Consts_SmkcEnter,	"Enter"
-	Consts_SmkcSpace,	"Space"
+	Consts_SHelpButton,	"&Help"
 	Consts_SCloseButton,	"&Close"
 	Consts_SIgnoreButton,	"&Ignore"
 	Consts_SRetryButton,	"&Retry"
@@ -557,7 +560,7 @@ BEGIN
 	Consts_SMsgDlgError,	"Error"
 	Consts_SMsgDlgInformation,	"Information"
 	Consts_SMsgDlgConfirm,	"Confirm"
-	Consts_SMsgDlgYes,	"&Yes"
+	Consts_SMenuReinserted,	"Menu inserted twice"
 	Consts_SMenuNotFound,	"Sub-menu is not in menu"
 	Consts_SNoTimers,	"Not enough timers available"
 	Consts_SNotPrinting,	"Printer is not currently printing"
@@ -573,7 +576,7 @@ BEGIN
 	Consts_SCancelButton,	"Cancel"
 	Consts_SYesButton,	"&Yes"
 	Consts_SNoButton,	"&No"
-	Consts_SHelpButton,	"&Help"
+	Consts_SInvalidImageSize,	"Invalid image size"
 	Consts_SInvalidImageList,	"Invalid ImageList"
 	Consts_SReplaceImage,	"Unable to Replace Image"
 	Consts_SImageIndexError,	"Invalid ImageList Index"
@@ -589,10 +592,10 @@ BEGIN
 	Consts_SCannotShowModal,	"Cannot make a visible window modal"
 	Consts_SPropertyOutOfRange,	"%s property out of range"
 	Consts_SMenuIndexError,	"Menu index out of range"
-	Consts_SMenuReinserted,	"Menu inserted twice"
 	RTLConsts_SNoTopics,	"No topic-based help system installed"
 	RTLConsts_SNothingFound,	"No help found for %s"
 	RTLConsts_SArgumentOutOfRange,	"Argument out of range"
+	RTLConsts_SGenericItemNotFound,	"Item not found"
 	RTLConsts_SGenericDuplicateItem,	"Duplicates not allowed"
 	Consts_SInvalidBitmap,	"Bitmap image is not valid"
 	Consts_SInvalidIcon,	"Icon image is not valid"
@@ -605,7 +608,6 @@ BEGIN
 	Consts_SUnknownClipboardFormat,	"Unsupported clipboard format"
 	Consts_SOutOfResources,	"Out of system resources"
 	Consts_SNoCanvasHandle,	"Canvas does not allow drawing"
-	Consts_SInvalidImageSize,	"Invalid image size"
 	RTLConsts_SThreadExternalWait,	"Cannot wait for an externally created thread"
 	RTLConsts_SThreadStartError,	"Cannot call Start on a running or suspended thread"
 	RTLConsts_SParamIsNegative,	"Parameter %s cannot be a negative value"

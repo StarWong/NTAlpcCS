@@ -372,8 +372,8 @@ PUNICODE_STRING = ^UNICODE_STRING;
      0:
      (
       client : packed record
-      functionID:Cardinal;//
-      hashTable:THashTable
+      //functionID:Cardinal;
+      hashTable:THashTable;
       end;
      );
      1:

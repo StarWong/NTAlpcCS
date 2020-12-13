@@ -1,26 +1,12 @@
 unit ALPC_Server;
 
 interface
-type
-TInitialize = function(const serverName:WideString):LongBool of object;
-TEvent = procedure of object;
-TFuncCaller = function(const clientViewer, serverViewer: Pointer): LongBool;
-TfnRegister = procedure;
-
-var
-Initialize:TInitialize;
-StartServer:TEvent;
-StopServer:TEvent;
-procedure AddFunc(const funcName:String;const FuncAddr:Pointer);
-implementation
-
 uses
-  ALPC_Base, ALPC_LPC_Define,SysUtils,HlpIHash,Classes,
-  HlpHashFactory,Generics.Collections,Logger;
+ALPC_LPC_Define;
 type
+    ret_Offsets = array[0..$10-1] of Cardinal;
     _ViewCache = packed record
     private type
-    ret_Offsets = array[0..$10-1] of Cardinal;
     offSet = ^TAT;
     TAT = array of Cardinal;
     private
@@ -30,6 +16,7 @@ type
     function return(const index:Cardinal;const data:Pointer;const size:Cardinal):Pointer;overload;
     procedure Marshal(var list:ret_Offsets);
     procedure FillCache(const index:Cardinal;const data:Pointer;const size:Cardinal);
+    procedure Sign(const Signal:LongBool);inline;
    end;
      ViewCache = _ViewCache;
      PViewCache = ^ViewCache;
@@ -46,8 +33,29 @@ type
      public
      class operator Multiply(V:_ReadIn;const Index:Cardinal) : Pointer;
      class operator Divide(V:_ReadIn;const mem:TMem) : Pointer;
+     public
+     procedure Push(const data:PViewCache);inline;
      end;
      ReadIn = _ReadIn;
+type
+TInitialize = function(const serverName:WideString):LongBool of object;
+TEvent = procedure of object;
+TCallBack = function(const clientViewer, serverViewer: Pointer): LongBool;
+//TInvoke  = function(const view:PViewCache;const reader:PReadIn):LongBool;
+{$IFNDEF reference}
+TPerformer = procedure(const view:PViewCache;const reader:PReadIn);
+{$ELSE}
+TPerformer = reference to procedure(const view:PViewCache;const reader:PReadIn);
+{$ENDIF}
+var
+Initialize:TInitialize;
+StartServer:TEvent;
+StopServer:TEvent;
+procedure AddFunc(const funcName:String;const FuncAddr:TPerformer);
+implementation
+uses
+  ALPC_Base,SysUtils,HlpIHash,Classes,
+  HlpHashFactory,Generics.Collections,Logger;
 type
 
 TABC = ViewDetail;
@@ -68,8 +76,7 @@ type
   strict private
     running: LongBool;
     handleForClient: THandle;
-    FfuncCaller:TFuncCaller;
-    FfnRegister:TfnRegister;
+    FfuncCaller:TCallBack ;
     launcher:Tlauncher;
   strict private
   class function callback(const user,host:Pointer):LongBool;static;
@@ -87,16 +94,11 @@ type
   procedure start;
   procedure stop;
   public
-  property funcCaller:TFuncCaller  write FfuncCaller;
-  property fnRegister:TfnRegister write FfnRegister;
+  property funcCaller:TCallBack   write FfuncCaller;
   end;
 
 type
-
-TFunctions = TDictionary<THashTable,Pointer>;
-THostFunction  = function(const view:PViewCache;const reader:PReadIn):LongBool;
-
-
+TFunctions = TDictionary<THashTable,TPerformer>;
 var
 Functions :TFunctions;
 Server:TServer;
@@ -113,7 +115,7 @@ var
     LHash:=nil;
   end;
 
-procedure AddFunc(const funcName:String;const FuncAddr:Pointer);
+procedure AddFunc(const funcName:String;const FuncAddr:TPerformer);
 var
 funcHash:AnsiString;
 begin
@@ -123,11 +125,12 @@ end;
 
 class function TServer.callback(const user,host:Pointer):LongBool;
 var
-FN:THostFunction;
+FN:TPerformer;
 begin
      Result:=False;
-     FN:=THostFunction(PViewCache(user).result.location.client.functionID);
+     FN:=Functions[(PViewCache(user).result.location.client.hashTable)];
      try
+        if Assigned(FN) then
         FN(user,host);
         Result:=True;
      except
@@ -159,7 +162,6 @@ end;
 constructor TServer.Create;
 begin
    FfuncCaller:=nil;
-   FfnRegister:=nil;
 end;
 
 function TServer.CreatePort: LongBool;
@@ -220,14 +222,13 @@ var
 begin
   if not Assigned(FfuncCaller) then
    FfuncCaller:= TServer.callback;
-   if Assigned(FfnRegister) then
-   FfnRegister;
+
   Self.CreateCarrier;
-  {
+
   Self.CreateLocalView;
   self.pSender.Attributes.pAttrHeader.Head.ValidAttributes:=ALPC_MESSAGE_VIEW_ATTRIBUTE;
   Self.pSender.Attributes.AssignView(pLocalView);
-  }
+
   while Self.running do
   begin
     ret := NtAlpcSendWaitReceivePort(Self.fPortHandle, $0, nil, nil,
@@ -240,7 +241,7 @@ begin
           begin
             Self.Accept;
           end;
-        LPC_REQUEST:
+            LPC_REQUEST:
           begin
             FfuncCaller(pReciver.Attributes.pAttrContext.View.ViewBase,
               pSender.Attributes.pAttrContext.View.ViewBase);
@@ -297,6 +298,11 @@ begin
    Result:= PByte(@V) + PCardinal(PByte(@V) + 4*Index)^;
 end;
 
+procedure _ReadIn.Push(const data: PViewCache);
+begin
+       Move(data.result.dataSection[0],Self.dataSection[0],Data.result.activeDataSize);
+end;
+
 { TServer.Tlauncher }
 
 constructor TServer.Tlauncher.Create(const parent:TServer);
@@ -341,6 +347,7 @@ begin
 
 end;
 
+
 function _ViewCache.return(const index: Cardinal): Pointer;
 var
 startAddr:PByte;
@@ -354,6 +361,11 @@ function _ViewCache.return(const index: Cardinal; const data: Pointer;
 begin
           result:= return(index);
           Move(data,result,size);
+end;
+
+procedure _ViewCache.Sign(const Signal: LongBool);
+begin
+     Self.result.location.server.onError:=Signal;
 end;
 
 initialization
