@@ -1,20 +1,5 @@
   type
-    TArgInfo = packed record
-    isPointer: LongBool;
-    case Integer of
-      0:
-        (
-        dynamicData:
-         record
-          dataSize: Cardinal;
-          case Integer of
-          0:(addr: Pointer;);
-          1:(offsetFromDataAddr:Cardinal)
-          end;
-           );
-      1:
-        (
-        staticData: record //always 8 bytes
+        TStaticData = record //always 8 bytes
         case Integer of
         0:(U64: UInt64; );
         1:(I64: Int64; );
@@ -31,7 +16,24 @@
         12:(Pointer:Pointer);
         13:(LongBool:Pointer);
         14:(unKnow:array[0..7] of Byte)
-         end;
+        end;
+  type
+    TArgInfo = packed record
+    isPointer: LongBool;
+    case Integer of
+      0:
+        (
+        dynamicData:
+         record
+          dataSize: Cardinal;
+          case Integer of
+          0:(addr: Pointer;);
+          1:(offsetFromDataAddr:Cardinal)
+          end;
+           );
+      1:
+        (
+        staticData:TStaticData;
          )
     end;
     PArgs = ^TArgs;

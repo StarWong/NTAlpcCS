@@ -9,13 +9,55 @@ begin
   LHash := nil;
 end;
 
-function _StubViewer.Arg(const index: Cardinal): Pointer;
+function _StubViewer.pArg(const index: Cardinal;const data:Pointer): Cardinal;
 begin
+   Result:=0;
   if  Self.Marshal.Arg[index].isPointer then
-  Result:=PByte(@(Self.Marshal.data[0])) + Self.Marshal.Arg[index].dynamicData.offsetFromDataAddr
-  else
-  Result:=@(Self.Marshal.Arg[index].staticData);
+  begin
+  result:=Self.Marshal.Arg[index].dynamicData.dataSize;
+  Move(
+  (PByte(@(Self.Marshal.data[0])) + Self.Marshal.Arg[index].dynamicData.offsetFromDataAddr)^,
+  data^,
+  result
+  );
+  end;
 end;
+
+function _StubViewer.pArg(const index: Cardinal;Out Str:string): Cardinal;
+begin
+  Result:=0;
+  if  Self.Marshal.Arg[index].isPointer then
+  begin
+  result:=Self.Marshal.Arg[index].dynamicData.dataSize;
+  SetString(
+  str,
+  PWideChar(PByte(@(Self.Marshal.data[0])) + Self.Marshal.Arg[index].dynamicData.offsetFromDataAddr),
+  result
+  );
+  end;
+end;
+
+function _StubViewer.pArg(const index: Cardinal;var bytes:TByteArray): Cardinal;
+begin
+  Result:=0;
+  if  Self.Marshal.Arg[index].isPointer then
+  begin
+  result:=Self.Marshal.Arg[index].dynamicData.dataSize;
+  SetLength(bytes,result);
+  Move(
+  (PByte(@(Self.Marshal.data[0])) + Self.Marshal.Arg[index].dynamicData.offsetFromDataAddr)^,
+  bytes[0],
+  result
+  );
+  end;
+end;
+
+function _StubViewer.pArg(const index: Cardinal): TStaticData;
+begin
+    Move(Self.Marshal.Arg[index].StaticData,Result,8);
+end;
+
+
 
 function _StubViewer.GetFuncID: THashTable;
 begin
@@ -24,8 +66,8 @@ end;
 
 function _StubViewer.IsSucessful(msg:THandleError = nil): LongBool;
 begin
-Result:=arguments.location.server.onError;
-if not Result then
+Result:= Not arguments.location.server.onError;
+if Not Result then
 begin
   if Assigned(msg) then
   msg(PopErrMessage);
@@ -34,7 +76,7 @@ end;
 
 
 
-procedure _StubViewer.LoadDynamicData;
+procedure _StubViewer.EncodeDynamicData;
 var
 pStorage:PByte;
 I:Cardinal;
@@ -58,6 +100,21 @@ pStorage:=@(Marshal.data[0]);
 
 end;
 
+procedure _StubViewer.DecodeDynamicData;
+var
+pStorage:PByte;
+I:Cardinal;
+begin
+   if Self.Marshal.count = 0 then  Exit;
+   pStorage:=@(Marshal.data[0]);
+       for I := 0 to Self.Marshal.count - 1 do
+    begin
+        if Not Self.Marshal.Arg[I].isPointer then Continue;
+        Marshal.Arg[I].dynamicData.Addr:=pStorage + Marshal.Arg[I].dynamicData.offsetFromDataAddr;
+    end;
+end;
+
+
 function _StubViewer.Marshal: PParameter;
 begin
    result:=@(Self.arguments.dataSection[0]);
@@ -65,7 +122,7 @@ end;
 
 procedure _StubViewer.FillServerCache(const serverCache: PStubViewer);
 begin
-    Move(Self.arguments.dataSection[0], serverCache^,Self.arguments.activeDataSize);
+    Move(Self, serverCache^,Self.arguments.activeDataSize);
 end;
 
 function _StubViewer.PopErrMessage:string;
@@ -88,5 +145,5 @@ end;
 
 procedure _StubViewer.Sign(const Signal: LongBool);
 begin
-    Self.arguments.location.Server.onError := Signal;
+    Self.arguments.location.Server.onError := Not Signal;
 end;

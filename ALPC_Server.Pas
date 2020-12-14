@@ -88,21 +88,32 @@ var
   FN: TPerformer;
 begin
   result := False;
-  PStubViewer(user).Sign(False);
+  //PStubViewer(user).Sign(False);
   try
    if Functions.ContainsKey(PStubViewer(user).GetFuncID) then
    FN := Functions[PStubViewer(user).GetFuncID]
    else
    begin
    PStubViewer(user).PushErrMessage('func not found!');
+   PStubViewer(user).Sign(False);
    Exit;
    end;
     if Assigned(FN) then
+    begin
       FN(user, host);
     result := True;
     PStubViewer(user).Sign(True);
+    Exit;
+    end
+    else
+    begin
+     PStubViewer(user).PushErrMessage('func addr is nil!');
+     PStubViewer(user).Sign(False);
+     Exit;
+    end;
   except
     PStubViewer(user).PushErrMessage(Exception(ExceptObject).Message[1]);
+    PStubViewer(user).Sign(False);
   end;
 end;
 
@@ -120,7 +131,7 @@ begin
     ret := NtAlpcAcceptConnectPort(@(Self.handleForClient), Self.fPortHandle,
       $0, nil, port_Attr.pPortAttrHeader, PContext,
       @(pReciver.Structures.pMsgHeader.Header), nil, not refuse);
-    Printf('accpet');
+   // Printf('accpet');
   finally
     port_Attr.Terminate;
     port_Attr.Free;
@@ -194,14 +205,12 @@ begin
   Self.pSender.Attributes.pAttrHeader.Head.ValidAttributes := $0;
    // ALPC_MESSAGE_VIEW_ATTRIBUTE;
   Self.pSender.Attributes.AssignView(pLocalView);
-  Printf(Self.pSender.Structures.pMsgHeader.Header.MessageId,'send:');
+  Self.pSender.Structures.Zero(PORT_MESSAGE_SIZE);
   while Self.running do
   begin
     ret := NtAlpcSendWaitReceivePort(Self.fPortHandle, $0, nil, nil,
       Self.pReciver.Structures.pMsgHeader, @fMessageSize,
       Self.pReciver.Attributes.pAttrHeader, nil);
-      Printf(Self.pReciver.Structures.pMsgHeader.Header.MessageId,'rec:');
-      Printf(Self.pSender.Structures.pMsgHeader.Header.MessageId,'send:');
     if ret = 0 then
     begin
       case (Self.pReciver.Structures.pMsgHeader.Header.u2.s2._Type and $FFF) of
@@ -213,7 +222,9 @@ begin
           begin
             FfuncCaller(pReciver.Attributes.pAttrContext.view.ViewBase,
               pSender.Attributes.pAttrContext.view.ViewBase);
-            ret := NtAlpcSendWaitReceivePort(Self.fPortHandle, $0,
+              pSender.Structures.pMsgHeader.Header.MessageId:=
+              pReciver.Structures.pMsgHeader.Header.MessageId;
+              ret := NtAlpcSendWaitReceivePort(Self.fPortHandle, $0,
               Self.pSender.Structures.pMsgHeader,
               Self.pSender.Attributes.pAttrHeader, nil, nil, nil, nil);
             if ret <> 0 then
@@ -224,7 +235,7 @@ begin
         LPC_LOST_REPLY, LPC_PORT_CLOSED, LPC_CLIENT_DIED:
           begin
             try
-              Printf('close');
+             // Printf('close');
               if handleForClient <> 0 then
               begin
                 NtClose(handleForClient);

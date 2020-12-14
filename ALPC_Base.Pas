@@ -11,18 +11,15 @@ TBlock = array of TAignValue;
 {$REGION 'MessageStructures'}
 MessageStructures = class
 strict private
-class var fBlock:TBlock;//Buffer
-protected
-//destructor Destroy;override;
-//constructor Create(const totalSize:ULONG);overload;
-class function Initialize(const totalSize:ULONG):Boolean;static;
-class procedure Terminate();static;
+fBlock:TBlock;//Buffer
 public
-class function Zero(activeSize:ULONG = 0):ULONG;static;
+pMsgHeader:PALPC_CUSTOM_MESSAGE;
+pMsgContext:PDataCache;
+fMsgbufferSize,fDataCacheHeaderSize:Word;
 public
-class var pMsgHeader:PALPC_CUSTOM_MESSAGE;
-class var pMsgContext:PDataCache;
-class var fMsgbufferSize,fDataCacheHeaderSize:Word;
+function Initialize(const totalSize:ULONG):Boolean;
+procedure Terminate();
+function Zero(activeSize:ULONG = 0):ULONG;
 end;
 {$ENDREGION}
 
@@ -41,18 +38,18 @@ PALPC_MESSAGE_ATTRIBUTES_CONTEXT = ^ALPC_MESSAGE_ATTRIBUTES_CONTEXT;
 ALPC_MESSAGE_ATTRIBUTES_CONTEXT = _ALPC_MESSAGE_ATTRIBUTES_CONTEXT;
 AlpcMessageAttributes = class
 strict private
-class var fBlock:TBlock;
-class var fMsgAttrBufferSize:ULONG;
+fBlock:TBlock;
+fMsgAttrBufferSize:ULONG;
 public
-class var pAttrHeader:PALPC_MESSAGE_ATTRIBUTES;
-class var pAttrContext:PALPC_MESSAGE_ATTRIBUTES_CONTEXT;
+pAttrHeader:PALPC_MESSAGE_ATTRIBUTES;
+pAttrContext:PALPC_MESSAGE_ATTRIBUTES_CONTEXT;
 protected
-class function Initialize(const attrFlags:ULONG):Boolean;static;
-class procedure Terminate();static;
+function Initialize(const attrFlags:ULONG):Boolean;
+procedure Terminate();
 strict private
-class function AllocateFlags(const attrFlags:ULONG):Boolean;static;
+function AllocateFlags(const attrFlags:ULONG):Boolean;
 public
-class procedure AssignView(const view:PALPC_DATA_VIEW_ATTR);static;
+procedure AssignView(const view:PALPC_DATA_VIEW_ATTR);
 end;
 {$ENDREGION}
 
@@ -81,20 +78,20 @@ end;
 {$REGION 'AlpcPortAttributes'}
  AlpcPortAttributes = class
  public
- class var pPortAttrHeader:PALPC_PORT_ATTRIBUTES;
+pPortAttrHeader:PALPC_PORT_ATTRIBUTES;
  public
- class procedure Initialize(const messageSize:Word;const portflags:ULONG);static;
- class procedure Terminate();static;
+procedure Initialize(const messageSize:Word;const portflags:ULONG);
+procedure Terminate();
  end;
 {$ENDREGION}
 
 {$REGION 'ObjectAttributes'}
 ObjectAttributes = class
 public
- class var pObjectAttrHeader:POBJECT_ATTRIBUTES;
+pObjectAttrHeader:POBJECT_ATTRIBUTES;
 public
- class procedure Initialize(const portName:PUNICODE_STRING);static;
- class procedure Terminate();static;
+procedure Initialize(const portName:PUNICODE_STRING);
+procedure Terminate();
 end;
 {$ENDREGION}
 
@@ -145,7 +142,10 @@ class function Send(
 const pSenderContext:PDataCache;
 pTime:PLARGE_INTEGER
 ):NTSTATUS;
+
+class function NewMem(const totalSize:ULONG;var fBlock:TBlock):Boolean;static;
 end;
+
 {$ENDREGION}
 
 implementation
@@ -176,7 +176,7 @@ end;
 
 { MessageStructures }
 
-class function MessageStructures.Initialize(const totalSize: ULONG): Boolean;
+function MessageStructures.Initialize(const totalSize: ULONG): Boolean;
 begin
        Result:=False;
        fDataCacheHeaderSize:=SizeOf(DataCache);
@@ -188,13 +188,13 @@ begin
        Result:=True;
 end;
 
-class procedure MessageStructures.Terminate();
+procedure MessageStructures.Terminate();
 begin
        FreeMem(fBlock);
 end;
 
 
-class function MessageStructures.Zero(activeSize:ULONG = 0):ULONG;
+function MessageStructures.Zero(activeSize:ULONG = 0):ULONG;
 begin
    if ((activeSize = 0) or (activeSize > fMsgbufferSize))  then Result:=fMsgbufferSize
    else
@@ -208,7 +208,7 @@ end;
 
 { AlpcMessageAttributes }
 
-class function AlpcMessageAttributes.Initialize(const attrFlags:ULONG):Boolean;
+function AlpcMessageAttributes.Initialize(const attrFlags:ULONG):Boolean;
 begin
    Result:=False;
    fMsgAttrBufferSize:=AlpcGetHeaderSize(attrFlags);
@@ -229,12 +229,12 @@ begin
    Result:=True;
 end;
 
-class procedure AlpcMessageAttributes.Terminate();
+procedure AlpcMessageAttributes.Terminate();
 begin
    FreeMem(fBlock);
 end;
 
-class procedure AlpcMessageAttributes.AssignView(const view:PALPC_DATA_VIEW_ATTR);
+procedure AlpcMessageAttributes.AssignView(const view:PALPC_DATA_VIEW_ATTR);
 begin
             if pAttrContext.View <> nil then
             begin
@@ -246,7 +246,7 @@ begin
 
 end;
 
-class function AlpcMessageAttributes.AllocateFlags(const attrFlags:ULONG):Boolean;
+function AlpcMessageAttributes.AllocateFlags(const attrFlags:ULONG):Boolean;
 var
 current:UInt64;
 begin
@@ -304,7 +304,9 @@ end;
 constructor TAlpcCarrier.Create(const customMessageSize: Word;
   const MsgAttrAllocatedFlags: ULONG);
 begin;
+       StructCls:=MessageStructures.Create;
        StructCls.Initialize(customMessageSize);
+       AttrCls:=AlpcMessageAttributes.Create;
        AttrCls.Initialize(MsgAttrAllocatedFlags);
 end;
 
@@ -314,9 +316,10 @@ destructor TAlpcCarrier.Destroy;
 begin
 
      StructCls.Terminate();
-
+     Self.Structures.Free;
 
      AttrCls.Terminate();
+     AttrCls.Free;
 
     inherited;
 end;
@@ -376,7 +379,7 @@ end;
 
 { AlpcPortAttributes }
 
-class procedure AlpcPortAttributes.Initialize(const messageSize:Word;const portflags:ULONG);
+procedure AlpcPortAttributes.Initialize(const messageSize:Word;const portflags:ULONG);
 begin
     New(pPortAttrHeader);
     pPortAttrHeader.Flags:=portflags;
@@ -393,14 +396,14 @@ begin
     pPortAttrHeader.SecurityQos.ContextTrackingMode:= SECURITY_STATIC_TRACKING;
 end;
 
-class procedure AlpcPortAttributes.Terminate;
+procedure AlpcPortAttributes.Terminate;
 begin
  if pPortAttrHeader <> nil then Dispose(pPortAttrHeader);
 end;
 
 { ObjectAttributes }
 
-class procedure ObjectAttributes.Initialize(const portName:PUNICODE_STRING);
+procedure ObjectAttributes.Initialize(const portName:PUNICODE_STRING);
 begin
     New(pObjectAttrHeader);
     FillChar(pObjectAttrHeader^,SizeOf(OBJECT_ATTRIBUTES),#0);
@@ -408,7 +411,7 @@ begin
     pObjectAttrHeader.objectname:=portName;
 end;
 
-class procedure ObjectAttributes.Terminate;
+procedure ObjectAttributes.Terminate;
 begin
     if pObjectAttrHeader <> nil  then Dispose(pObjectAttrHeader);
 end;
@@ -467,12 +470,20 @@ begin
     New(pLocalView);
     New(pPortName);
     RTL_CONSTANT_STRING(serverName,pPortName);
+    fPortAttr:=AlpcPortAttributes.Create;
     fPortAttr.Initialize(customMessageSize,portFlags);
+    fObjectAttr:=ObjectAttributes.Create;
     fObjectAttr.Initialize(pPortName);
     fMessageSize:=customMessageSize;
     fDataSizeOfQuotaIfNotUseView:=dataSizeOfQuotaIfNotUseView;
     fMsgAttrAllocatedFlags:=messageAttributesAllocatedFlags;
     fAllocatedSectionSize:=allocatedSectionSize;
+end;
+
+class function AlpcTransportBase.NewMem(const totalSize: ULONG;
+  var fBlock: TBlock): Boolean;
+begin
+Result:=ALPC_Base.NewMem(totalSize,fBlock);
 end;
 
 class function AlpcTransportBase.Recv(const pReceiverContext: PDataCache;
@@ -552,8 +563,16 @@ end;
 
 class procedure AlpcTransportBase.Terminate;
 begin
+       if fPortAttr<> nil then
+       begin
        fPortAttr.Terminate();
+       FreeAndNil(fPortAttr);
+       end;
+       if fObjectAttr <> nil then
+       begin
        fObjectAttr.Terminate();
+       FreeAndNil(fObjectAttr);
+       end;
        if pSender <> nil then  FreeAndNil(pSender);
        if pReciver <> nil then FreeAndNil(pReciver);
        if pLocalView <> nil then Dispose(pLocalView);

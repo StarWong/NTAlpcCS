@@ -37,4 +37,27 @@ object Client: TClient
     Height = 21
     TabOrder = 2
   end
+  object Button2: TButton
+    Left = 208
+    Top = 184
+    Width = 161
+    Height = 25
+    Caption = 'getVersion'
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object Edit3: TEdit
+    Left = 392
+    Top = 186
+    Width = 105
+    Height = 21
+    TabOrder = 4
+  end
+  object Edit4: TEdit
+    Left = 520
+    Top = 186
+    Width = 97
+    Height = 21
+    TabOrder = 5
+  end
 end

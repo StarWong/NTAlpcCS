@@ -1,7 +1,7 @@
 object MainForm: TMainForm
   Left = 0
   Top = 0
-  Caption = 'MainForm'
+  Caption = 'LPC_kernel_Server'
   ClientHeight = 336
   ClientWidth = 635
   Color = clBtnFace
