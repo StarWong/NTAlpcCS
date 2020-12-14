@@ -37,21 +37,19 @@ procedure TMainForm.Button2Click(Sender: TObject);
 begin
 StopServer;
 end;
-procedure sum(const user:PViewCache;const host:PReadIn);
+procedure sum(const user:PStubViewer;const host:PStubViewer);
 function sum(const a,b:Integer):Integer;
 begin
     Result:=a + b;
 end;
-var
-list:ret_Offsets;
 begin
-list[0]:=1;
-list[1]:=4;
-host.Push(user);
-user.Marshal(list);
-PInteger(user.return(0))^:=sum(PInteger(host^*0)^ ,PInteger(host^*1)^);
-user.Sign(True);
+user.FillServerCache(host);//save data to host
+user.Marshal.count:=1;
+user.Marshal.Arg[0].isPointer:=False;
+user.Marshal.Arg[0].staticData.Integer:=sum(pinteger(host.Arg(0))^,pinteger(host.Arg(1))^);
+user.LoadDynamicData;
 end;
+
 initialization
 AddFunc('sum',sum);
 end.

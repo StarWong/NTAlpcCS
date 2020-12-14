@@ -3,7 +3,7 @@
 			<ProjectGuid>{1A1F2488-89C5-48F8-85CF-8F44A05EEA73}</ProjectGuid>
 			<ProjectVersion>12.0</ProjectVersion>
 			<MainSource>FServer.dpr</MainSource>
-			<Config Condition="'$(Config)'==''">Release</Config>
+			<Config Condition="'$(Config)'==''">Debug</Config>
 			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">

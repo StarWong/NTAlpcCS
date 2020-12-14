@@ -30,36 +30,22 @@ uses
 ALPC_Client,Logger;
 {$R *.dfm}
 
-function sum(const a:Integer{a = 1};const b:Integer{b = 3}):Integer;
-var
-P:PViewCache;
+function sum(const a,b:Integer):Integer;
 begin
-        P:=ClientViewer;
-        p.Initialize;
-        P.SetID(1);
-        P.Push(@a,4);
-        p.Push(@b,4);
-        p.Finalize;
-        Printf(IntToHex(Cardinal(P),8));
-        Printf(IntToHex(Cardinal(@(P.client.dataSection[0])),8));
-        Invoke;
-        P:=ServerViewer;
-        if P.client.location.server.onError = False then
-        begin
-          Result:=Pinteger(P.return(0))^;
-        end
-        else
-        begin
-          Exception.Create(PAnsiChar(P.return(0)));
-        end;
+ClientViewer.Marshal.count:=2;
+ClientViewer.Marshal.Arg[0].isPointer:=False;
+ClientViewer.Marshal.Arg[0].staticData.Integer:=a;
+ClientViewer.Marshal.Arg[1].isPointer:=False;
+ClientViewer.Marshal.Arg[1].staticData.Integer:=b;
+ClientViewer.LoadDynamicData;
+Invoke;
+ServerViewer.Marshal.count:=1;
+ServerViewer.LoadDynamicData;
+if not ServerViewer.IsSucessful then Exit(0);
+Result:=ServerViewer.Marshal.Arg[0].staticData.Integer;
 end;
 
-function change(const a:Integer;var b:Integer;out c:Double):Integer;
-var
-P:PViewCache;
-begin
 
-end;
 
 procedure TClient.Button1Click(Sender: TObject);
 var
@@ -68,7 +54,7 @@ a,b:Integer;
 begin
 a:=StrToInt(Edit1.Text);
 b:=StrToInt(Edit2.Text);
-ShowMessage(Edit1.Text + ' + ' + Edit2.Text + ' = ' + IntToStr(sum(a,b)));
+Printf(sum(a,b),'result:');
 end;
 
 

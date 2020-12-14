@@ -8,116 +8,123 @@
   resources were bound to the produced executable.
 */
 
-#define Consts_SCannotOpenClipboard 65280
-#define Consts_SInvalidPrinterOp 65281
-#define Consts_SNoDefaultPrinter 65282
-#define Consts_SDuplicateMenus 65283
-#define Consts_SDockedCtlNeedsName 65284
-#define Consts_SDockTreeRemoveError 65285
-#define Consts_SDockZoneNotFound 65286
-#define Consts_SDockZoneHasNoCtl 65287
-#define Consts_SDockZoneVersionConflict 65288
-#define Consts_SWindowsVistaRequired 65289
-#define Consts_SXPThemesRequired 65290
-#define Consts_STaskDlgButtonCaption 65291
-#define Consts_STaskDlgRadioButtonCaption 65292
-#define Consts_SInvalidTaskDlgButtonCaption 65293
-#define Consts_SmkcPgUp 65296
-#define Consts_SmkcPgDn 65297
-#define Consts_SmkcEnd 65298
-#define Consts_SmkcHome 65299
-#define Consts_SmkcLeft 65300
-#define Consts_SmkcUp 65301
-#define Consts_SmkcRight 65302
-#define Consts_SmkcDown 65303
-#define Consts_SmkcIns 65304
-#define Consts_SmkcDel 65305
-#define Consts_SmkcShift 65306
-#define Consts_SmkcCtrl 65307
-#define Consts_SmkcAlt 65308
-#define Consts_SOutOfRange 65309
-#define Consts_sAllFilter 65310
-#define Consts_SIconToClipboard 65311
-#define Consts_SMsgDlgNo 65312
-#define Consts_SMsgDlgOK 65313
-#define Consts_SMsgDlgCancel 65314
-#define Consts_SMsgDlgHelp 65315
-#define Consts_SMsgDlgAbort 65316
-#define Consts_SMsgDlgRetry 65317
-#define Consts_SMsgDlgIgnore 65318
-#define Consts_SMsgDlgAll 65319
-#define Consts_SMsgDlgNoToAll 65320
-#define Consts_SMsgDlgYesToAll 65321
-#define Consts_SMsgDlgClose 65322
-#define Consts_SmkcBkSp 65323
-#define Consts_SmkcTab 65324
-#define Consts_SmkcEsc 65325
-#define Consts_SmkcEnter 65326
-#define Consts_SmkcSpace 65327
-#define Consts_SDeviceOnPort 65328
-#define Consts_SGroupIndexTooLow 65329
-#define Consts_SNoMDIForm 65330
-#define Consts_SImageCanvasNeedsBitmap 65331
-#define Consts_SControlParentSetToSelf 65332
-#define Consts_SCannotDragForm 65333
-#define Consts_SVMetafiles 65334
-#define Consts_SVEnhMetafiles 65335
-#define Consts_SVIcons 65336
-#define Consts_SVBitmaps 65337
-#define Consts_SVTIFFImages 65338
-#define Consts_SMsgDlgWarning 65339
-#define Consts_SMsgDlgError 65340
-#define Consts_SMsgDlgInformation 65341
-#define Consts_SMsgDlgConfirm 65342
-#define Consts_SMsgDlgYes 65343
-#define Consts_SWindowClass 65344
-#define Consts_SCannotFocus 65345
-#define Consts_SParentRequired 65346
-#define Consts_SParentGivenNotAParent 65347
-#define Consts_SMDIChildNotVisible 65348
-#define Consts_SVisibleChanged 65349
-#define Consts_SCannotShowModal 65350
-#define Consts_SPropertyOutOfRange 65351
-#define Consts_SMenuIndexError 65352
-#define Consts_SMenuReinserted 65353
-#define Consts_SMenuNotFound 65354
-#define Consts_SNoTimers 65355
-#define Consts_SNotPrinting 65356
-#define Consts_SPrinting 65357
-#define Consts_SPrinterIndexError 65358
-#define Consts_SInvalidPrinter 65359
-#define Consts_SInvalidMetafile 65360
-#define Consts_SInvalidPixelFormat 65361
-#define Consts_SInvalidImage 65362
-#define Consts_SChangeIconSize 65363
-#define Consts_SChangeWicSize 65364
-#define Consts_SUnknownExtension 65365
-#define Consts_SUnknownClipboardFormat 65366
-#define Consts_SOutOfResources 65367
-#define Consts_SNoCanvasHandle 65368
-#define Consts_SInvalidImageSize 65369
-#define Consts_SInvalidImageList 65370
-#define Consts_SReplaceImage 65371
-#define Consts_SImageIndexError 65372
-#define Consts_SImageReadFail 65373
-#define Consts_SImageWriteFail 65374
-#define Consts_SWindowDCError 65375
-#define RTLConsts_SParamIsNegative 65376
-#define RTLConsts_SInputBufferExceed 65377
-#define RTLConsts_SFileNotFound 65378
-#define RTLConsts_hNoFilterViewer 65379
-#define RTLConsts_sInvalidTimeoutValue 65380
-#define RTLConsts_SInvalidInteger 65381
-#define RTLConsts_STimeEncodeError 65382
-#define RTLConsts_SNoContext 65383
-#define RTLConsts_SNoContextFound 65384
-#define RTLConsts_SNoIndex 65385
-#define RTLConsts_SNoSearch 65386
-#define RTLConsts_SNoTableOfContents 65387
-#define RTLConsts_SNoTopics 65388
-#define RTLConsts_SNothingFound 65389
-#define Consts_SInvalidBitmap 65390
-#define Consts_SInvalidIcon 65391
+#define HlpBlake2STreeConfig_SInvalidFanOutParameter 65264
+#define HlpBlake2STreeConfig_SInvalidMaxDepthParameter 65265
+#define HlpBlake2STreeConfig_SInvalidNodeDepthParameter 65266
+#define HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter 65267
+#define HlpBlake2STreeConfig_SInvalidNodeOffsetParameter 65268
+#define HlpHashResult_SImpossibleRepresentationUInt8 65280
+#define HlpHashResult_SImpossibleRepresentationUInt16 65281
+#define HlpHashResult_SImpossibleRepresentationUInt32 65282
+#define HlpHashResult_SImpossibleRepresentationUInt64 65283
+#define HlpBlake2BConfig_SInvalidHashSize 65284
+#define HlpBlake2BConfig_SInvalidKeyLength 65285
+#define HlpBlake2BConfig_SInvalidPersonalisationLength 65286
+#define HlpBlake2BConfig_SInvalidSaltLength 65287
+#define HlpBlake2BTreeConfig_SInvalidFanOutParameter 65288
+#define HlpBlake2BTreeConfig_SInvalidMaxDepthParameter 65289
+#define HlpBlake2BTreeConfig_SInvalidNodeDepthParameter 65290
+#define HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter 65291
+#define HlpBlake2SConfig_SInvalidHashSize 65292
+#define HlpBlake2SConfig_SInvalidKeyLength 65293
+#define HlpBlake2SConfig_SInvalidPersonalisationLength 65294
+#define HlpBlake2SConfig_SInvalidSaltLength 65295
+#define Consts_SIconToClipboard 65296
+#define Consts_SInvalidPrinterOp 65297
+#define Consts_SNoDefaultPrinter 65298
+#define Consts_SDuplicateMenus 65299
+#define Consts_SDockedCtlNeedsName 65300
+#define Consts_SDockTreeRemoveError 65301
+#define Consts_SDockZoneNotFound 65302
+#define Consts_SDockZoneHasNoCtl 65303
+#define Consts_SDockZoneVersionConflict 65304
+#define HlpConverters_SEncodingInstanceNil 65305
+#define HlpHash_SIndexOutOfRange 65306
+#define HlpHash_SInvalidBufferSize 65307
+#define HlpHash_SUnAssignedStream 65308
+#define HlpHash_SFileNotExist 65309
+#define HlpHash_SCloneNotYetImplemented 65310
+#define HlpHashResult_SImpossibleRepresentationInt32 65311
+#define Consts_SmkcEsc 65312
+#define Consts_SmkcEnter 65313
+#define Consts_SmkcSpace 65314
+#define Consts_SmkcPgUp 65315
+#define Consts_SmkcPgDn 65316
+#define Consts_SmkcEnd 65317
+#define Consts_SmkcHome 65318
+#define Consts_SmkcLeft 65319
+#define Consts_SmkcUp 65320
+#define Consts_SmkcRight 65321
+#define Consts_SmkcDown 65322
+#define Consts_SmkcIns 65323
+#define Consts_SmkcDel 65324
+#define Consts_SmkcShift 65325
+#define Consts_SmkcCtrl 65326
+#define Consts_SmkcAlt 65327
+#define Consts_SMsgDlgInformation 65328
+#define Consts_SMsgDlgConfirm 65329
+#define Consts_SMsgDlgYes 65330
+#define Consts_SMsgDlgNo 65331
+#define Consts_SMsgDlgOK 65332
+#define Consts_SMsgDlgCancel 65333
+#define Consts_SMsgDlgHelp 65334
+#define Consts_SMsgDlgAbort 65335
+#define Consts_SMsgDlgRetry 65336
+#define Consts_SMsgDlgIgnore 65337
+#define Consts_SMsgDlgAll 65338
+#define Consts_SMsgDlgNoToAll 65339
+#define Consts_SMsgDlgYesToAll 65340
+#define Consts_SMsgDlgClose 65341
+#define Consts_SmkcBkSp 65342
+#define Consts_SmkcTab 65343
+#define Consts_SCannotShowModal 65344
+#define Consts_SMenuIndexError 65345
+#define Consts_SMenuReinserted 65346
+#define Consts_SMenuNotFound 65347
+#define Consts_SNoTimers 65348
+#define Consts_SNotPrinting 65349
+#define Consts_SPrinting 65350
+#define Consts_SPrinterIndexError 65351
+#define Consts_SInvalidPrinter 65352
+#define Consts_SDeviceOnPort 65353
+#define Consts_SGroupIndexTooLow 65354
+#define Consts_SNoMDIForm 65355
+#define Consts_SControlParentSetToSelf 65356
+#define Consts_SCannotDragForm 65357
+#define Consts_SMsgDlgWarning 65358
+#define Consts_SMsgDlgError 65359
+#define Consts_SUnknownClipboardFormat 65360
+#define Consts_SOutOfResources 65361
+#define Consts_SNoCanvasHandle 65362
+#define Consts_SInvalidImageSize 65363
+#define Consts_SInvalidImageList 65364
+#define Consts_SReplaceImage 65365
+#define Consts_SImageIndexError 65366
+#define Consts_SImageReadFail 65367
+#define Consts_SImageWriteFail 65368
+#define Consts_SWindowDCError 65369
+#define Consts_SWindowClass 65370
+#define Consts_SCannotFocus 65371
+#define Consts_SParentRequired 65372
+#define Consts_SParentGivenNotAParent 65373
+#define Consts_SMDIChildNotVisible 65374
+#define Consts_SVisibleChanged 65375
+#define RTLConsts_SFileNotFound 65376
+#define RTLConsts_hNoFilterViewer 65377
+#define RTLConsts_sInvalidTimeoutValue 65378
+#define RTLConsts_SInvalidInteger 65379
+#define RTLConsts_STimeEncodeError 65380
+#define RTLConsts_SNoContext 65381
+#define RTLConsts_SNoContextFound 65382
+#define RTLConsts_SNoIndex 65383
+#define RTLConsts_SNoSearch 65384
+#define RTLConsts_SNoTableOfContents 65385
+#define RTLConsts_SNoTopics 65386
+#define RTLConsts_SNothingFound 65387
+#define Consts_SInvalidBitmap 65388
+#define Consts_SInvalidIcon 65389
+#define Consts_SInvalidPixelFormat 65390
+#define Consts_SChangeIconSize 65391
 #define RTLConsts_SReadError 65392
 #define RTLConsts_SReadOnlyProperty 65393
 #define RTLConsts_SRegCreateFailed 65394
@@ -264,7 +271,28 @@
 #define SysConst_SInvalidPointer 65535
 STRINGTABLE
 BEGIN
-	Consts_SCannotOpenClipboard,	"Cannot open clipboard: %s"
+	HlpBlake2STreeConfig_SInvalidFanOutParameter,	"FanOut Value Should be Between [0 .. 255] for Blake2S"
+	HlpBlake2STreeConfig_SInvalidMaxDepthParameter,	"FanOut Value Should be Between [1 .. 255] for Blake2S"
+	HlpBlake2STreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2S"
+	HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter,	"InnerHashSize Value Should be Between [0 .. 32] for Blake2S"
+	HlpBlake2STreeConfig_SInvalidNodeOffsetParameter,	"NodeOffset Value Should be Between [0 .. (2^48-1)] for Blake2S"
+	HlpHashResult_SImpossibleRepresentationUInt8,	"Current Data Structure cannot be Represented as an \"UInt8\" Type."
+	HlpHashResult_SImpossibleRepresentationUInt16,	"Current Data Structure cannot be Represented as an \"UInt16\" Type."
+	HlpHashResult_SImpossibleRepresentationUInt32,	"Current Data Structure cannot be Represented as an \"UInt32\" Type."
+	HlpHashResult_SImpossibleRepresentationUInt64,	"Current Data Structure cannot be Represented as an \"UInt64\" Type."
+	HlpBlake2BConfig_SInvalidHashSize,	"BLAKE2B HashSize must be restricted to one of the following [1 .. 64], \"%d\""
+	HlpBlake2BConfig_SInvalidKeyLength,	"\"Key\" Length Must Not Be Greater Than 64, \"%d\""
+	HlpBlake2BConfig_SInvalidPersonalisationLength,	"\"Personalisation\" Length Must Be Equal To 16, \"%d\""
+	HlpBlake2BConfig_SInvalidSaltLength,	"\"Salt\" Length Must Be Equal To 16, \"%d\""
+	HlpBlake2BTreeConfig_SInvalidFanOutParameter,	"FanOut Value Should be Between [0 .. 255] for Blake2B"
+	HlpBlake2BTreeConfig_SInvalidMaxDepthParameter,	"FanOut Value Should be Between [1 .. 255] for Blake2B"
+	HlpBlake2BTreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2B"
+	HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter,	"InnerHashSize Value Should be Between [0 .. 64] for Blake2B"
+	HlpBlake2SConfig_SInvalidHashSize,	"BLAKE2S HashSize must be restricted to one of the following [1 .. 32], \"%d\""
+	HlpBlake2SConfig_SInvalidKeyLength,	"\"Key\" Length Must Not Be Greater Than 32, \"%d\""
+	HlpBlake2SConfig_SInvalidPersonalisationLength,	"\"Personalisation\" Length Must Be Equal To 8, \"%d\""
+	HlpBlake2SConfig_SInvalidSaltLength,	"\"Salt\" Length Must Be Equal To 8, \"%d\""
+	Consts_SIconToClipboard,	"Clipboard does not support Icons"
 	Consts_SInvalidPrinterOp,	"Operation not supported on selected printer"
 	Consts_SNoDefaultPrinter,	"There is no default printer currently selected"
 	Consts_SDuplicateMenus,	"Menu '%s' is already being used by another form"
@@ -273,11 +301,16 @@ BEGIN
 	Consts_SDockZoneNotFound,	" - Dock zone not found"
 	Consts_SDockZoneHasNoCtl,	" - Dock zone has no control"
 	Consts_SDockZoneVersionConflict,	"Error loading dock zone from the stream. Expecting version %d, but found %d."
-	Consts_SWindowsVistaRequired,	"%s requires Windows Vista or later"
-	Consts_SXPThemesRequired,	"%s requires themes to be enabled"
-	Consts_STaskDlgButtonCaption,	"Button%d"
-	Consts_STaskDlgRadioButtonCaption,	"RadioButton%d"
-	Consts_SInvalidTaskDlgButtonCaption,	"Caption cannot be empty"
+	HlpConverters_SEncodingInstanceNil,	"Encoding Instance Cannot Be Nil"
+	HlpHash_SIndexOutOfRange,	"Current Index Is Out Of Range"
+	HlpHash_SInvalidBufferSize,	"\"BufferSize\" Must Be Greater Than Zero"
+	HlpHash_SUnAssignedStream,	"Input Stream Is Unassigned"
+	HlpHash_SFileNotExist,	"Specified File Not Found"
+	HlpHash_SCloneNotYetImplemented,	"Clone Not Yet Implemented For \"%s\""
+	HlpHashResult_SImpossibleRepresentationInt32,	"Current Data Structure cannot be Represented as an \"Int32\" Type."
+	Consts_SmkcEsc,	"Esc"
+	Consts_SmkcEnter,	"Enter"
+	Consts_SmkcSpace,	"Space"
 	Consts_SmkcPgUp,	"PgUp"
 	Consts_SmkcPgDn,	"PgDn"
 	Consts_SmkcEnd,	"End"
@@ -291,9 +324,9 @@ BEGIN
 	Consts_SmkcShift,	"Shift+"
 	Consts_SmkcCtrl,	"Ctrl+"
 	Consts_SmkcAlt,	"Alt+"
-	Consts_SOutOfRange,	"Value must be between %d and %d"
-	Consts_sAllFilter,	"All"
-	Consts_SIconToClipboard,	"Clipboard does not support Icons"
+	Consts_SMsgDlgInformation,	"Information"
+	Consts_SMsgDlgConfirm,	"Confirm"
+	Consts_SMsgDlgYes,	"&Yes"
 	Consts_SMsgDlgNo,	"&No"
 	Consts_SMsgDlgOK,	"OK"
 	Consts_SMsgDlgCancel,	"Cancel"
@@ -307,33 +340,7 @@ BEGIN
 	Consts_SMsgDlgClose,	"&Close"
 	Consts_SmkcBkSp,	"BkSp"
 	Consts_SmkcTab,	"Tab"
-	Consts_SmkcEsc,	"Esc"
-	Consts_SmkcEnter,	"Enter"
-	Consts_SmkcSpace,	"Space"
-	Consts_SDeviceOnPort,	"%s on %s"
-	Consts_SGroupIndexTooLow,	"GroupIndex cannot be less than a previous menu item's GroupIndex"
-	Consts_SNoMDIForm,	"Cannot create form. No MDI forms are currently active"
-	Consts_SImageCanvasNeedsBitmap,	"Can only modify an image if it contains a bitmap"
-	Consts_SControlParentSetToSelf,	"A control cannot have itself as its parent"
-	Consts_SCannotDragForm,	"Cannot drag a form"
-	Consts_SVMetafiles,	"Metafiles"
-	Consts_SVEnhMetafiles,	"Enhanced Metafiles"
-	Consts_SVIcons,	"Icons"
-	Consts_SVBitmaps,	"Bitmaps"
-	Consts_SVTIFFImages,	"TIFF Images"
-	Consts_SMsgDlgWarning,	"Warning"
-	Consts_SMsgDlgError,	"Error"
-	Consts_SMsgDlgInformation,	"Information"
-	Consts_SMsgDlgConfirm,	"Confirm"
-	Consts_SMsgDlgYes,	"&Yes"
-	Consts_SWindowClass,	"Error creating window class"
-	Consts_SCannotFocus,	"Cannot focus a disabled or invisible window"
-	Consts_SParentRequired,	"Control '%s' has no parent window"
-	Consts_SParentGivenNotAParent,	"Parent given is not a parent of '%s'"
-	Consts_SMDIChildNotVisible,	"Cannot hide an MDI Child Form"
-	Consts_SVisibleChanged,	"Cannot change Visible in OnShow or OnHide"
 	Consts_SCannotShowModal,	"Cannot make a visible window modal"
-	Consts_SPropertyOutOfRange,	"%s property out of range"
 	Consts_SMenuIndexError,	"Menu index out of range"
 	Consts_SMenuReinserted,	"Menu inserted twice"
 	Consts_SMenuNotFound,	"Sub-menu is not in menu"
@@ -342,12 +349,13 @@ BEGIN
 	Consts_SPrinting,	"Printing in progress"
 	Consts_SPrinterIndexError,	"Printer index out of range"
 	Consts_SInvalidPrinter,	"Printer selected is not valid"
-	Consts_SInvalidMetafile,	"Metafile is not valid"
-	Consts_SInvalidPixelFormat,	"Invalid pixel format"
-	Consts_SInvalidImage,	"Invalid image"
-	Consts_SChangeIconSize,	"Cannot change the size of an icon"
-	Consts_SChangeWicSize,	"Cannot change the size of a WIC Image"
-	Consts_SUnknownExtension,	"Unknown picture file extension (.%s)"
+	Consts_SDeviceOnPort,	"%s on %s"
+	Consts_SGroupIndexTooLow,	"GroupIndex cannot be less than a previous menu item's GroupIndex"
+	Consts_SNoMDIForm,	"Cannot create form. No MDI forms are currently active"
+	Consts_SControlParentSetToSelf,	"A control cannot have itself as its parent"
+	Consts_SCannotDragForm,	"Cannot drag a form"
+	Consts_SMsgDlgWarning,	"Warning"
+	Consts_SMsgDlgError,	"Error"
 	Consts_SUnknownClipboardFormat,	"Unsupported clipboard format"
 	Consts_SOutOfResources,	"Out of system resources"
 	Consts_SNoCanvasHandle,	"Canvas does not allow drawing"
@@ -358,8 +366,12 @@ BEGIN
 	Consts_SImageReadFail,	"Failed to read ImageList data from stream"
 	Consts_SImageWriteFail,	"Failed to write ImageList data to stream"
 	Consts_SWindowDCError,	"Error creating window device context"
-	RTLConsts_SParamIsNegative,	"Parameter %s cannot be a negative value"
-	RTLConsts_SInputBufferExceed,	"Input buffer exceeded for %s = %d, %s = %d"
+	Consts_SWindowClass,	"Error creating window class"
+	Consts_SCannotFocus,	"Cannot focus a disabled or invisible window"
+	Consts_SParentRequired,	"Control '%s' has no parent window"
+	Consts_SParentGivenNotAParent,	"Parent given is not a parent of '%s'"
+	Consts_SMDIChildNotVisible,	"Cannot hide an MDI Child Form"
+	Consts_SVisibleChanged,	"Cannot change Visible in OnShow or OnHide"
 	RTLConsts_SFileNotFound,	"The specified file was not found"
 	RTLConsts_hNoFilterViewer,	"No help viewer that supports filters"
 	RTLConsts_sInvalidTimeoutValue,	"Invalid Timeout value: %s"
@@ -374,6 +386,8 @@ BEGIN
 	RTLConsts_SNothingFound,	"No help found for %s"
 	Consts_SInvalidBitmap,	"Bitmap image is not valid"
 	Consts_SInvalidIcon,	"Icon image is not valid"
+	Consts_SInvalidPixelFormat,	"Invalid pixel format"
+	Consts_SChangeIconSize,	"Cannot change the size of an icon"
 	RTLConsts_SReadError,	"Stream read error"
 	RTLConsts_SReadOnlyProperty,	"Property is read-only"
 	RTLConsts_SRegCreateFailed,	"Failed to create key %s"

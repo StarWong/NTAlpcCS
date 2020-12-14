@@ -4,7 +4,9 @@ interface
 uses
 Windows,Logger,Classes,SysUtils,Generics.Collections,SyncObjs;
 {$REGION 'Type'}
+
 type
+
 NTSTATUS = Integer;
 ULONG = Cardinal;
 uint64_t = UInt64;
@@ -359,34 +361,7 @@ PUNICODE_STRING = ^UNICODE_STRING;
      PViewCache = ^ViewCache;
      ViewCache = _ViewCache;
     }
-{$REGION 'ViewDetail'}
-     type
-     PHashTable = ^THashTable;
-     THashTable = array[0..40] of Byte; //sha1 39+1
-    _ViewDetail = packed record
 
-     activeDataSize:Cardinal;
-
-     location : packed record
-     case Integer of
-     0:
-     (
-      client : packed record
-      //functionID:Cardinal;
-      hashTable:THashTable;
-      end;
-     );
-     1:
-     (
-      server : packed record
-      onError:LongBool;
-      end;
-     )
-     end;
-     dataSection:array[0..0] of Byte;
-     end;
-     ViewDetail = _ViewDetail;
-{$ENDREGION}
 
   ALPC_MESSAGE_INFORMATION_CLASS = Cardinal;
 

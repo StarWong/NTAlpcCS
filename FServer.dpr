@@ -1,13 +1,13 @@
 program FServer;
 
 uses
-  {$IFNDEF DEBUG}
+{$IFNDEF DEBUG}
   madExcept,
   madLinkDisAsm,
   madListHardware,
   madListProcesses,
   madListModules,
-  {$ENDIF}
+{$ENDIF}
   Forms,
   ALPC_Server_Example in 'ALPC_Server_Example.pas' {MainForm},
   ALPC_Base in 'ALPC_Base.Pas',

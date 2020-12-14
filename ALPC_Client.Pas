@@ -9,26 +9,14 @@ FnPathID:Cardinal;
 end;
 PAuth = ^TAuth;
 
-
-
-
-    _ViewCache = packed record
-      client:ViewDetail;
-     procedure SetID(const functionID:Cardinal);
-     procedure Push(addr:Pointer;size:Cardinal;IsPointer:LongBool = False);overload;
-     procedure Initialize;
-     procedure Finalize;
-     function return(index:Cardinal):Pointer;
-     end;
-
-
-     ViewCache = _ViewCache;
-     PViewCache = ^ViewCache;
+{$I TParameter.Inc}
+{$I ViewHeader.Inc}
+{$I StubViewerHeader.Inc}
 
 TInitialize = procedure(const serverName:WideString) of object;
 TTerminate = procedure() of object;
 TConnect = function(const Auth:PAuth):Integer of object;
-TViewer = function:Pointer of object;
+TViewer = function:PStubViewer of object;
 TInvoke = procedure of object;
 var
 Initialize:TInitialize;
@@ -38,7 +26,7 @@ ClientViewer:TViewer;
 ServerViewer:TViewer;
 Invoke:TInvoke;
 implementation
-uses ALPC_Base;
+uses ALPC_Base,HlpIHash,HlpHashFactory,SysUtils;
 type
 
 TClient = class(AlpcTransportBase)
@@ -50,8 +38,8 @@ procedure Initialize(const serverName:WideString);
 procedure Terminate();
 function Connect(const Auth:PAuth):NTSTATUS;
 public
-function ReturnClientViewAddr():Pointer;
-function ReturnServerViewAddr():Pointer;
+function ReturnClientViewAddr:PStubViewer;
+function ReturnServerViewAddr:PStubViewer;
 procedure Invoke;
 end;
 { TClient }
@@ -72,8 +60,6 @@ baseOffSet:Integer = 0;
 var
 Client:TClient;
 
-in_List:array[0..$F] of TDataInfo;  //Max 15 arguments with in
-
 procedure Abort;
 begin
   raise TObject.Create;
@@ -84,71 +70,6 @@ begin
        Result:=pbyte(P) + offset;
 end;
 
-function _ViewCache.return(index:Cardinal):Pointer;
-var
-P:array of Cardinal;
-begin
-       P:=@(Self.client.dataSection[0]);
-       Result:=PByte(P) + P[index];
-end;
-
-procedure _ViewCache.Push(addr:Pointer;size:Cardinal;IsPointer:LongBool = False);
-begin
-         in_List[PInteger(@in_List[0])^+1].addr:=addr;
-         in_List[PInteger(@in_List[0])^+1].size:=size;
-         in_List[PInteger(@in_List[0])^+1].IsPointer:=IsPointer;
-         Inc(PInteger(@in_List[0])^);
-end;
-
-
-
-procedure _ViewCache.Initialize;
-begin
-       Self.client.activeDataSize:=0;
-       PInteger(@in_List[0])^:=0; //reset in counts
-end;
-
-procedure _ViewCache.Finalize;
-var
-I:Integer;
-P:array of Cardinal;
-begin
-if PCardinal(@in_List[0])^ > 0 then
-begin
-P:= @(Self.client.dataSection[0]);
-P[0]:=PCardinal(@in_List[0])^*4;
-if in_List[1].IsPointer then
-begin
- Move(in_List[1].size,(PByte(P) + P[0])^,4); //move size value to cache
- Move(PPointer(in_List[1].addr)^,(PByte(P) + P[0] + 4)^,in_List[1].size); //move PPointer^'s value
- Inc(in_List[1].size,4); // add the size of pointer
-end
-else
-Move(in_List[1].addr^,(PByte(P) + P[0])^,in_List[1].size);
-
-for I := 1 to PInteger(@in_List[0])^ - 1 do
-begin
-     P[I]:=P[I-1] + in_List[I].size;
-     if in_List[I].IsPointer then
-     begin
-     Move(in_List[I+1].size,(PByte(P) + P[I])^,4); //move size value to cache
-     Move(PPointer(in_List[I+1].addr)^,(PByte(P) + P[I] + 4)^,in_List[I+1].size); //move PPointer^'s value
-     Inc(in_List[I+1].size,4);    // add the size of pointer
-     end
-     else
-     begin
-     Move(in_List[I+1].addr^,(PByte(P) + P[I])^,in_List[I+1].size);
-     end;
-end;
-    Self.client.activeDataSize:= P[I - 1] + in_List[I].size;
-end;
-
-end;
-
-procedure _ViewCache.SetID(const functionID:Cardinal);
-begin
-  Self.client.location.client.functionID:=functionID;
-end;
 
 
 function TClient.Connect(const Auth: PAuth): NTSTATUS;
@@ -242,12 +163,12 @@ begin
     if ret <> NTSTATUS_SUCC then Abort;
 end;
 
-function TClient.ReturnClientViewAddr: Pointer;
+function TClient.ReturnClientViewAddr: PStubViewer;
 begin
 Result:=pSender.Attributes.pAttrContext.View.ViewBase;
 end;
 
-function TClient.ReturnServerViewAddr: Pointer;
+function TClient.ReturnServerViewAddr: PStubViewer;
 begin
 Result:=pReciver.Attributes.pAttrContext.View.ViewBase;
 end;
@@ -257,13 +178,7 @@ begin
 inherited Terminate();
 end;
 
-function GetBaseOffSet:Integer;
-var
-V:_ViewCache;
-begin
-  baseOffSet:=UINT64(@(V.client.dataSection)) - UINT64(@V);
-end;
-
+{$I StubViewerBody.Inc}
 
 initialization
 Client:=TClient.Create();
@@ -273,7 +188,6 @@ Connect:=Client.Connect;
 ClientViewer:=Client.ReturnClientViewAddr;
 ServerViewer:=Client.ReturnServerViewAddr;
 Invoke:=Client.Invoke;
-GetBaseOffSet;
 finalization
 if Client <> nil then Client.Free();
 end.
