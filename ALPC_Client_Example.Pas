@@ -71,7 +71,7 @@ ClientViewer.Marshal.Arg[0].staticData.Integer:=count;
 ClientViewer.EncodeDynamicData;
 Invoke;
 //ClientViewer.Marshal.count:=2;
-//ClientViewer.LoadDynamicData;
+ClientViewer.DecodeDynamicData;
 if not ClientViewer.IsSucessful then Exit('');
 ClientViewer.pArg(0,Result);
 ClientViewer.pArg(1,time);

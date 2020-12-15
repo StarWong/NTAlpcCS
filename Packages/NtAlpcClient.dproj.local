@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/12/15 09:45:05.599.dproj,C:\Users\Ranger\Documents\RAD Studio\Projects\Package1.dproj=D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\Packages\NtAlpcClient.dproj</Transaction>
+    <Transaction>2020/12/15 09:56:59.159.Pas,D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\ALPC_Base.Pas=</Transaction>
+    <Transaction>2020/12/15 09:56:59.174.Pas,D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\ALPC_LPC_Define.Pas=</Transaction>
+  </Transactions>
+</BorlandProject>

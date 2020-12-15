@@ -1,0 +1,1227 @@
+
+ Start         Length     Name                   Class
+ 0001:00401000 0000A1F4H .text                   CODE
+ 0002:0040C000 00000284H .itext                  ICODE
+ 0003:0040D000 00000070H .data                   DATA
+ 0004:0040E000 00000080H .bss                    BSS
+ 0005:00000000 00000000H .tls                    TLS
+
+
+Detailed map of segments
+
+ 0001:00000000 00000226 C=CODE     S=.text    G=(none)   M=System   ACBP=A9
+ 0001:00000228 000001C3 C=CODE     S=.text    G=(none)   M=SysInit  ACBP=A9
+ 0001:000003EC 00000076 C=CODE     S=.text    G=(none)   M=SysUtils ACBP=A9
+ 0001:00000464 000001F5 C=CODE     S=.text    G=(none)   M=Windows  ACBP=A9
+ 0001:0000065C 00000046 C=CODE     S=.text    G=(none)   M=Classes  ACBP=A9
+ 0001:000006A4 00000006 C=CODE     S=.text    G=(none)   M=TypInfo  ACBP=A9
+ 0001:000006AC 00000006 C=CODE     S=.text    G=(none)   M=Variants ACBP=A9
+ 0001:000006B4 00000006 C=CODE     S=.text    G=(none)   M=VarUtils ACBP=A9
+ 0001:000006BC 00000006 C=CODE     S=.text    G=(none)   M=SyncObjs ACBP=A9
+ 0001:000006C4 00000006 C=CODE     S=.text    G=(none)   M=TimeSpan ACBP=A9
+ 0001:000006CC 00000006 C=CODE     S=.text    G=(none)   M=Generics.Collections ACBP=A9
+ 0001:000006D4 00000006 C=CODE     S=.text    G=(none)   M=Generics.Defaults ACBP=A9
+ 0001:000006DC 0000000E C=CODE     S=.text    G=(none)   M=Forms    ACBP=A9
+ 0001:000006EC 00000006 C=CODE     S=.text    G=(none)   M=UxTheme  ACBP=A9
+ 0001:000006F4 00000006 C=CODE     S=.text    G=(none)   M=HelpIntfs ACBP=A9
+ 0001:000006FC 00000006 C=CODE     S=.text    G=(none)   M=MultiMon ACBP=A9
+ 0001:00000704 00000006 C=CODE     S=.text    G=(none)   M=ActnList ACBP=A9
+ 0001:0000070C 00000006 C=CODE     S=.text    G=(none)   M=Graphics ACBP=A9
+ 0001:00000714 00000006 C=CODE     S=.text    G=(none)   M=Registry ACBP=A9
+ 0001:0000071C 00000006 C=CODE     S=.text    G=(none)   M=IniFiles ACBP=A9
+ 0001:00000724 0000000E C=CODE     S=.text    G=(none)   M=IOUtils  ACBP=A9
+ 0001:00000734 00000006 C=CODE     S=.text    G=(none)   M=Themes   ACBP=A9
+ 0001:0000073C 00000006 C=CODE     S=.text    G=(none)   M=Controls ACBP=A9
+ 0001:00000744 00000006 C=CODE     S=.text    G=(none)   M=Menus    ACBP=A9
+ 0001:0000074C 00000006 C=CODE     S=.text    G=(none)   M=Dialogs  ACBP=A9
+ 0001:00000754 00000006 C=CODE     S=.text    G=(none)   M=ComCtrls ACBP=A9
+ 0001:0000075C 00000006 C=CODE     S=.text    G=(none)   M=GraphUtil ACBP=A9
+ 0001:00000764 00000006 C=CODE     S=.text    G=(none)   M=ExtCtrls ACBP=A9
+ 0001:0000076C 00000006 C=CODE     S=.text    G=(none)   M=Printers ACBP=A9
+ 0001:00000774 00000006 C=CODE     S=.text    G=(none)   M=Clipbrd  ACBP=A9
+ 0001:0000077C 00000006 C=CODE     S=.text    G=(none)   M=FlatSB   ACBP=A9
+ 0001:00000784 00002C0B C=CODE     S=.text    G=(none)   M=Logger   ACBP=A9
+ 0001:00003390 00001263 C=CODE     S=.text    G=(none)   M=ALPC_LPC_Define ACBP=A9
+ 0001:000045F4 00001514 C=CODE     S=.text    G=(none)   M=ALPC_Base ACBP=A9
+ 0001:00005B08 00000006 C=CODE     S=.text    G=(none)   M=HlpHashFactory ACBP=A9
+ 0001:00005B10 00000006 C=CODE     S=.text    G=(none)   M=HlpBitConverter ACBP=A9
+ 0001:00005B18 0000000E C=CODE     S=.text    G=(none)   M=HlpBlake2B ACBP=A9
+ 0001:00005B28 0000000E C=CODE     S=.text    G=(none)   M=HlpBlake2BIvBuilder ACBP=A9
+ 0001:00005B38 0000000E C=CODE     S=.text    G=(none)   M=HlpBlake2S ACBP=A9
+ 0001:00005B48 0000000E C=CODE     S=.text    G=(none)   M=HlpBlake2SIvBuilder ACBP=A9
+ 0001:00005B58 0000001E C=CODE     S=.text    G=(none)   M=HlpGOST3411_2012 ACBP=A9
+ 0001:00005B78 0000000E C=CODE     S=.text    G=(none)   M=HlpGost  ACBP=A9
+ 0001:00005B88 0000000E C=CODE     S=.text    G=(none)   M=HlpSnefru ACBP=A9
+ 0001:00005B98 0000000E C=CODE     S=.text    G=(none)   M=HlpWhirlPool ACBP=A9
+ 0001:00005BA8 0000000E C=CODE     S=.text    G=(none)   M=HlpGrindahl512 ACBP=A9
+ 0001:00005BB8 0000000E C=CODE     S=.text    G=(none)   M=HlpGrindahl256 ACBP=A9
+ 0001:00005BC8 00000016 C=CODE     S=.text    G=(none)   M=HlpCRC32Fast ACBP=A9
+ 0001:00005BE0 00003DDC C=CODE     S=.text    G=(none)   M=ALPC_Server ACBP=A9
+ 0001:000099BC 00000837 C=CODE     S=.text    G=(none)   M=.NtAlpcServer ACBP=A9
+ 0002:00000000 00000006 C=ICODE    S=.itext   G=(none)   M=System   ACBP=A9
+ 0002:00000008 0000001E C=ICODE    S=.itext   G=(none)   M=SysUtils ACBP=A9
+ 0002:00000028 00000016 C=ICODE    S=.itext   G=(none)   M=Windows  ACBP=A9
+ 0002:00000040 0000000E C=ICODE    S=.itext   G=(none)   M=Classes  ACBP=A9
+ 0002:00000050 00000006 C=ICODE    S=.itext   G=(none)   M=TypInfo  ACBP=A9
+ 0002:00000058 00000006 C=ICODE    S=.itext   G=(none)   M=Variants ACBP=A9
+ 0002:00000060 00000006 C=ICODE    S=.itext   G=(none)   M=VarUtils ACBP=A9
+ 0002:00000068 00000006 C=ICODE    S=.itext   G=(none)   M=SyncObjs ACBP=A9
+ 0002:00000070 00000006 C=ICODE    S=.itext   G=(none)   M=TimeSpan ACBP=A9
+ 0002:00000078 00000006 C=ICODE    S=.itext   G=(none)   M=Forms    ACBP=A9
+ 0002:00000080 00000006 C=ICODE    S=.itext   G=(none)   M=UxTheme  ACBP=A9
+ 0002:00000088 00000006 C=ICODE    S=.itext   G=(none)   M=HelpIntfs ACBP=A9
+ 0002:00000090 00000006 C=ICODE    S=.itext   G=(none)   M=MultiMon ACBP=A9
+ 0002:00000098 00000006 C=ICODE    S=.itext   G=(none)   M=ActnList ACBP=A9
+ 0002:000000A0 00000006 C=ICODE    S=.itext   G=(none)   M=Graphics ACBP=A9
+ 0002:000000A8 00000006 C=ICODE    S=.itext   G=(none)   M=Registry ACBP=A9
+ 0002:000000B0 00000006 C=ICODE    S=.itext   G=(none)   M=IniFiles ACBP=A9
+ 0002:000000B8 0000000E C=ICODE    S=.itext   G=(none)   M=IOUtils  ACBP=A9
+ 0002:000000C8 00000006 C=ICODE    S=.itext   G=(none)   M=Themes   ACBP=A9
+ 0002:000000D0 00000006 C=ICODE    S=.itext   G=(none)   M=Controls ACBP=A9
+ 0002:000000D8 00000006 C=ICODE    S=.itext   G=(none)   M=Menus    ACBP=A9
+ 0002:000000E0 00000006 C=ICODE    S=.itext   G=(none)   M=Dialogs  ACBP=A9
+ 0002:000000E8 00000006 C=ICODE    S=.itext   G=(none)   M=ComCtrls ACBP=A9
+ 0002:000000F0 00000006 C=ICODE    S=.itext   G=(none)   M=GraphUtil ACBP=A9
+ 0002:000000F8 00000006 C=ICODE    S=.itext   G=(none)   M=ExtCtrls ACBP=A9
+ 0002:00000100 00000006 C=ICODE    S=.itext   G=(none)   M=Printers ACBP=A9
+ 0002:00000108 00000006 C=ICODE    S=.itext   G=(none)   M=Clipbrd  ACBP=A9
+ 0002:00000110 00000006 C=ICODE    S=.itext   G=(none)   M=FlatSB   ACBP=A9
+ 0002:00000118 00000008 C=ICODE    S=.itext   G=(none)   M=Logger   ACBP=A9
+ 0002:00000120 00000008 C=ICODE    S=.itext   G=(none)   M=ALPC_LPC_Define ACBP=A9
+ 0002:00000128 00000014 C=ICODE    S=.itext   G=(none)   M=ALPC_Base ACBP=A9
+ 0002:0000013C 00000006 C=ICODE    S=.itext   G=(none)   M=HlpBitConverter ACBP=A9
+ 0002:00000144 0000000E C=ICODE    S=.itext   G=(none)   M=HlpBlake2B ACBP=A9
+ 0002:00000154 0000000E C=ICODE    S=.itext   G=(none)   M=HlpBlake2BIvBuilder ACBP=A9
+ 0002:00000164 0000000E C=ICODE    S=.itext   G=(none)   M=HlpBlake2S ACBP=A9
+ 0002:00000174 0000000E C=ICODE    S=.itext   G=(none)   M=HlpBlake2SIvBuilder ACBP=A9
+ 0002:00000184 0000001E C=ICODE    S=.itext   G=(none)   M=HlpGOST3411_2012 ACBP=A9
+ 0002:000001A4 0000000E C=ICODE    S=.itext   G=(none)   M=HlpGost  ACBP=A9
+ 0002:000001B4 0000000E C=ICODE    S=.itext   G=(none)   M=HlpSnefru ACBP=A9
+ 0002:000001C4 0000000E C=ICODE    S=.itext   G=(none)   M=HlpWhirlPool ACBP=A9
+ 0002:000001D4 0000000E C=ICODE    S=.itext   G=(none)   M=HlpGrindahl512 ACBP=A9
+ 0002:000001E4 0000000E C=ICODE    S=.itext   G=(none)   M=HlpGrindahl256 ACBP=A9
+ 0002:000001F4 00000016 C=ICODE    S=.itext   G=(none)   M=HlpCRC32Fast ACBP=A9
+ 0002:0000020C 0000006D C=ICODE    S=.itext   G=(none)   M=ALPC_Server ACBP=A9
+ 0002:0000027C 00000005 C=ICODE    S=.itext   G=(none)   M=.NtAlpcServer ACBP=A9
+ 0003:00000000 00000030 C=DATA     S=.data    G=DGROUP   M=SysInit  ACBP=A9
+ 0003:00000030 0000000C C=DATA     S=.data    G=DGROUP   M=Windows  ACBP=A9
+ 0003:0000003C 00000004 C=DATA     S=.data    G=DGROUP   M=ALPC_Base ACBP=A9
+ 0004:00000000 0000000C C=BSS      S=.bss     G=DGROUP   M=SysInit  ACBP=A9
+ 0004:0000000C 00000008 C=BSS      S=.bss     G=DGROUP   M=Windows  ACBP=A9
+ 0004:00000014 0000000C C=BSS      S=.bss     G=DGROUP   M=Logger   ACBP=A9
+ 0004:00000020 00000004 C=BSS      S=.bss     G=DGROUP   M=ALPC_LPC_Define ACBP=A9
+ 0004:00000024 00000038 C=BSS      S=.bss     G=DGROUP   M=ALPC_Base ACBP=A9
+ 0004:0000005C 00000024 C=BSS      S=.bss     G=DGROUP   M=ALPC_Server ACBP=A9
+
+
+  Address             Publics by Name
+
+ 0002:0000027C       .NtAlpcServer..NtAlpcServer
+ 0001:0000A1D4       .NtAlpcServer.@GetPackageInfoTable
+ 0001:0000A1DC       .NtAlpcServer.@PackageLoad
+ 0001:0000A1E8       .NtAlpcServer.@PackageUnload
+ 0002:00000098       ActnList.ActnList
+ 0001:00000704       ActnList.Finalization
+ 0004:00000058       ALPC_Base..7
+ 0001:000048F4       ALPC_Base..AlpcMessageAttributes
+ 0001:00004D64       ALPC_Base..AlpcPortAttributes
+ 0001:00004FF0       ALPC_Base..AlpcTransportBase
+ 0001:00004620       ALPC_Base..MessageStructures
+ 0001:00004EB8       ALPC_Base..ObjectAttributes
+ 0001:00004A58       ALPC_Base..TAlpcCarrier
+ 0001:000052C0       ALPC_Base.AlpcMessageAttributes.AllocateFlags
+ 0001:0000529C       ALPC_Base.AlpcMessageAttributes.AssignView
+ 0001:000051AC       ALPC_Base.AlpcMessageAttributes.Initialize
+ 0001:00005278       ALPC_Base.AlpcMessageAttributes.Terminate
+ 0001:000055E8       ALPC_Base.AlpcPortAttributes.Initialize
+ 0001:0000564C       ALPC_Base.AlpcPortAttributes.Terminate
+ 0001:000056A8       ALPC_Base.AlpcTransportBase.CreateCarrier
+ 0001:000056E8       ALPC_Base.AlpcTransportBase.CreateLocalView
+ 0004:0000002C       ALPC_Base.AlpcTransportBase.fAllocatedSectionSize
+ 0004:00000024       ALPC_Base.AlpcTransportBase.fBlock
+ 0004:00000030       ALPC_Base.AlpcTransportBase.fDataSizeOfQuotaIfNotUseView
+ 0004:00000054       ALPC_Base.AlpcTransportBase.fMessageSize
+ 0004:00000034       ALPC_Base.AlpcTransportBase.fMsgAttrAllocatedFlags
+ 0004:0000003C       ALPC_Base.AlpcTransportBase.fObjectAttr
+ 0004:00000038       ALPC_Base.AlpcTransportBase.fPortAttr
+ 0004:00000048       ALPC_Base.AlpcTransportBase.fPortHandle
+ 0004:00000028       ALPC_Base.AlpcTransportBase.fSectionHandle
+ 0001:0000574C       ALPC_Base.AlpcTransportBase.Initialize
+ 0001:000057F0       ALPC_Base.AlpcTransportBase.NewMem
+ 0004:00000050       ALPC_Base.AlpcTransportBase.pLocalView
+ 0004:0000004C       ALPC_Base.AlpcTransportBase.pPortName
+ 0004:00000044       ALPC_Base.AlpcTransportBase.pReciver
+ 0004:00000040       ALPC_Base.AlpcTransportBase.pSender
+ 0001:0000586C       ALPC_Base.AlpcTransportBase.Recv
+ 0001:000058D8       ALPC_Base.AlpcTransportBase.RTL_CONSTANT_STRING
+ 0001:0000594C       ALPC_Base.AlpcTransportBase.Send
+ 0001:0000598C       ALPC_Base.AlpcTransportBase.Send_Recv
+ 0001:00005A08       ALPC_Base.AlpcTransportBase.Terminate
+ 0002:00000128       ALPC_Base.ALPC_Base
+ 0001:00005AB0       ALPC_Base.Finalization
+ 0001:00005090       ALPC_Base.MessageStructures.Initialize
+ 0001:00005140       ALPC_Base.MessageStructures.Terminate
+ 0001:00005164       ALPC_Base.MessageStructures.Zero
+ 0001:00005660       ALPC_Base.ObjectAttributes.Initialize
+ 0001:00005694       ALPC_Base.ObjectAttributes.Terminate
+ 0003:0000003C       ALPC_Base.rpc_mark
+ 0001:000053DC       ALPC_Base.TAlpcCarrier.Create
+ 0001:00005450       ALPC_Base.TAlpcCarrier.Destroy
+ 0001:00005498       ALPC_Base.TAlpcCarrier.Pop
+ 0001:000054E8       ALPC_Base.TAlpcCarrier.Pop_V2
+ 0001:00005504       ALPC_Base.TAlpcCarrier.Push
+ 0001:000055A4       ALPC_Base.TAlpcCarrier.Push_V2
+ 0004:00000020       ALPC_LPC_Define..1
+ 0001:000045DC       ALPC_LPC_Define.AlpcGetHeaderSize
+ 0001:000045B4       ALPC_LPC_Define.AlpcInitializeMessageAttribute
+ 0002:00000120       ALPC_LPC_Define.ALPC_LPC_Define
+ 0001:000045EC       ALPC_LPC_Define.Finalization
+ 0001:000045C4       ALPC_LPC_Define.NtAlpcAcceptConnectPort
+ 0001:000045BC       ALPC_LPC_Define.NtAlpcCreatePort
+ 0001:000045CC       ALPC_LPC_Define.NtAlpcCreatePortSection
+ 0001:000045D4       ALPC_LPC_Define.NtAlpcCreateSectionView
+ 0001:000045AC       ALPC_LPC_Define.NtAlpcSendWaitReceivePort
+ 0001:000045E4       ALPC_LPC_Define.NtClose
+ 0004:00000074       ALPC_Server..1
+ 0001:00007840       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>
+ 0001:00006E8C       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection
+ 0001:00006CA4       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator
+ 0001:00007654       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator
+ 0001:0000747C       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection
+ 0001:00007290       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator
+ 0001:00006BA0       ALPC_Server..TEnumerable<ALPC_Server.THashTable>
+ 0001:0000718C       ALPC_Server..TEnumerable<ALPC_Server.TPerformer>
+ 0001:00006670       ALPC_Server..TEnumerable<TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>>
+ 0001:00006A78       ALPC_Server..TEnumerator<ALPC_Server.THashTable>
+ 0001:00007064       ALPC_Server..TEnumerator<ALPC_Server.TPerformer>
+ 0001:0000650C       ALPC_Server..TEnumerator<TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>>
+ 0001:000062B0       ALPC_Server..TServer
+ 0001:000061B0       ALPC_Server..TServer.Tlauncher
+ 0001:00008B90       ALPC_Server.AddFunc
+ 0002:0000020C       ALPC_Server.ALPC_Server
+ 0001:00008BEC       ALPC_Server.Finalization
+ 0004:00000078       ALPC_Server.Functions
+ 0001:000086F8       ALPC_Server.GetHashTable
+ 0004:0000005C       ALPC_Server.Initialize
+ 0004:0000007C       ALPC_Server.Server
+ 0004:00000064       ALPC_Server.StartServer
+ 0004:0000006C       ALPC_Server.StopServer
+ 0001:00007F14       ALPC_Server.SyncSetBool
+ 0001:00009340       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Add
+ 0001:00009524       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.AddOrSetValue
+ 0001:00009408       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Clear
+ 0001:00009580       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.ContainsKey
+ 0001:000095A4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.ContainsValue
+ 0001:00009078       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:000090B0       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:000090E8       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:00009250       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:000091A0       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:00009304       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Destroy
+ 0001:00008EB4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.DoAdd
+ 0001:00009040       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.DoGetEnumerator
+ 0001:00008F48       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.DoRemove
+ 0001:00008F14       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.DoSetValue
+ 0001:000093C4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.ExtractPair
+ 0001:00008D80       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetBucketIndex
+ 0001:00009678       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetEnumerator
+ 0001:00008E1C       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetItem
+ 0001:00009638       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetKeys
+ 0001:00009658       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetValues
+ 0001:00008D5C       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Grow
+ 0001:00008DFC       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Hash
+ 0001:00009048       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.KeyNotify
+ 0001:00008C74       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Rehash
+ 0001:00008E60       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.RehashAdd
+ 0001:000093A4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Remove
+ 0001:00008C34       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.SetCapacity
+ 0001:000096A8       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection.Create
+ 0001:000096A0       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection.DoGetEnumerator
+ 0001:00009698       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection.GetCount
+ 0001:000096E4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection.GetEnumerator
+ 0001:00009730       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.Create
+ 0001:00009714       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.DoGetCurrent
+ 0001:00009728       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.DoMoveNext
+ 0001:000096F4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.GetCurrent
+ 0001:00009774       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.MoveNext
+ 0001:00009900       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.Create
+ 0001:000098E4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.DoGetCurrent
+ 0001:000098F8       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.DoMoveNext
+ 0001:000098B4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.GetCurrent
+ 0001:00009944       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.MoveNext
+ 0001:000094D8       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TrimExcess
+ 0001:000094E4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TryGetValue
+ 0001:000097CC       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection.Create
+ 0001:000097C4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection.DoGetEnumerator
+ 0001:000097BC       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection.GetCount
+ 0001:00009808       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection.GetEnumerator
+ 0001:00009838       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.Create
+ 0001:00009828       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.DoGetCurrent
+ 0001:00009830       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.DoMoveNext
+ 0001:00009818       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.GetCurrent
+ 0001:0000987C       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.MoveNext
+ 0001:00009060       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.ValueNotify
+ 0001:00009688       ALPC_Server.TEnumerable<ALPC_Server.THashTable>.GetEnumerator
+ 0001:000097AC       ALPC_Server.TEnumerable<ALPC_Server.TPerformer>.GetEnumerator
+ 0001:00008C24       ALPC_Server.TEnumerable<TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>>.GetEnumerator
+ 0001:00009690       ALPC_Server.TEnumerator<ALPC_Server.THashTable>.MoveNext
+ 0001:000097B4       ALPC_Server.TEnumerator<ALPC_Server.TPerformer>.MoveNext
+ 0001:00008C2C       ALPC_Server.TEnumerator<TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>>.MoveNext
+ 0001:0000997C       ALPC_Server.TEqualityComparer<ALPC_Server.THashTable>.Default
+ 0001:0000999C       ALPC_Server.TEqualityComparer<ALPC_Server.TPerformer>.Default
+ 0001:00008C0C       ALPC_Server.TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:000080B0       ALPC_Server.TServer.Accept
+ 0001:00007F1C       ALPC_Server.TServer.callback
+ 0001:00008154       ALPC_Server.TServer.Create
+ 0001:0000817C       ALPC_Server.TServer.Destroy
+ 0001:000081A8       ALPC_Server.TServer.Initialize
+ 0001:0000846C       ALPC_Server.TServer.Listen
+ 0001:000081F4       ALPC_Server.TServer.start
+ 0001:00008324       ALPC_Server.TServer.stop
+ 0001:0000868C       ALPC_Server.TServer.Terminate
+ 0001:000086A0       ALPC_Server.TServer.Tlauncher.Create
+ 0001:000086E8       ALPC_Server.TServer.Tlauncher.Execute
+ 0001:00008A28       ALPC_Server._StubViewer.DecodeDynamicData
+ 0001:00008964       ALPC_Server._StubViewer.EncodeDynamicData
+ 0001:00008A88       ALPC_Server._StubViewer.FillServerCache
+ 0001:000088EC       ALPC_Server._StubViewer.GetFuncID
+ 0001:00008900       ALPC_Server._StubViewer.IsSucessful
+ 0001:00008A84       ALPC_Server._StubViewer.Marshal
+ 0001:000087E8       ALPC_Server._StubViewer.pArg
+ 0001:0000878C       ALPC_Server._StubViewer.pArg
+ 0001:000088C4       ALPC_Server._StubViewer.pArg
+ 0001:00008854       ALPC_Server._StubViewer.pArg
+ 0001:00008A90       ALPC_Server._StubViewer.PopErrMessage
+ 0001:00008AA4       ALPC_Server._StubViewer.PushErrMessage
+ 0001:00008B0C       ALPC_Server._StubViewer.SetFuncID
+ 0001:00008B80       ALPC_Server._StubViewer.Sign
+ 0002:00000048       Classes.Classes
+ 0001:0000069C       Classes.Finalization
+ 0001:00000674       Classes.TThread.AfterConstruction
+ 0001:0000065C       Classes.TThread.Create
+ 0002:00000040       Classes.TThread.Create@
+ 0001:00000664       Classes.TThread.Destroy
+ 0001:0000066C       Classes.TThread.Destroy@
+ 0001:0000067C       Classes.TThread.DoTerminate
+ 0001:00000684       Classes.TThread.Resume
+ 0001:0000068C       Classes.TThread.Terminate
+ 0001:00000694       Classes.TThread.WaitFor
+ 0002:00000108       Clipbrd.Clipbrd
+ 0001:00000774       Clipbrd.Finalization
+ 0002:000000E8       ComCtrls.ComCtrls
+ 0001:00000754       ComCtrls.Finalization
+ 0002:000000D0       Controls.Controls
+ 0001:0000073C       Controls.Finalization
+ 0002:000000E0       Dialogs.Dialogs
+ 0001:0000074C       Dialogs.Finalization
+ 0002:000000F8       ExtCtrls.ExtCtrls
+ 0001:00000764       ExtCtrls.Finalization
+ 0001:0000077C       FlatSB.Finalization
+ 0002:00000110       FlatSB.FlatSB
+ 0001:000006E4       Forms.Finalization
+ 0002:00000078       Forms.Forms
+ 0001:000006DC       Forms.TApplication.GetTitle
+ 0001:000006CC       Generics.Collections.InCircularRange
+ 0001:000006D4       Generics.Defaults._LookupVtableInfo
+ 0001:0000070C       Graphics.Finalization
+ 0002:000000A0       Graphics.Graphics
+ 0001:0000075C       GraphUtil.Finalization
+ 0002:000000F0       GraphUtil.GraphUtil
+ 0001:000006F4       HelpIntfs.Finalization
+ 0002:00000088       HelpIntfs.HelpIntfs
+ 0002:0000013C       HlpBitConverter.TBitConverter.BitConverter@
+ 0001:00005B10       HlpBitConverter.TBitConverter.Destroy@
+ 0001:00005B20       HlpBlake2B.Finalization
+ 0002:0000014C       HlpBlake2B.HlpBlake2B
+ 0002:00000144       HlpBlake2B.TBlake2B.Blake2BConfig@
+ 0001:00005B18       HlpBlake2B.TBlake2B.Destroy@
+ 0001:00005B30       HlpBlake2BIvBuilder.Finalization
+ 0002:0000015C       HlpBlake2BIvBuilder.HlpBlake2BIvBuilder
+ 0002:00000154       HlpBlake2BIvBuilder.TBlake2BIvBuilder.Blake2BIvBuilder@
+ 0001:00005B28       HlpBlake2BIvBuilder.TBlake2BIvBuilder.Destroy@
+ 0001:00005B40       HlpBlake2S.Finalization
+ 0002:0000016C       HlpBlake2S.HlpBlake2S
+ 0002:00000164       HlpBlake2S.TBlake2S.Blake2SConfig@
+ 0001:00005B38       HlpBlake2S.TBlake2S.Destroy@
+ 0001:00005B50       HlpBlake2SIvBuilder.Finalization
+ 0002:0000017C       HlpBlake2SIvBuilder.HlpBlake2SIvBuilder
+ 0002:00000174       HlpBlake2SIvBuilder.TBlake2SIvBuilder.Blake2SIvBuilder@
+ 0001:00005B48       HlpBlake2SIvBuilder.TBlake2SIvBuilder.Destroy@
+ 0001:00005BD8       HlpCRC32Fast.Finalization
+ 0002:00000204       HlpCRC32Fast.HlpCRC32Fast
+ 0002:000001FC       HlpCRC32Fast.TCRC32_CASTAGNOLI.CRC32_CASTAGNOLI@
+ 0001:00005BD0       HlpCRC32Fast.TCRC32_CASTAGNOLI.Destroy@
+ 0002:000001F4       HlpCRC32Fast.TCRC32_PKZIP.CRC32_PKZIP@
+ 0001:00005BC8       HlpCRC32Fast.TCRC32_PKZIP.Destroy@
+ 0001:00005B80       HlpGost.Finalization
+ 0002:000001AC       HlpGost.HlpGost
+ 0001:00005B78       HlpGost.TGost.Destroy@
+ 0002:000001A4       HlpGost.TGost.Gost@
+ 0001:00005B70       HlpGOST3411_2012.Finalization
+ 0002:0000019C       HlpGOST3411_2012.HlpGOST3411_2012
+ 0001:00005B58       HlpGOST3411_2012.TGOST3411_2012.Destroy@
+ 0002:00000184       HlpGOST3411_2012.TGOST3411_2012.GOST3411_2012@
+ 0001:00005B60       HlpGOST3411_2012.TGOST3411_2012_256.Destroy@
+ 0002:0000018C       HlpGOST3411_2012.TGOST3411_2012_256.TGOST3411_2012_256@
+ 0001:00005B68       HlpGOST3411_2012.TGOST3411_2012_512.Destroy@
+ 0002:00000194       HlpGOST3411_2012.TGOST3411_2012_512.TGOST3411_2012_512@
+ 0001:00005BC0       HlpGrindahl256.Finalization
+ 0002:000001EC       HlpGrindahl256.HlpGrindahl256
+ 0001:00005BB8       HlpGrindahl256.TGrindahl256.Destroy@
+ 0002:000001E4       HlpGrindahl256.TGrindahl256.Grindahl256@
+ 0001:00005BB0       HlpGrindahl512.Finalization
+ 0002:000001DC       HlpGrindahl512.HlpGrindahl512
+ 0001:00005BA8       HlpGrindahl512.TGrindahl512.Destroy@
+ 0002:000001D4       HlpGrindahl512.TGrindahl512.Grindahl512@
+ 0001:00005B08       HlpHashFactory.THashFactory.TCrypto.CreateSHA1
+ 0001:00005B90       HlpSnefru.Finalization
+ 0002:000001BC       HlpSnefru.HlpSnefru
+ 0001:00005B88       HlpSnefru.TSnefru.Destroy@
+ 0002:000001B4       HlpSnefru.TSnefru.Snefru@
+ 0001:00005BA0       HlpWhirlPool.Finalization
+ 0002:000001CC       HlpWhirlPool.HlpWhirlPool
+ 0001:00005B98       HlpWhirlPool.TWhirlPool.Destroy@
+ 0002:000001C4       HlpWhirlPool.TWhirlPool.WhirlPool@
+ 0001:0000071C       IniFiles.Finalization
+ 0002:000000B0       IniFiles.IniFiles
+ 0001:0000072C       IOUtils.Finalization
+ 0002:000000C0       IOUtils.IOUtils
+ 0002:000000B8       IOUtils.TPath.Create@
+ 0001:00000724       IOUtils.TPath.Destroy@
+ 0004:00000014       Logger..1
+ 0001:00003388       Logger.Finalization
+ 0004:00000018       Logger.HConsole
+ 0001:00003064       Logger.Initialize
+ 0004:0000001C       Logger.IsLoggerEnabled
+ 0001:00002EA4       Logger.Log
+ 0001:00002F9C       Logger.Log
+ 0001:00002D9C       Logger.Log
+ 0002:00000118       Logger.Logger
+ 0001:00000784       Logger.PByteToHex
+ 0001:00003294       Logger.Printf
+ 0001:0000330C       Logger.Printf
+ 0001:00003224       Logger.Printf
+ 0001:000031FC       Logger.Terminate
+ 0001:00000744       Menus.Finalization
+ 0002:000000D8       Menus.Menus
+ 0001:000006FC       MultiMon.Finalization
+ 0002:00000090       MultiMon.MultiMon
+ 0001:0000076C       Printers.Finalization
+ 0002:00000100       Printers.Printers
+ 0001:00000714       Registry.Finalization
+ 0002:000000A8       Registry.Registry
+ 0001:000006BC       SyncObjs.Finalization
+ 0002:00000068       SyncObjs.SyncObjs
+ 0001:00000370       SysInit.@InitPkg
+ 0001:000003D4       SysInit.@PackageLoad
+ 0001:000003E0       SysInit.@PackageUnload
+ 0001:00000260       SysInit.AllocTlsBuffer
+ 0001:0000031C       SysInit.ExitProcessTLS
+ 0001:000002E4       SysInit.ExitThreadTLS
+ 0001:00000228       SysInit.FreeLibrary
+ 0001:0000026C       SysInit.GetTlsSize
+ 0004:00000004       SysInit.HInstance
+ 0001:00000340       SysInit.InitializeModule
+ 0001:000002B8       SysInit.InitProcessTLS
+ 0001:00000274       SysInit.InitThreadTLS
+ 0001:00000230       SysInit.LocalAlloc
+ 0001:00000238       SysInit.LocalFree
+ 0003:00000004       SysInit.Module
+ 0004:00000000       SysInit.ModuleIsLib
+ 0004:00000001       SysInit.ModuleIsPackage
+ 0001:00000240       SysInit.TlsAlloc
+ 0004:00000008       SysInit.tlsBuffer
+ 0001:00000248       SysInit.TlsFree
+ 0001:00000250       SysInit.TlsGetValue
+ 0003:00000000       SysInit.TlsIndex
+ 0005:00000000       SysInit.TlsLast
+ 0003:00000020       SysInit.TlsProc
+ 0001:00000258       SysInit.TlsSetValue
+ 0001:0000034C       SysInit.UninitializeModule
+ 0001:00000030       System.@AbstractError
+ 0001:000000C8       System.@AfterConstruction
+ 0001:00000118       System.@Assert
+ 0001:000000D0       System.@BeforeDestruction
+ 0001:000000B8       System.@ClassCreate
+ 0001:000000C0       System.@ClassDestroy
+ 0001:000000F0       System.@DoneExcept
+ 0001:000001F8       System.@DynArrayAsg
+ 0001:000001F0       System.@DynArrayClear
+ 0001:000001E0       System.@DynArrayLength
+ 0001:000001E8       System.@DynArraySetLength
+ 0001:00000130       System.@EnsureAnsiString
+ 0001:00000128       System.@EnsureUnicodeString
+ 0001:00000040       System.@FillChar
+ 0001:000001D8       System.@FinalizeArray
+ 0001:00000038       System.@Flush
+ 0001:00000008       System.@FreeMem
+ 0001:00000000       System.@GetMem
+ 0001:000000D8       System.@HandleAnyException
+ 0001:000000E0       System.@HandleFinally
+ 0001:00000108       System.@InitWideStrings
+ 0001:00000210       System.@IntfClear
+ 0001:00000218       System.@IntfCopy
+ 0001:00000120       System.@LStrClr
+ 0001:000001A0       System.@LStrFromUStr
+ 0001:00000138       System.@LStrLen
+ 0001:000000F8       System.@PackageLoad
+ 0001:00000100       System.@PackageUnload
+ 0001:000000E8       System.@RaiseExcept
+ 0001:00000110       System.@RunError
+ 0001:00000028       System.@TRUNC
+ 0001:00000140       System.@UniqueStringA
+ 0001:000001D0       System.@UniqueStringU
+ 0001:00000160       System.@UStrAddRef
+ 0001:00000170       System.@UStrArrayClr
+ 0001:00000178       System.@UStrAsg
+ 0001:000001B0       System.@UStrCat
+ 0001:000001B8       System.@UStrCat3
+ 0001:000001C0       System.@UStrCatN
+ 0001:00000168       System.@UStrClr
+ 0001:00000198       System.@UStrFromPWChar
+ 0001:00000188       System.@UStrFromPWCharLen
+ 0001:00000190       System.@UStrFromWChar
+ 0001:000001A8       System.@UStrLen
+ 0001:00000180       System.@UStrToPWChar
+ 0001:000001C8       System.@Write0UString
+ 0001:00000048       System.@WriteLn
+ 0001:00000148       System.@WStrClr
+ 0001:00000158       System.@WStrLen
+ 0001:00000150       System.@WStrToPWChar
+ 0001:00000018       System.@_IOTest
+ 0001:00000010       System.ExceptObject
+ 0001:00000220       System.Finalization
+ 0001:00000020       System.Move
+ 0001:00000200       System.RegisterModule
+ 0002:00000000       System.System
+ 0001:000000A0       System.TObject.AfterConstruction
+ 0001:000000A8       System.TObject.BeforeDestruction
+ 0001:00000060       System.TObject.Create
+ 0001:00000098       System.TObject.DefaultHandler
+ 0001:00000068       System.TObject.Destroy
+ 0001:000000B0       System.TObject.Dispatch
+ 0001:00000078       System.TObject.Equals
+ 0001:00000070       System.TObject.Free
+ 0001:00000058       System.TObject.FreeInstance
+ 0001:00000080       System.TObject.GetHashCode
+ 0001:00000050       System.TObject.NewInstance
+ 0001:00000088       System.TObject.SafeCallException
+ 0001:00000090       System.TObject.ToString
+ 0001:00000208       System.UnregisterModule
+ 0001:00000424       SysUtils.Exception.Create
+ 0002:00000018       SysUtils.Exception.Create@
+ 0001:0000042C       SysUtils.Exception.CreateRes
+ 0001:00000434       SysUtils.Exception.Destroy@
+ 0001:0000045C       SysUtils.Finalization
+ 0001:00000404       SysUtils.Format
+ 0001:00000414       SysUtils.FormatDateTime
+ 0001:0000043C       SysUtils.FreeAndNil
+ 0001:000003FC       SysUtils.IntToHex
+ 0001:000003EC       SysUtils.IntToStr
+ 0001:000003F4       SysUtils.IntToStr
+ 0001:0000040C       SysUtils.Now
+ 0001:0000041C       SysUtils.OutOfMemoryError
+ 0002:00000020       SysUtils.SysUtils
+ 0002:00000010       SysUtils.TEncoding.Create@
+ 0001:0000044C       SysUtils.TEncoding.Destroy@
+ 0001:00000454       SysUtils.TEncoding.GetUTF8
+ 0002:00000008       SysUtils.TLanguages.Create@
+ 0001:00000444       SysUtils.TLanguages.Destroy@
+ 0001:00000734       Themes.Finalization
+ 0002:000000C8       Themes.Themes
+ 0002:00000070       TimeSpan.TTimeSpan.Create@
+ 0001:000006C4       TimeSpan.TTimeSpan.Destroy@
+ 0001:000006A4       TypInfo.Finalization
+ 0002:00000050       TypInfo.TypInfo
+ 0001:000006EC       UxTheme.Finalization
+ 0002:00000080       UxTheme.UxTheme
+ 0001:000006AC       Variants.Finalization
+ 0002:00000058       Variants.Variants
+ 0001:000006B4       VarUtils.Finalization
+ 0002:00000060       VarUtils.VarUtils
+ 0004:0000000C       Windows..2
+ 0001:000005B0       Windows.AllocConsole
+ 0001:000005B8       Windows.CloseHandle
+ 0001:0000063C       Windows.Finalization
+ 0001:000005C0       Windows.FreeLibrary
+ 0001:000005C8       Windows.GetCurrentProcessId
+ 0001:000005D0       Windows.GetStdHandle
+ 0001:000005D8       Windows.GetVersionEx
+ 0004:00000010       Windows.HtmlHelpModule
+ 0001:00000600       Windows.InitVersionInfo
+ 0001:000005F8       Windows.MessageBox
+ 0001:000005E0       Windows.SetConsoleTitle
+ 0003:00000030       Windows.Win32MajorVersion
+ 0003:00000034       Windows.Win32MinorVersion
+ 0003:00000038       Windows.Win32Platform
+ 0002:00000028       Windows.Windows
+ 0001:000005E8       Windows.WriteConsoleA
+ 0001:000005F0       Windows.WriteConsoleW
+
+
+  Address             Publics by Value
+
+ 0001:00000000       System.@GetMem
+ 0001:00000008       System.@FreeMem
+ 0001:00000010       System.ExceptObject
+ 0001:00000018       System.@_IOTest
+ 0001:00000020       System.Move
+ 0001:00000028       System.@TRUNC
+ 0001:00000030       System.@AbstractError
+ 0001:00000038       System.@Flush
+ 0001:00000040       System.@FillChar
+ 0001:00000048       System.@WriteLn
+ 0001:00000050       System.TObject.NewInstance
+ 0001:00000058       System.TObject.FreeInstance
+ 0001:00000060       System.TObject.Create
+ 0001:00000068       System.TObject.Destroy
+ 0001:00000070       System.TObject.Free
+ 0001:00000078       System.TObject.Equals
+ 0001:00000080       System.TObject.GetHashCode
+ 0001:00000088       System.TObject.SafeCallException
+ 0001:00000090       System.TObject.ToString
+ 0001:00000098       System.TObject.DefaultHandler
+ 0001:000000A0       System.TObject.AfterConstruction
+ 0001:000000A8       System.TObject.BeforeDestruction
+ 0001:000000B0       System.TObject.Dispatch
+ 0001:000000B8       System.@ClassCreate
+ 0001:000000C0       System.@ClassDestroy
+ 0001:000000C8       System.@AfterConstruction
+ 0001:000000D0       System.@BeforeDestruction
+ 0001:000000D8       System.@HandleAnyException
+ 0001:000000E0       System.@HandleFinally
+ 0001:000000E8       System.@RaiseExcept
+ 0001:000000F0       System.@DoneExcept
+ 0001:000000F8       System.@PackageLoad
+ 0001:00000100       System.@PackageUnload
+ 0001:00000108       System.@InitWideStrings
+ 0001:00000110       System.@RunError
+ 0001:00000118       System.@Assert
+ 0001:00000120       System.@LStrClr
+ 0001:00000128       System.@EnsureUnicodeString
+ 0001:00000130       System.@EnsureAnsiString
+ 0001:00000138       System.@LStrLen
+ 0001:00000140       System.@UniqueStringA
+ 0001:00000148       System.@WStrClr
+ 0001:00000150       System.@WStrToPWChar
+ 0001:00000158       System.@WStrLen
+ 0001:00000160       System.@UStrAddRef
+ 0001:00000168       System.@UStrClr
+ 0001:00000170       System.@UStrArrayClr
+ 0001:00000178       System.@UStrAsg
+ 0001:00000180       System.@UStrToPWChar
+ 0001:00000188       System.@UStrFromPWCharLen
+ 0001:00000190       System.@UStrFromWChar
+ 0001:00000198       System.@UStrFromPWChar
+ 0001:000001A0       System.@LStrFromUStr
+ 0001:000001A8       System.@UStrLen
+ 0001:000001B0       System.@UStrCat
+ 0001:000001B8       System.@UStrCat3
+ 0001:000001C0       System.@UStrCatN
+ 0001:000001C8       System.@Write0UString
+ 0001:000001D0       System.@UniqueStringU
+ 0001:000001D8       System.@FinalizeArray
+ 0001:000001E0       System.@DynArrayLength
+ 0001:000001E8       System.@DynArraySetLength
+ 0001:000001F0       System.@DynArrayClear
+ 0001:000001F8       System.@DynArrayAsg
+ 0001:00000200       System.RegisterModule
+ 0001:00000208       System.UnregisterModule
+ 0001:00000210       System.@IntfClear
+ 0001:00000218       System.@IntfCopy
+ 0001:00000220       System.Finalization
+ 0001:00000228       SysInit.FreeLibrary
+ 0001:00000230       SysInit.LocalAlloc
+ 0001:00000238       SysInit.LocalFree
+ 0001:00000240       SysInit.TlsAlloc
+ 0001:00000248       SysInit.TlsFree
+ 0001:00000250       SysInit.TlsGetValue
+ 0001:00000258       SysInit.TlsSetValue
+ 0001:00000260       SysInit.AllocTlsBuffer
+ 0001:0000026C       SysInit.GetTlsSize
+ 0001:00000274       SysInit.InitThreadTLS
+ 0001:000002B8       SysInit.InitProcessTLS
+ 0001:000002E4       SysInit.ExitThreadTLS
+ 0001:0000031C       SysInit.ExitProcessTLS
+ 0001:00000340       SysInit.InitializeModule
+ 0001:0000034C       SysInit.UninitializeModule
+ 0001:00000370       SysInit.@InitPkg
+ 0001:000003D4       SysInit.@PackageLoad
+ 0001:000003E0       SysInit.@PackageUnload
+ 0001:000003EC       SysUtils.IntToStr
+ 0001:000003F4       SysUtils.IntToStr
+ 0001:000003FC       SysUtils.IntToHex
+ 0001:00000404       SysUtils.Format
+ 0001:0000040C       SysUtils.Now
+ 0001:00000414       SysUtils.FormatDateTime
+ 0001:0000041C       SysUtils.OutOfMemoryError
+ 0001:00000424       SysUtils.Exception.Create
+ 0001:0000042C       SysUtils.Exception.CreateRes
+ 0001:00000434       SysUtils.Exception.Destroy@
+ 0001:0000043C       SysUtils.FreeAndNil
+ 0001:00000444       SysUtils.TLanguages.Destroy@
+ 0001:0000044C       SysUtils.TEncoding.Destroy@
+ 0001:00000454       SysUtils.TEncoding.GetUTF8
+ 0001:0000045C       SysUtils.Finalization
+ 0001:000005B0       Windows.AllocConsole
+ 0001:000005B8       Windows.CloseHandle
+ 0001:000005C0       Windows.FreeLibrary
+ 0001:000005C8       Windows.GetCurrentProcessId
+ 0001:000005D0       Windows.GetStdHandle
+ 0001:000005D8       Windows.GetVersionEx
+ 0001:000005E0       Windows.SetConsoleTitle
+ 0001:000005E8       Windows.WriteConsoleA
+ 0001:000005F0       Windows.WriteConsoleW
+ 0001:000005F8       Windows.MessageBox
+ 0001:00000600       Windows.InitVersionInfo
+ 0001:0000063C       Windows.Finalization
+ 0001:0000065C       Classes.TThread.Create
+ 0001:00000664       Classes.TThread.Destroy
+ 0001:0000066C       Classes.TThread.Destroy@
+ 0001:00000674       Classes.TThread.AfterConstruction
+ 0001:0000067C       Classes.TThread.DoTerminate
+ 0001:00000684       Classes.TThread.Resume
+ 0001:0000068C       Classes.TThread.Terminate
+ 0001:00000694       Classes.TThread.WaitFor
+ 0001:0000069C       Classes.Finalization
+ 0001:000006A4       TypInfo.Finalization
+ 0001:000006AC       Variants.Finalization
+ 0001:000006B4       VarUtils.Finalization
+ 0001:000006BC       SyncObjs.Finalization
+ 0001:000006C4       TimeSpan.TTimeSpan.Destroy@
+ 0001:000006CC       Generics.Collections.InCircularRange
+ 0001:000006D4       Generics.Defaults._LookupVtableInfo
+ 0001:000006DC       Forms.TApplication.GetTitle
+ 0001:000006E4       Forms.Finalization
+ 0001:000006EC       UxTheme.Finalization
+ 0001:000006F4       HelpIntfs.Finalization
+ 0001:000006FC       MultiMon.Finalization
+ 0001:00000704       ActnList.Finalization
+ 0001:0000070C       Graphics.Finalization
+ 0001:00000714       Registry.Finalization
+ 0001:0000071C       IniFiles.Finalization
+ 0001:00000724       IOUtils.TPath.Destroy@
+ 0001:0000072C       IOUtils.Finalization
+ 0001:00000734       Themes.Finalization
+ 0001:0000073C       Controls.Finalization
+ 0001:00000744       Menus.Finalization
+ 0001:0000074C       Dialogs.Finalization
+ 0001:00000754       ComCtrls.Finalization
+ 0001:0000075C       GraphUtil.Finalization
+ 0001:00000764       ExtCtrls.Finalization
+ 0001:0000076C       Printers.Finalization
+ 0001:00000774       Clipbrd.Finalization
+ 0001:0000077C       FlatSB.Finalization
+ 0001:00000784       Logger.PByteToHex
+ 0001:00002D9C       Logger.Log
+ 0001:00002EA4       Logger.Log
+ 0001:00002F9C       Logger.Log
+ 0001:00003064       Logger.Initialize
+ 0001:000031FC       Logger.Terminate
+ 0001:00003224       Logger.Printf
+ 0001:00003294       Logger.Printf
+ 0001:0000330C       Logger.Printf
+ 0001:00003388       Logger.Finalization
+ 0001:000045AC       ALPC_LPC_Define.NtAlpcSendWaitReceivePort
+ 0001:000045B4       ALPC_LPC_Define.AlpcInitializeMessageAttribute
+ 0001:000045BC       ALPC_LPC_Define.NtAlpcCreatePort
+ 0001:000045C4       ALPC_LPC_Define.NtAlpcAcceptConnectPort
+ 0001:000045CC       ALPC_LPC_Define.NtAlpcCreatePortSection
+ 0001:000045D4       ALPC_LPC_Define.NtAlpcCreateSectionView
+ 0001:000045DC       ALPC_LPC_Define.AlpcGetHeaderSize
+ 0001:000045E4       ALPC_LPC_Define.NtClose
+ 0001:000045EC       ALPC_LPC_Define.Finalization
+ 0001:00004620       ALPC_Base..MessageStructures
+ 0001:000048F4       ALPC_Base..AlpcMessageAttributes
+ 0001:00004A58       ALPC_Base..TAlpcCarrier
+ 0001:00004D64       ALPC_Base..AlpcPortAttributes
+ 0001:00004EB8       ALPC_Base..ObjectAttributes
+ 0001:00004FF0       ALPC_Base..AlpcTransportBase
+ 0001:00005090       ALPC_Base.MessageStructures.Initialize
+ 0001:00005140       ALPC_Base.MessageStructures.Terminate
+ 0001:00005164       ALPC_Base.MessageStructures.Zero
+ 0001:000051AC       ALPC_Base.AlpcMessageAttributes.Initialize
+ 0001:00005278       ALPC_Base.AlpcMessageAttributes.Terminate
+ 0001:0000529C       ALPC_Base.AlpcMessageAttributes.AssignView
+ 0001:000052C0       ALPC_Base.AlpcMessageAttributes.AllocateFlags
+ 0001:000053DC       ALPC_Base.TAlpcCarrier.Create
+ 0001:00005450       ALPC_Base.TAlpcCarrier.Destroy
+ 0001:00005498       ALPC_Base.TAlpcCarrier.Pop
+ 0001:000054E8       ALPC_Base.TAlpcCarrier.Pop_V2
+ 0001:00005504       ALPC_Base.TAlpcCarrier.Push
+ 0001:000055A4       ALPC_Base.TAlpcCarrier.Push_V2
+ 0001:000055E8       ALPC_Base.AlpcPortAttributes.Initialize
+ 0001:0000564C       ALPC_Base.AlpcPortAttributes.Terminate
+ 0001:00005660       ALPC_Base.ObjectAttributes.Initialize
+ 0001:00005694       ALPC_Base.ObjectAttributes.Terminate
+ 0001:000056A8       ALPC_Base.AlpcTransportBase.CreateCarrier
+ 0001:000056E8       ALPC_Base.AlpcTransportBase.CreateLocalView
+ 0001:0000574C       ALPC_Base.AlpcTransportBase.Initialize
+ 0001:000057F0       ALPC_Base.AlpcTransportBase.NewMem
+ 0001:0000586C       ALPC_Base.AlpcTransportBase.Recv
+ 0001:000058D8       ALPC_Base.AlpcTransportBase.RTL_CONSTANT_STRING
+ 0001:0000594C       ALPC_Base.AlpcTransportBase.Send
+ 0001:0000598C       ALPC_Base.AlpcTransportBase.Send_Recv
+ 0001:00005A08       ALPC_Base.AlpcTransportBase.Terminate
+ 0001:00005AB0       ALPC_Base.Finalization
+ 0001:00005B08       HlpHashFactory.THashFactory.TCrypto.CreateSHA1
+ 0001:00005B10       HlpBitConverter.TBitConverter.Destroy@
+ 0001:00005B18       HlpBlake2B.TBlake2B.Destroy@
+ 0001:00005B20       HlpBlake2B.Finalization
+ 0001:00005B28       HlpBlake2BIvBuilder.TBlake2BIvBuilder.Destroy@
+ 0001:00005B30       HlpBlake2BIvBuilder.Finalization
+ 0001:00005B38       HlpBlake2S.TBlake2S.Destroy@
+ 0001:00005B40       HlpBlake2S.Finalization
+ 0001:00005B48       HlpBlake2SIvBuilder.TBlake2SIvBuilder.Destroy@
+ 0001:00005B50       HlpBlake2SIvBuilder.Finalization
+ 0001:00005B58       HlpGOST3411_2012.TGOST3411_2012.Destroy@
+ 0001:00005B60       HlpGOST3411_2012.TGOST3411_2012_256.Destroy@
+ 0001:00005B68       HlpGOST3411_2012.TGOST3411_2012_512.Destroy@
+ 0001:00005B70       HlpGOST3411_2012.Finalization
+ 0001:00005B78       HlpGost.TGost.Destroy@
+ 0001:00005B80       HlpGost.Finalization
+ 0001:00005B88       HlpSnefru.TSnefru.Destroy@
+ 0001:00005B90       HlpSnefru.Finalization
+ 0001:00005B98       HlpWhirlPool.TWhirlPool.Destroy@
+ 0001:00005BA0       HlpWhirlPool.Finalization
+ 0001:00005BA8       HlpGrindahl512.TGrindahl512.Destroy@
+ 0001:00005BB0       HlpGrindahl512.Finalization
+ 0001:00005BB8       HlpGrindahl256.TGrindahl256.Destroy@
+ 0001:00005BC0       HlpGrindahl256.Finalization
+ 0001:00005BC8       HlpCRC32Fast.TCRC32_PKZIP.Destroy@
+ 0001:00005BD0       HlpCRC32Fast.TCRC32_CASTAGNOLI.Destroy@
+ 0001:00005BD8       HlpCRC32Fast.Finalization
+ 0001:000061B0       ALPC_Server..TServer.Tlauncher
+ 0001:000062B0       ALPC_Server..TServer
+ 0001:0000650C       ALPC_Server..TEnumerator<TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>>
+ 0001:00006670       ALPC_Server..TEnumerable<TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>>
+ 0001:00006A78       ALPC_Server..TEnumerator<ALPC_Server.THashTable>
+ 0001:00006BA0       ALPC_Server..TEnumerable<ALPC_Server.THashTable>
+ 0001:00006CA4       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator
+ 0001:00006E8C       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection
+ 0001:00007064       ALPC_Server..TEnumerator<ALPC_Server.TPerformer>
+ 0001:0000718C       ALPC_Server..TEnumerable<ALPC_Server.TPerformer>
+ 0001:00007290       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator
+ 0001:0000747C       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection
+ 0001:00007654       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator
+ 0001:00007840       ALPC_Server..TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>
+ 0001:00007F14       ALPC_Server.SyncSetBool
+ 0001:00007F1C       ALPC_Server.TServer.callback
+ 0001:000080B0       ALPC_Server.TServer.Accept
+ 0001:00008154       ALPC_Server.TServer.Create
+ 0001:0000817C       ALPC_Server.TServer.Destroy
+ 0001:000081A8       ALPC_Server.TServer.Initialize
+ 0001:000081F4       ALPC_Server.TServer.start
+ 0001:00008324       ALPC_Server.TServer.stop
+ 0001:0000846C       ALPC_Server.TServer.Listen
+ 0001:0000868C       ALPC_Server.TServer.Terminate
+ 0001:000086A0       ALPC_Server.TServer.Tlauncher.Create
+ 0001:000086E8       ALPC_Server.TServer.Tlauncher.Execute
+ 0001:000086F8       ALPC_Server.GetHashTable
+ 0001:0000878C       ALPC_Server._StubViewer.pArg
+ 0001:000087E8       ALPC_Server._StubViewer.pArg
+ 0001:00008854       ALPC_Server._StubViewer.pArg
+ 0001:000088C4       ALPC_Server._StubViewer.pArg
+ 0001:000088EC       ALPC_Server._StubViewer.GetFuncID
+ 0001:00008900       ALPC_Server._StubViewer.IsSucessful
+ 0001:00008964       ALPC_Server._StubViewer.EncodeDynamicData
+ 0001:00008A28       ALPC_Server._StubViewer.DecodeDynamicData
+ 0001:00008A84       ALPC_Server._StubViewer.Marshal
+ 0001:00008A88       ALPC_Server._StubViewer.FillServerCache
+ 0001:00008A90       ALPC_Server._StubViewer.PopErrMessage
+ 0001:00008AA4       ALPC_Server._StubViewer.PushErrMessage
+ 0001:00008B0C       ALPC_Server._StubViewer.SetFuncID
+ 0001:00008B80       ALPC_Server._StubViewer.Sign
+ 0001:00008B90       ALPC_Server.AddFunc
+ 0001:00008BEC       ALPC_Server.Finalization
+ 0001:00008C0C       ALPC_Server.TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:00008C24       ALPC_Server.TEnumerable<TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>>.GetEnumerator
+ 0001:00008C2C       ALPC_Server.TEnumerator<TPair<ALPC_Server.THashTable,ALPC_Server.TPerformer>>.MoveNext
+ 0001:00008C34       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.SetCapacity
+ 0001:00008C74       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Rehash
+ 0001:00008D5C       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Grow
+ 0001:00008D80       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetBucketIndex
+ 0001:00008DFC       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Hash
+ 0001:00008E1C       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetItem
+ 0001:00008E60       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.RehashAdd
+ 0001:00008EB4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.DoAdd
+ 0001:00008F14       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.DoSetValue
+ 0001:00008F48       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.DoRemove
+ 0001:00009040       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.DoGetEnumerator
+ 0001:00009048       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.KeyNotify
+ 0001:00009060       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.ValueNotify
+ 0001:00009078       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:000090B0       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:000090E8       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:000091A0       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:00009250       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Create
+ 0001:00009304       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Destroy
+ 0001:00009340       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Add
+ 0001:000093A4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Remove
+ 0001:000093C4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.ExtractPair
+ 0001:00009408       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.Clear
+ 0001:000094D8       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TrimExcess
+ 0001:000094E4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TryGetValue
+ 0001:00009524       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.AddOrSetValue
+ 0001:00009580       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.ContainsKey
+ 0001:000095A4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.ContainsValue
+ 0001:00009638       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetKeys
+ 0001:00009658       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetValues
+ 0001:00009678       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.GetEnumerator
+ 0001:00009688       ALPC_Server.TEnumerable<ALPC_Server.THashTable>.GetEnumerator
+ 0001:00009690       ALPC_Server.TEnumerator<ALPC_Server.THashTable>.MoveNext
+ 0001:00009698       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection.GetCount
+ 0001:000096A0       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection.DoGetEnumerator
+ 0001:000096A8       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection.Create
+ 0001:000096E4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyCollection.GetEnumerator
+ 0001:000096F4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.GetCurrent
+ 0001:00009714       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.DoGetCurrent
+ 0001:00009728       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.DoMoveNext
+ 0001:00009730       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.Create
+ 0001:00009774       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TKeyEnumerator.MoveNext
+ 0001:000097AC       ALPC_Server.TEnumerable<ALPC_Server.TPerformer>.GetEnumerator
+ 0001:000097B4       ALPC_Server.TEnumerator<ALPC_Server.TPerformer>.MoveNext
+ 0001:000097BC       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection.GetCount
+ 0001:000097C4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection.DoGetEnumerator
+ 0001:000097CC       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection.Create
+ 0001:00009808       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueCollection.GetEnumerator
+ 0001:00009818       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.GetCurrent
+ 0001:00009828       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.DoGetCurrent
+ 0001:00009830       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.DoMoveNext
+ 0001:00009838       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.Create
+ 0001:0000987C       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TValueEnumerator.MoveNext
+ 0001:000098B4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.GetCurrent
+ 0001:000098E4       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.DoGetCurrent
+ 0001:000098F8       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.DoMoveNext
+ 0001:00009900       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.Create
+ 0001:00009944       ALPC_Server.TDictionary<ALPC_Server.THashTable,ALPC_Server.TPerformer>.TPairEnumerator.MoveNext
+ 0001:0000997C       ALPC_Server.TEqualityComparer<ALPC_Server.THashTable>.Default
+ 0001:0000999C       ALPC_Server.TEqualityComparer<ALPC_Server.TPerformer>.Default
+ 0001:0000A1D4       .NtAlpcServer.@GetPackageInfoTable
+ 0001:0000A1DC       .NtAlpcServer.@PackageLoad
+ 0001:0000A1E8       .NtAlpcServer.@PackageUnload
+ 0002:00000000       System.System
+ 0002:00000008       SysUtils.TLanguages.Create@
+ 0002:00000010       SysUtils.TEncoding.Create@
+ 0002:00000018       SysUtils.Exception.Create@
+ 0002:00000020       SysUtils.SysUtils
+ 0002:00000028       Windows.Windows
+ 0002:00000040       Classes.TThread.Create@
+ 0002:00000048       Classes.Classes
+ 0002:00000050       TypInfo.TypInfo
+ 0002:00000058       Variants.Variants
+ 0002:00000060       VarUtils.VarUtils
+ 0002:00000068       SyncObjs.SyncObjs
+ 0002:00000070       TimeSpan.TTimeSpan.Create@
+ 0002:00000078       Forms.Forms
+ 0002:00000080       UxTheme.UxTheme
+ 0002:00000088       HelpIntfs.HelpIntfs
+ 0002:00000090       MultiMon.MultiMon
+ 0002:00000098       ActnList.ActnList
+ 0002:000000A0       Graphics.Graphics
+ 0002:000000A8       Registry.Registry
+ 0002:000000B0       IniFiles.IniFiles
+ 0002:000000B8       IOUtils.TPath.Create@
+ 0002:000000C0       IOUtils.IOUtils
+ 0002:000000C8       Themes.Themes
+ 0002:000000D0       Controls.Controls
+ 0002:000000D8       Menus.Menus
+ 0002:000000E0       Dialogs.Dialogs
+ 0002:000000E8       ComCtrls.ComCtrls
+ 0002:000000F0       GraphUtil.GraphUtil
+ 0002:000000F8       ExtCtrls.ExtCtrls
+ 0002:00000100       Printers.Printers
+ 0002:00000108       Clipbrd.Clipbrd
+ 0002:00000110       FlatSB.FlatSB
+ 0002:00000118       Logger.Logger
+ 0002:00000120       ALPC_LPC_Define.ALPC_LPC_Define
+ 0002:00000128       ALPC_Base.ALPC_Base
+ 0002:0000013C       HlpBitConverter.TBitConverter.BitConverter@
+ 0002:00000144       HlpBlake2B.TBlake2B.Blake2BConfig@
+ 0002:0000014C       HlpBlake2B.HlpBlake2B
+ 0002:00000154       HlpBlake2BIvBuilder.TBlake2BIvBuilder.Blake2BIvBuilder@
+ 0002:0000015C       HlpBlake2BIvBuilder.HlpBlake2BIvBuilder
+ 0002:00000164       HlpBlake2S.TBlake2S.Blake2SConfig@
+ 0002:0000016C       HlpBlake2S.HlpBlake2S
+ 0002:00000174       HlpBlake2SIvBuilder.TBlake2SIvBuilder.Blake2SIvBuilder@
+ 0002:0000017C       HlpBlake2SIvBuilder.HlpBlake2SIvBuilder
+ 0002:00000184       HlpGOST3411_2012.TGOST3411_2012.GOST3411_2012@
+ 0002:0000018C       HlpGOST3411_2012.TGOST3411_2012_256.TGOST3411_2012_256@
+ 0002:00000194       HlpGOST3411_2012.TGOST3411_2012_512.TGOST3411_2012_512@
+ 0002:0000019C       HlpGOST3411_2012.HlpGOST3411_2012
+ 0002:000001A4       HlpGost.TGost.Gost@
+ 0002:000001AC       HlpGost.HlpGost
+ 0002:000001B4       HlpSnefru.TSnefru.Snefru@
+ 0002:000001BC       HlpSnefru.HlpSnefru
+ 0002:000001C4       HlpWhirlPool.TWhirlPool.WhirlPool@
+ 0002:000001CC       HlpWhirlPool.HlpWhirlPool
+ 0002:000001D4       HlpGrindahl512.TGrindahl512.Grindahl512@
+ 0002:000001DC       HlpGrindahl512.HlpGrindahl512
+ 0002:000001E4       HlpGrindahl256.TGrindahl256.Grindahl256@
+ 0002:000001EC       HlpGrindahl256.HlpGrindahl256
+ 0002:000001F4       HlpCRC32Fast.TCRC32_PKZIP.CRC32_PKZIP@
+ 0002:000001FC       HlpCRC32Fast.TCRC32_CASTAGNOLI.CRC32_CASTAGNOLI@
+ 0002:00000204       HlpCRC32Fast.HlpCRC32Fast
+ 0002:0000020C       ALPC_Server.ALPC_Server
+ 0002:0000027C       .NtAlpcServer..NtAlpcServer
+ 0003:00000000       SysInit.TlsIndex
+ 0003:00000004       SysInit.Module
+ 0003:00000020       SysInit.TlsProc
+ 0003:00000030       Windows.Win32MajorVersion
+ 0003:00000034       Windows.Win32MinorVersion
+ 0003:00000038       Windows.Win32Platform
+ 0003:0000003C       ALPC_Base.rpc_mark
+ 0004:00000000       SysInit.ModuleIsLib
+ 0004:00000001       SysInit.ModuleIsPackage
+ 0004:00000004       SysInit.HInstance
+ 0004:00000008       SysInit.tlsBuffer
+ 0004:0000000C       Windows..2
+ 0004:00000010       Windows.HtmlHelpModule
+ 0004:00000014       Logger..1
+ 0004:00000018       Logger.HConsole
+ 0004:0000001C       Logger.IsLoggerEnabled
+ 0004:00000020       ALPC_LPC_Define..1
+ 0004:00000024       ALPC_Base.AlpcTransportBase.fBlock
+ 0004:00000028       ALPC_Base.AlpcTransportBase.fSectionHandle
+ 0004:0000002C       ALPC_Base.AlpcTransportBase.fAllocatedSectionSize
+ 0004:00000030       ALPC_Base.AlpcTransportBase.fDataSizeOfQuotaIfNotUseView
+ 0004:00000034       ALPC_Base.AlpcTransportBase.fMsgAttrAllocatedFlags
+ 0004:00000038       ALPC_Base.AlpcTransportBase.fPortAttr
+ 0004:0000003C       ALPC_Base.AlpcTransportBase.fObjectAttr
+ 0004:00000040       ALPC_Base.AlpcTransportBase.pSender
+ 0004:00000044       ALPC_Base.AlpcTransportBase.pReciver
+ 0004:00000048       ALPC_Base.AlpcTransportBase.fPortHandle
+ 0004:0000004C       ALPC_Base.AlpcTransportBase.pPortName
+ 0004:00000050       ALPC_Base.AlpcTransportBase.pLocalView
+ 0004:00000054       ALPC_Base.AlpcTransportBase.fMessageSize
+ 0004:00000058       ALPC_Base..7
+ 0004:0000005C       ALPC_Server.Initialize
+ 0004:00000064       ALPC_Server.StartServer
+ 0004:0000006C       ALPC_Server.StopServer
+ 0004:00000074       ALPC_Server..1
+ 0004:00000078       ALPC_Server.Functions
+ 0004:0000007C       ALPC_Server.Server
+ 0005:00000000       SysInit.TlsLast
+
+
+Line numbers for Logger(Logger.pas) segment .text
+
+   381 0001:00000784   382 0001:00000787   384 0001:00000B9C   385 0001:00000BAA
+   386 0001:00000BB8   387 0001:00000BC6   388 0001:00000BD4   389 0001:00000BE2
+   390 0001:00000BF0   391 0001:00000BFE   392 0001:00000C0C   393 0001:00000C1A
+   394 0001:00000C28   395 0001:00000C36   396 0001:00000C44   397 0001:00000C52
+   398 0001:00000C60   399 0001:00000C6E   400 0001:00000C7C   401 0001:00000C8A
+   402 0001:00000C98   403 0001:00000CA6   404 0001:00000CB4   405 0001:00000CC2
+   406 0001:00000CD0   407 0001:00000CDE   408 0001:00000CEC   409 0001:00000CFA
+   410 0001:00000D08   411 0001:00000D16   412 0001:00000D24   413 0001:00000D32
+   414 0001:00000D40   415 0001:00000D4E   416 0001:00000D5C   417 0001:00000D6A
+   418 0001:00000D78   419 0001:00000D86   420 0001:00000D94   421 0001:00000DA2
+   422 0001:00000DB0   423 0001:00000DBE   424 0001:00000DCC   425 0001:00000DDA
+   426 0001:00000DE8   427 0001:00000DF6   428 0001:00000E04   429 0001:00000E12
+   430 0001:00000E20   431 0001:00000E2E   432 0001:00000E3C   433 0001:00000E4A
+   434 0001:00000E58   435 0001:00000E66   436 0001:00000E74   437 0001:00000E82
+   438 0001:00000E90   439 0001:00000E9E   440 0001:00000EAC   441 0001:00000EBA
+   442 0001:00000EC8   443 0001:00000ED6   444 0001:00000EE4   445 0001:00000EF2
+   446 0001:00000F00   447 0001:00000F0E   448 0001:00000F1C   449 0001:00000F2A
+   450 0001:00000F38   451 0001:00000F46   452 0001:00000F54   453 0001:00000F62
+   454 0001:00000F70   455 0001:00000F7E   456 0001:00000F8C   457 0001:00000F9A
+   458 0001:00000FA8   459 0001:00000FB6   460 0001:00000FC4   461 0001:00000FD2
+   462 0001:00000FE0   463 0001:00000FEE   464 0001:00000FFC   465 0001:0000100A
+   466 0001:00001018   467 0001:00001026   468 0001:00001034   469 0001:00001042
+   470 0001:00001050   471 0001:0000105E   472 0001:0000106C   473 0001:0000107A
+   474 0001:00001088   475 0001:00001096   476 0001:000010A4   477 0001:000010B2
+   478 0001:000010C0   479 0001:000010CE   480 0001:000010DC   481 0001:000010EA
+   482 0001:000010F8   483 0001:00001106   484 0001:00001114   485 0001:00001122
+   486 0001:00001130   487 0001:0000113E   488 0001:0000114C   489 0001:0000115A
+   490 0001:00001168   491 0001:00001176   492 0001:00001184   493 0001:00001192
+   494 0001:000011A0   495 0001:000011AE   496 0001:000011BC   497 0001:000011CA
+   498 0001:000011D8   499 0001:000011E6   500 0001:000011F4   501 0001:00001202
+   502 0001:00001210   503 0001:0000121E   504 0001:0000122C   505 0001:0000123A
+   506 0001:00001248   507 0001:00001256   508 0001:00001264   509 0001:00001272
+   510 0001:00001280   511 0001:0000128E   512 0001:0000129C   513 0001:000012AA
+   514 0001:000012B8   515 0001:000012C6   516 0001:000012D4   517 0001:000012E2
+   518 0001:000012F0   519 0001:000012FE   520 0001:0000130C   521 0001:0000131A
+   522 0001:00001328   523 0001:00001336   524 0001:00001344   525 0001:00001352
+   526 0001:00001360   527 0001:0000136E   528 0001:0000137C   529 0001:0000138A
+   530 0001:00001398   531 0001:000013A6   532 0001:000013B4   533 0001:000013C2
+   534 0001:000013D0   535 0001:000013DE   536 0001:000013EC   537 0001:000013FA
+   538 0001:00001408   539 0001:00001416   540 0001:00001424   541 0001:00001432
+   542 0001:00001440   543 0001:0000144E   544 0001:0000145C   545 0001:0000146A
+   546 0001:00001478   547 0001:00001486   548 0001:00001494   549 0001:000014A2
+   550 0001:000014B0   551 0001:000014BE   552 0001:000014CC   553 0001:000014DA
+   554 0001:000014E8   555 0001:000014F6   556 0001:00001504   557 0001:00001512
+   558 0001:00001520   559 0001:0000152E   560 0001:0000153C   561 0001:0000154A
+   562 0001:00001558   563 0001:00001566   564 0001:00001574   565 0001:00001582
+   566 0001:00001590   567 0001:0000159E   568 0001:000015AC   569 0001:000015BA
+   570 0001:000015C8   571 0001:000015D6   572 0001:000015E4   573 0001:000015F2
+   574 0001:00001600   575 0001:0000160E   576 0001:0000161C   577 0001:0000162A
+   578 0001:00001638   579 0001:00001646   580 0001:00001654   581 0001:00001662
+   582 0001:00001670   583 0001:0000167E   584 0001:0000168C   585 0001:0000169A
+   586 0001:000016A8   587 0001:000016B6   588 0001:000016C4   589 0001:000016D2
+   590 0001:000016E0   591 0001:000016EE   592 0001:000016FC   593 0001:0000170A
+   594 0001:00001718   595 0001:00001726   596 0001:00001734   597 0001:00001742
+   598 0001:00001750   599 0001:0000175E   600 0001:0000176C   601 0001:0000177A
+   602 0001:00001788   603 0001:00001796   604 0001:000017A4   605 0001:000017B2
+   606 0001:000017C0   607 0001:000017CE   608 0001:000017DC   609 0001:000017EA
+   610 0001:000017F8   611 0001:00001806   612 0001:00001814   613 0001:00001822
+   614 0001:00001830   615 0001:0000183E   616 0001:0000184C   617 0001:0000185A
+   618 0001:00001868   619 0001:00001876   620 0001:00001884   621 0001:00001892
+   622 0001:000018A0   623 0001:000018AE   624 0001:000018BC   625 0001:000018CA
+   626 0001:000018D8   627 0001:000018E6   628 0001:000018F4   629 0001:00001902
+   630 0001:00001910   631 0001:0000191E   632 0001:0000192C   633 0001:0000193A
+   634 0001:00001948   635 0001:00001956   636 0001:00001964   637 0001:00001972
+   638 0001:00001980   639 0001:0000198E   643 0001:0000199A   649 0001:00002D9C
+   650 0001:00002DBE   651 0001:00002DCC   652 0001:00002DDB   653 0001:00002E03
+   655 0001:00002E2A   657 0001:00002E42   662 0001:00002EA4   663 0001:00002EC6
+   664 0001:00002ED4   665 0001:00002EFC   667 0001:00002F23   669 0001:00002F3B
+   674 0001:00002F9C   676 0001:00002FBB   678 0001:00002FC6   679 0001:00002FCA
+   680 0001:00002FCB   681 0001:00002FD3   683 0001:00003003   684 0001:00003024
+   676 0001:00003025   686 0001:00003028   693 0001:00003064   694 0001:0000307B
+   709 0001:00003088   711 0001:0000308D   714 0001:000030F9   730 0001:00003105
+   731 0001:0000310F   735 0001:000031FC   739 0001:00003205   740 0001:0000320E
+   742 0001:00003219   756 0001:00003220   759 0001:00003224   760 0001:0000324B
+   761 0001:00003250   762 0001:00003265   763 0001:0000326A   766 0001:00003294
+   767 0001:000032B9   768 0001:000032BE   769 0001:000032DE   770 0001:000032E3
+   773 0001:0000330C   774 0001:00003334   775 0001:00003339   776 0001:0000335B
+   777 0001:00003360   788 0001:00003388
+
+Line numbers for Logger(Logger.pas) segment .itext
+
+   780 0002:00000118   784 0002:0000011F
+
+Line numbers for ALPC_LPC_Define(..\ALPC_LPC_Define.Pas) segment .text
+
+   466 0001:000045AC   471 0001:000045B4   476 0001:000045BC   484 0001:000045C4
+   493 0001:000045CC   497 0001:000045D4   518 0001:000045DC   558 0001:000045E4
+
+Line numbers for ALPC_LPC_Define(..\ALPC_LPC_Define.Pas) segment .itext
+
+   590 0002:00000120
+
+Line numbers for ALPC_Base(..\ALPC_Base.Pas) segment .text
+
+   180 0001:00005090   181 0001:00005099   182 0001:0000509D   184 0001:000050A3
+   185 0001:000050A9   186 0001:00005124   187 0001:0000512A   188 0001:00005130
+   189 0001:00005134   192 0001:00005140   193 0001:00005141   194 0001:00005160
+   198 0001:00005164   199 0001:00005168   201 0001:0000517A   202 0001:0000517C
+   204 0001:00005186   205 0001:00005192   206 0001:000051A0   207 0001:000051A4
+   212 0001:000051AC   213 0001:000051B8   214 0001:000051BD   215 0001:000051CB
+   216 0001:000051D3   217 0001:0000524D   218 0001:00005253   228 0001:00005259
+   229 0001:00005263   230 0001:00005268   233 0001:00005278   234 0001:00005279
+   235 0001:00005298   238 0001:0000529C   239 0001:0000529D   241 0001:000052A7
+   242 0001:000052AB   243 0001:000052B1   244 0001:000052B7   247 0001:000052BD
+   252 0001:000052C0   253 0001:000052CA   254 0001:000052CF   255 0001:000052E9
+   257 0001:000052FB   259 0001:00005309   260 0001:00005311   263 0001:0000531A
+   265 0001:00005328   266 0001:00005331   269 0001:0000533A   271 0001:00005348
+   272 0001:00005351   275 0001:0000535A   277 0001:00005368   278 0001:00005371
+   281 0001:0000537A   283 0001:00005388   284 0001:00005391   287 0001:0000539A
+   289 0001:000053A8   290 0001:000053B1   293 0001:000053BA   295 0001:000053C8
+   298 0001:000053D1   299 0001:000053D3   306 0001:000053DC   307 0001:000053F6
+   308 0001:00005407   309 0001:00005411   310 0001:00005422   311 0001:0000542C
+   316 0001:00005450   318 0001:0000545B   319 0001:00005463   321 0001:0000546B
+   322 0001:00005473   324 0001:0000547B   325 0001:00005487   330 0001:00005498
+   331 0001:0000549E   333 0001:000054AA   334 0001:000054B5   338 0001:000054D4
+   340 0001:000054E3   343 0001:000054E8   344 0001:000054E9   345 0001:00005501
+   349 0001:00005504   350 0001:0000550D   351 0001:0000551F   352 0001:0000552B
+   354 0001:0000552F   355 0001:00005533   356 0001:00005540   357 0001:0000554B
+   358 0001:00005559   362 0001:0000556E   363 0001:00005572   364 0001:00005582
+   365 0001:0000558D   368 0001:0000559D   371 0001:000055A4   372 0001:000055AA
+   373 0001:000055BC   374 0001:000055C7   376 0001:000055CF   378 0001:000055E5
+   383 0001:000055E8   384 0001:000055F2   385 0001:00005601   386 0001:00005603
+   387 0001:00005609   388 0001:0000560E   389 0001:00005615   390 0001:0000561C
+   391 0001:00005623   392 0001:0000562A   393 0001:00005631   394 0001:00005638
+   395 0001:0000563F   396 0001:00005643   397 0001:00005647   401 0001:0000564C
+   402 0001:0000565F   407 0001:00005660   408 0001:00005667   409 0001:00005676
+   410 0001:00005684   411 0001:0000568D   412 0001:00005690   416 0001:00005694
+   417 0001:000056A7   427 0001:000056A8   431 0001:000056C6   436 0001:000056E4
+   441 0001:000056E8   443 0001:000056E9   451 0001:00005703   453 0001:00005707
+   454 0001:00005715   455 0001:00005723   456 0001:0000572C   457 0001:00005736
+   463 0001:00005749   469 0001:0000574C   470 0001:00005758   471 0001:00005767
+   472 0001:00005776   473 0001:00005785   474 0001:00005796   475 0001:000057A5
+   476 0001:000057B6   477 0001:000057C6   478 0001:000057CC   479 0001:000057D6
+   480 0001:000057DE   481 0001:000057E6   485 0001:000057F0   486 0001:000057FC
+   487 0001:00005863   491 0001:0000586C   492 0001:00005870   502 0001:000058A1
+   504 0001:000058A5   506 0001:000058B1   514 0001:000058D8   516 0001:000058DF
+   517 0001:000058EA   518 0001:000058FB   519 0001:00005904   520 0001:0000590C
+   521 0001:00005914   522 0001:0000592E   523 0001:00005945   527 0001:0000594C
+   528 0001:0000594F   529 0001:0000595E   539 0001:0000598A   543 0001:0000598C
+   544 0001:00005993   548 0001:000059A4   558 0001:000059EF   560 0001:000059F3
+   562 0001:000059FF   566 0001:00005A08   568 0001:00005A11   569 0001:00005A1B
+   571 0001:00005A25   573 0001:00005A2E   574 0001:00005A38   576 0001:00005A42
+   577 0001:00005A55   578 0001:00005A68   579 0001:00005A80   580 0001:00005A98
+   581 0001:00005AAC
+
+Line numbers for ALPC_Base(..\ALPC_Base.Pas) segment .itext
+
+   583 0002:00000128
+
+Line numbers for ALPC_Server(..\ALPC_Server.Pas) segment .text
+
+    84 0001:00007F14    89 0001:00007F1C    90 0001:00007F3D    92 0001:00007F42
+    93 0001:00007F50    94 0001:00007F6E    97 0001:00007F87    98 0001:00007F93
+    99 0001:00007F9C   101 0001:00007FA9   103 0001:00007FAD   104 0001:00007FB6
+   105 0001:00007FBD   106 0001:00007FC7   110 0001:00007FD1   111 0001:00007FDD
+   112 0001:00007FE6   115 0001:00007FFF   116 0001:0000801F   118 0001:0000802D
+   126 0001:000080B0   127 0001:000080BD   128 0001:000080C2   129 0001:000080D1
+   130 0001:000080DF   131 0001:000080F0   136 0001:00008134   137 0001:0000813C
+   139 0001:0000814C   142 0001:00008154   143 0001:00008160   144 0001:00008165
+   154 0001:0000817C   155 0001:00008187   156 0001:0000818E   157 0001:0000819A
+   161 0001:000081A8   164 0001:000081C6   165 0001:000081F0   168 0001:000081F4
+   170 0001:000081F8   172 0001:000081FE   173 0001:00008218   174 0001:0000822B
+   175 0001:00008232   177 0001:00008239   180 0001:00008324   182 0001:00008327
+   184 0001:0000832D   185 0001:00008347   186 0001:00008352   187 0001:0000835F
+   188 0001:00008367   189 0001:0000836F   190 0001:00008377   193 0001:00008380
+   198 0001:0000846C   199 0001:00008476   200 0001:0000847F   202 0001:00008489
+   204 0001:00008493   205 0001:0000849F   207 0001:000084B1   208 0001:000084C4
+   211 0001:000084DD   214 0001:00008516   216 0001:0000851E   219 0001:0000854F
+   224 0001:00008560   225 0001:0000858C   227 0001:000085AD   230 0001:000085DA
+   232 0001:000085DE   237 0001:000085F1   239 0001:000085FF   241 0001:00008608
+   242 0001:00008614   246 0001:0000862B   256 0001:00008632   257 0001:0000863A
+   209 0001:0000864E   260 0001:0000865B   263 0001:0000868C   264 0001:0000868F
+   265 0001:00008696   266 0001:0000869D   273 0001:000086A0   274 0001:000086B5
+   275 0001:000086C0   276 0001:000086CA   279 0001:000086E8   281 0001:000086E9
+   282 0001:000086ED   283 0001:000086F5
+
+Line numbers for ALPC_Server(StubViewerBody.Inc) segment .text
+
+     6 0001:000086F8     7 0001:00008715     8 0001:0000871D     9 0001:0000874E
+    10 0001:00008756    13 0001:0000878C    14 0001:00008796    15 0001:00008798
+    17 0001:000087A9    18 0001:000087B7    24 0001:000087DE    27 0001:000087E8
+    28 0001:00008803    29 0001:00008805    31 0001:00008816    32 0001:00008824
+    38 0001:0000884A    41 0001:00008854    42 0001:0000885E    43 0001:00008860
+    45 0001:00008871    46 0001:0000887F    47 0001:00008895    53 0001:000088BD
+    56 0001:000088C4    57 0001:000088CD    58 0001:000088E7    63 0001:000088EC
+    64 0001:000088EE    65 0001:000088FB    68 0001:00008900    69 0001:0000891A
+    70 0001:00008928    72 0001:0000892C    73 0001:00008930    75 0001:0000893F
+    84 0001:00008964    85 0001:0000896B    86 0001:0000896F    87 0001:00008974
+    88 0001:00008984    89 0001:0000898A    91 0001:00008994    93 0001:000089A5
+    94 0001:000089B6    95 0001:000089DB    96 0001:000089E9    97 0001:000089FA
+    98 0001:00008A0B    99 0001:00008A1B    91 0001:00008A1C   101 0001:00008A1F
+   107 0001:00008A28   108 0001:00008A2F   109 0001:00008A3B   110 0001:00008A48
+   112 0001:00008A59   113 0001:00008A6A   114 0001:00008A78   110 0001:00008A79
+   115 0001:00008A7C   120 0001:00008A84   121 0001:00008A87   125 0001:00008A88
+   126 0001:00008A8F   129 0001:00008A90   130 0001:00008A96   131 0001:00008AA0
+   134 0001:00008AA4   135 0001:00008AC4   136 0001:00008AE8   141 0001:00008B0C
+   142 0001:00008B25   143 0001:00008B2F   144 0001:00008B5B   148 0001:00008B80
+
+Line numbers for ALPC_Server(..\ALPC_Server.Pas) segment .text
+
+   285 0001:00008B8E   290 0001:00008B90   291 0001:00008BA9   292 0001:00008BB3
+   293 0001:00008BC9   305 0001:00008BEC   306 0001:00008BFE   308 0001:00008C08
+
+Line numbers for ALPC_Server(..\ALPC_Server.Pas) segment .itext
+
+   295 0002:0000020C   297 0002:00000215   298 0002:00000228   299 0002:00000239
+   300 0002:0000024E   301 0002:00000263   303 0002:00000278
+
+Line numbers for .NtAlpcServer(NtAlpcServer.dpk) segment .itext
+
+    38 0002:0000027C
+
+Bound resource files
+
+NtAlpcServer.res
+NtAlpcServer.drf
+
+
+Program entry point at 0002:0000027C
