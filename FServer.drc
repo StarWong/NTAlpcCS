@@ -8,35 +8,7 @@
   resources were bound to the produced executable.
 */
 
-#define HlpBlake2BTreeConfig_SInvalidFanOutParameter 65152
-#define HlpBlake2BTreeConfig_SInvalidMaxDepthParameter 65153
-#define HlpBlake2BTreeConfig_SInvalidNodeDepthParameter 65154
-#define HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter 65155
-#define HlpBlake2SConfig_SInvalidHashSize 65156
-#define HlpBlake2SConfig_SInvalidKeyLength 65157
-#define HlpBlake2SConfig_SInvalidPersonalisationLength 65158
-#define HlpBlake2SConfig_SInvalidSaltLength 65159
-#define HlpBlake2STreeConfig_SInvalidFanOutParameter 65160
-#define HlpBlake2STreeConfig_SInvalidMaxDepthParameter 65161
-#define HlpBlake2STreeConfig_SInvalidNodeDepthParameter 65162
-#define HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter 65163
-#define HlpBlake2STreeConfig_SInvalidNodeOffsetParameter 65164
 #define RzBorder_sRzColorMenuBar 65168
-#define HlpConverters_SEncodingInstanceNil 65169
-#define HlpHash_SIndexOutOfRange 65170
-#define HlpHash_SInvalidBufferSize 65171
-#define HlpHash_SUnAssignedStream 65172
-#define HlpHash_SFileNotExist 65173
-#define HlpHash_SCloneNotYetImplemented 65174
-#define HlpHashResult_SImpossibleRepresentationInt32 65175
-#define HlpHashResult_SImpossibleRepresentationUInt8 65176
-#define HlpHashResult_SImpossibleRepresentationUInt16 65177
-#define HlpHashResult_SImpossibleRepresentationUInt32 65178
-#define HlpHashResult_SImpossibleRepresentationUInt64 65179
-#define HlpBlake2BConfig_SInvalidHashSize 65180
-#define HlpBlake2BConfig_SInvalidKeyLength 65181
-#define HlpBlake2BConfig_SInvalidPersonalisationLength 65182
-#define HlpBlake2BConfig_SInvalidSaltLength 65183
 #define RzBorder_sRzColorHighlight 65184
 #define RzBorder_sRzColorHighlightText 65185
 #define RzBorder_sRzColorBtnFace 65186
@@ -391,35 +363,7 @@
 #define SysConst_SUnderflow 65535
 STRINGTABLE
 BEGIN
-	HlpBlake2BTreeConfig_SInvalidFanOutParameter,	"FanOut Value Should be Between [0 .. 255] for Blake2B"
-	HlpBlake2BTreeConfig_SInvalidMaxDepthParameter,	"FanOut Value Should be Between [1 .. 255] for Blake2B"
-	HlpBlake2BTreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2B"
-	HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter,	"InnerHashSize Value Should be Between [0 .. 64] for Blake2B"
-	HlpBlake2SConfig_SInvalidHashSize,	"BLAKE2S HashSize must be restricted to one of the following [1 .. 32], \"%d\""
-	HlpBlake2SConfig_SInvalidKeyLength,	"\"Key\" Length Must Not Be Greater Than 32, \"%d\""
-	HlpBlake2SConfig_SInvalidPersonalisationLength,	"\"Personalisation\" Length Must Be Equal To 8, \"%d\""
-	HlpBlake2SConfig_SInvalidSaltLength,	"\"Salt\" Length Must Be Equal To 8, \"%d\""
-	HlpBlake2STreeConfig_SInvalidFanOutParameter,	"FanOut Value Should be Between [0 .. 255] for Blake2S"
-	HlpBlake2STreeConfig_SInvalidMaxDepthParameter,	"FanOut Value Should be Between [1 .. 255] for Blake2S"
-	HlpBlake2STreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2S"
-	HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter,	"InnerHashSize Value Should be Between [0 .. 32] for Blake2S"
-	HlpBlake2STreeConfig_SInvalidNodeOffsetParameter,	"NodeOffset Value Should be Between [0 .. (2^48-1)] for Blake2S"
 	RzBorder_sRzColorMenuBar,	"Menu Bar"
-	HlpConverters_SEncodingInstanceNil,	"Encoding Instance Cannot Be Nil"
-	HlpHash_SIndexOutOfRange,	"Current Index Is Out Of Range"
-	HlpHash_SInvalidBufferSize,	"\"BufferSize\" Must Be Greater Than Zero"
-	HlpHash_SUnAssignedStream,	"Input Stream Is Unassigned"
-	HlpHash_SFileNotExist,	"Specified File Not Found"
-	HlpHash_SCloneNotYetImplemented,	"Clone Not Yet Implemented For \"%s\""
-	HlpHashResult_SImpossibleRepresentationInt32,	"Current Data Structure cannot be Represented as an \"Int32\" Type."
-	HlpHashResult_SImpossibleRepresentationUInt8,	"Current Data Structure cannot be Represented as an \"UInt8\" Type."
-	HlpHashResult_SImpossibleRepresentationUInt16,	"Current Data Structure cannot be Represented as an \"UInt16\" Type."
-	HlpHashResult_SImpossibleRepresentationUInt32,	"Current Data Structure cannot be Represented as an \"UInt32\" Type."
-	HlpHashResult_SImpossibleRepresentationUInt64,	"Current Data Structure cannot be Represented as an \"UInt64\" Type."
-	HlpBlake2BConfig_SInvalidHashSize,	"BLAKE2B HashSize must be restricted to one of the following [1 .. 64], \"%d\""
-	HlpBlake2BConfig_SInvalidKeyLength,	"\"Key\" Length Must Not Be Greater Than 64, \"%d\""
-	HlpBlake2BConfig_SInvalidPersonalisationLength,	"\"Personalisation\" Length Must Be Equal To 16, \"%d\""
-	HlpBlake2BConfig_SInvalidSaltLength,	"\"Salt\" Length Must Be Equal To 16, \"%d\""
 	RzBorder_sRzColorHighlight,	"Highlight"
 	RzBorder_sRzColorHighlightText,	"Highlight Text"
 	RzBorder_sRzColorBtnFace,	"Button Face"
@@ -782,6 +726,6 @@ END
 /* c:\program files (x86)\embarcadero\rad studio\7.0\lib\extdlgs.res */
 /* C:\Program Files (x86)\Raize\RC6\Lib\RS2010\RzCommonCursors.res */
 /* C:\Program Files (x86)\Raize\RC6\Lib\RS2010\RzToolbarForm.dfm */
-/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\ALPC_Server_Example.dfm */
-/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\FServer.res */
-/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\FServer.drf */
+/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\Mylibrary\NtAlpcCS\ALPC_Server_Example.dfm */
+/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\Mylibrary\NtAlpcCS\FServer.res */
+/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\Mylibrary\NtAlpcCS\FServer.drf */

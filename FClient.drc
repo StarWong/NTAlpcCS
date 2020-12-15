@@ -8,27 +8,6 @@
   resources were bound to the produced executable.
 */
 
-#define HlpBlake2STreeConfig_SInvalidFanOutParameter 65264
-#define HlpBlake2STreeConfig_SInvalidMaxDepthParameter 65265
-#define HlpBlake2STreeConfig_SInvalidNodeDepthParameter 65266
-#define HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter 65267
-#define HlpBlake2STreeConfig_SInvalidNodeOffsetParameter 65268
-#define HlpHashResult_SImpossibleRepresentationUInt8 65280
-#define HlpHashResult_SImpossibleRepresentationUInt16 65281
-#define HlpHashResult_SImpossibleRepresentationUInt32 65282
-#define HlpHashResult_SImpossibleRepresentationUInt64 65283
-#define HlpBlake2BConfig_SInvalidHashSize 65284
-#define HlpBlake2BConfig_SInvalidKeyLength 65285
-#define HlpBlake2BConfig_SInvalidPersonalisationLength 65286
-#define HlpBlake2BConfig_SInvalidSaltLength 65287
-#define HlpBlake2BTreeConfig_SInvalidFanOutParameter 65288
-#define HlpBlake2BTreeConfig_SInvalidMaxDepthParameter 65289
-#define HlpBlake2BTreeConfig_SInvalidNodeDepthParameter 65290
-#define HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter 65291
-#define HlpBlake2SConfig_SInvalidHashSize 65292
-#define HlpBlake2SConfig_SInvalidKeyLength 65293
-#define HlpBlake2SConfig_SInvalidPersonalisationLength 65294
-#define HlpBlake2SConfig_SInvalidSaltLength 65295
 #define Consts_SIconToClipboard 65296
 #define Consts_SInvalidPrinterOp 65297
 #define Consts_SNoDefaultPrinter 65298
@@ -38,13 +17,6 @@
 #define Consts_SDockZoneNotFound 65302
 #define Consts_SDockZoneHasNoCtl 65303
 #define Consts_SDockZoneVersionConflict 65304
-#define HlpConverters_SEncodingInstanceNil 65305
-#define HlpHash_SIndexOutOfRange 65306
-#define HlpHash_SInvalidBufferSize 65307
-#define HlpHash_SUnAssignedStream 65308
-#define HlpHash_SFileNotExist 65309
-#define HlpHash_SCloneNotYetImplemented 65310
-#define HlpHashResult_SImpossibleRepresentationInt32 65311
 #define Consts_SmkcEsc 65312
 #define Consts_SmkcEnter 65313
 #define Consts_SmkcSpace 65314
@@ -271,27 +243,6 @@
 #define SysConst_SInvalidPointer 65535
 STRINGTABLE
 BEGIN
-	HlpBlake2STreeConfig_SInvalidFanOutParameter,	"FanOut Value Should be Between [0 .. 255] for Blake2S"
-	HlpBlake2STreeConfig_SInvalidMaxDepthParameter,	"FanOut Value Should be Between [1 .. 255] for Blake2S"
-	HlpBlake2STreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2S"
-	HlpBlake2STreeConfig_SInvalidInnerHashSizeParameter,	"InnerHashSize Value Should be Between [0 .. 32] for Blake2S"
-	HlpBlake2STreeConfig_SInvalidNodeOffsetParameter,	"NodeOffset Value Should be Between [0 .. (2^48-1)] for Blake2S"
-	HlpHashResult_SImpossibleRepresentationUInt8,	"Current Data Structure cannot be Represented as an \"UInt8\" Type."
-	HlpHashResult_SImpossibleRepresentationUInt16,	"Current Data Structure cannot be Represented as an \"UInt16\" Type."
-	HlpHashResult_SImpossibleRepresentationUInt32,	"Current Data Structure cannot be Represented as an \"UInt32\" Type."
-	HlpHashResult_SImpossibleRepresentationUInt64,	"Current Data Structure cannot be Represented as an \"UInt64\" Type."
-	HlpBlake2BConfig_SInvalidHashSize,	"BLAKE2B HashSize must be restricted to one of the following [1 .. 64], \"%d\""
-	HlpBlake2BConfig_SInvalidKeyLength,	"\"Key\" Length Must Not Be Greater Than 64, \"%d\""
-	HlpBlake2BConfig_SInvalidPersonalisationLength,	"\"Personalisation\" Length Must Be Equal To 16, \"%d\""
-	HlpBlake2BConfig_SInvalidSaltLength,	"\"Salt\" Length Must Be Equal To 16, \"%d\""
-	HlpBlake2BTreeConfig_SInvalidFanOutParameter,	"FanOut Value Should be Between [0 .. 255] for Blake2B"
-	HlpBlake2BTreeConfig_SInvalidMaxDepthParameter,	"FanOut Value Should be Between [1 .. 255] for Blake2B"
-	HlpBlake2BTreeConfig_SInvalidNodeDepthParameter,	"NodeDepth Value Should be Between [0 .. 255] for Blake2B"
-	HlpBlake2BTreeConfig_SInvalidInnerHashSizeParameter,	"InnerHashSize Value Should be Between [0 .. 64] for Blake2B"
-	HlpBlake2SConfig_SInvalidHashSize,	"BLAKE2S HashSize must be restricted to one of the following [1 .. 32], \"%d\""
-	HlpBlake2SConfig_SInvalidKeyLength,	"\"Key\" Length Must Not Be Greater Than 32, \"%d\""
-	HlpBlake2SConfig_SInvalidPersonalisationLength,	"\"Personalisation\" Length Must Be Equal To 8, \"%d\""
-	HlpBlake2SConfig_SInvalidSaltLength,	"\"Salt\" Length Must Be Equal To 8, \"%d\""
 	Consts_SIconToClipboard,	"Clipboard does not support Icons"
 	Consts_SInvalidPrinterOp,	"Operation not supported on selected printer"
 	Consts_SNoDefaultPrinter,	"There is no default printer currently selected"
@@ -301,13 +252,6 @@ BEGIN
 	Consts_SDockZoneNotFound,	" - Dock zone not found"
 	Consts_SDockZoneHasNoCtl,	" - Dock zone has no control"
 	Consts_SDockZoneVersionConflict,	"Error loading dock zone from the stream. Expecting version %d, but found %d."
-	HlpConverters_SEncodingInstanceNil,	"Encoding Instance Cannot Be Nil"
-	HlpHash_SIndexOutOfRange,	"Current Index Is Out Of Range"
-	HlpHash_SInvalidBufferSize,	"\"BufferSize\" Must Be Greater Than Zero"
-	HlpHash_SUnAssignedStream,	"Input Stream Is Unassigned"
-	HlpHash_SFileNotExist,	"Specified File Not Found"
-	HlpHash_SCloneNotYetImplemented,	"Clone Not Yet Implemented For \"%s\""
-	HlpHashResult_SImpossibleRepresentationInt32,	"Current Data Structure cannot be Represented as an \"Int32\" Type."
 	Consts_SmkcEsc,	"Esc"
 	Consts_SmkcEnter,	"Enter"
 	Consts_SmkcSpace,	"Space"
@@ -536,6 +480,6 @@ END
 
 /* c:\program files (x86)\embarcadero\rad studio\7.0\lib\Character.res */
 /* c:\program files (x86)\embarcadero\rad studio\7.0\lib\controls.res */
-/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\ALPC_Client_Example.dfm */
-/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\FClient.res */
-/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\NtAlpcCS\NtAlpcCS\FClient.drf */
+/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\Mylibrary\NtAlpcCS\ALPC_Client_Example.dfm */
+/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\Mylibrary\NtAlpcCS\FClient.res */
+/* D:\Ranger\Documents\Visual Studio 2015\Source\Repos\Mylibrary\NtAlpcCS\FClient.drf */

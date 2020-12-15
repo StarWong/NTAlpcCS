@@ -96,7 +96,7 @@ end;
 {$ENDREGION}
 
 {$REGION 'AlpcTransportBase'}
-AlpcTransportBase = class
+AlpcTransportBase = class(TComponent)
 strict private
 class var fBlock:TBlock;
 class var fSectionHandle:HANDLE;

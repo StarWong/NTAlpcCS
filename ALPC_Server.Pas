@@ -27,11 +27,13 @@ uses
     StopServer: TEvent;
     procedure AddFunc(const funcName: String; const FuncAddr: TPerformer);
 
+procedure Register;
+
 implementation
 
 uses
-  ALPC_Base, SysUtils, HlpIHash, Classes,
-  HlpHashFactory, Generics.Collections, Logger;
+  ALPC_Base, SysUtils, Classes,
+  SHA1, Generics.Collections, Logger;
 
 
 
@@ -290,6 +292,11 @@ var
 begin
   funcHash := GetHashTable(funcName);
   Functions.Add(PHashTable(@(funcHash[1]))^, FuncAddr);
+end;
+
+procedure Register;
+begin
+  Classes.RegisterComponents('NtAlpc', [TServer]);
 end;
 
 initialization

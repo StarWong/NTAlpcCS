@@ -1,0 +1,72 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{E349146B-FE48-4C47-96FD-01187CCB74F3}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="FClient.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="FServer.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Packages\NtAlpcClient.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Packages\NtAlpcServer.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="FClient">
+			<MSBuild Projects="FClient.dproj"/>
+		</Target>
+		<Target Name="FClient:Clean">
+			<MSBuild Targets="Clean" Projects="FClient.dproj"/>
+		</Target>
+		<Target Name="FClient:Make">
+			<MSBuild Targets="Make" Projects="FClient.dproj"/>
+		</Target>
+		<Target Name="FServer">
+			<MSBuild Projects="FServer.dproj"/>
+		</Target>
+		<Target Name="FServer:Clean">
+			<MSBuild Targets="Clean" Projects="FServer.dproj"/>
+		</Target>
+		<Target Name="FServer:Make">
+			<MSBuild Targets="Make" Projects="FServer.dproj"/>
+		</Target>
+		<Target Name="NtAlpcClient">
+			<MSBuild Projects="Packages\NtAlpcClient.dproj"/>
+		</Target>
+		<Target Name="NtAlpcClient:Clean">
+			<MSBuild Targets="Clean" Projects="Packages\NtAlpcClient.dproj"/>
+		</Target>
+		<Target Name="NtAlpcClient:Make">
+			<MSBuild Targets="Make" Projects="Packages\NtAlpcClient.dproj"/>
+		</Target>
+		<Target Name="NtAlpcServer">
+			<MSBuild Projects="Packages\NtAlpcServer.dproj"/>
+		</Target>
+		<Target Name="NtAlpcServer:Clean">
+			<MSBuild Targets="Clean" Projects="Packages\NtAlpcServer.dproj"/>
+		</Target>
+		<Target Name="NtAlpcServer:Make">
+			<MSBuild Targets="Make" Projects="Packages\NtAlpcServer.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="FClient;FServer;NtAlpcClient;NtAlpcServer"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="FClient:Clean;FServer:Clean;NtAlpcClient:Clean;NtAlpcServer:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="FClient:Make;FServer:Make;NtAlpcClient:Make;NtAlpcServer:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

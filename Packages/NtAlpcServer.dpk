@@ -22,13 +22,15 @@ package NtAlpcServer;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
+{$RUNONLY}
 {$IMPLICITBUILD ON}
 
 requires
   rtl,
   vcl,
   soaprtl,
-  HashLib4PascalPackage;
+  HashLib4PascalPackage,
+  Log;
 
 contains
   ALPC_Base in '..\ALPC_Base.Pas',

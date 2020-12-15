@@ -108,7 +108,10 @@
 						<VersionInfoKeys Name="Comments"/>
 					</VersionInfoKeys>
 					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\Log.bpl">(untitled)</Excluded_Packages>
 						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\tmsded2010.bpl">TMS Component Pack design time support</Excluded_Packages>
+						<Excluded_Packages Name="D:\Ranger\Documents\Visual Studio 2015\Source\Repos\Mylibrary\NtAlpcCS\Packages\NtAlpcClient.bpl">(untitled)</Excluded_Packages>
+						<Excluded_Packages Name="D:\Ranger\Documents\Visual Studio 2015\Source\Repos\Mylibrary\NtAlpcCS\Packages\NtAlpcServer.bpl">(untitled)</Excluded_Packages>
 					</Excluded_Packages>
 				</Delphi.Personality>
 			</BorlandProject>

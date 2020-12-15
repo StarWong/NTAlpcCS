@@ -1,13 +1,20 @@
 { _StubViewer }
 
-function GetHashTable(const funcName: string): AnsiString;
-var
-  LHash: IHash;
+//function GetHashTable(const funcName: string): AnsiString;
+//var
+//  LHash: IHash;
+//begin
+//  LHash := THashFactory.TCrypto.CreateSHA1;
+//  result := LHash.ComputeString(funcName, TEncoding.UTF8).ToString();
+//  LHash := nil;
+//end;
+
+function GetHashTable(const funcName: AnsiString): AnsiString;
 begin
-  LHash := THashFactory.TCrypto.CreateSHA1;
-  result := LHash.ComputeString(funcName, TEncoding.UTF8).ToString();
-  LHash := nil;
+Result:=GetSha1(@funcName[1],Length(funcName));
 end;
+
+
 
 function _StubViewer.pArg(const index: Cardinal;const data:Pointer): Cardinal;
 begin

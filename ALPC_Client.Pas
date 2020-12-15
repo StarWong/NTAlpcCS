@@ -25,8 +25,9 @@ Connect:TConnect;
 ClientViewer:TViewer;
 ServerViewer:TViewer;
 Invoke:TInvoke;
+
 implementation
-uses ALPC_Base,HlpIHash,HlpHashFactory,SysUtils;
+uses ALPC_Base,SHA1,SysUtils,Classes;
 type
 
 TClient = class(AlpcTransportBase)
@@ -179,6 +180,8 @@ inherited Terminate();
 end;
 
 {$I StubViewerBody.Inc}
+
+
 
 initialization
 Client:=TClient.Create();

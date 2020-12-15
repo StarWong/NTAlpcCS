@@ -20,6 +20,7 @@
 			<Base>true</Base>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
+			<RuntimeOnlyPackage>true</RuntimeOnlyPackage>
 			<DCC_DependencyCheckOutputName>NtAlpcServer.bpl</DCC_DependencyCheckOutputName>
 			<DesignOnlyPackage>false</DesignOnlyPackage>
 			<GenPackage>true</GenPackage>
@@ -55,6 +56,7 @@
 			<DCCReference Include="vcl.dcp"/>
 			<DCCReference Include="soaprtl.dcp"/>
 			<DCCReference Include="HashLib4PascalPackage.dcp"/>
+			<DCCReference Include="Log.dcp"/>
 			<DCCReference Include="..\ALPC_Base.Pas"/>
 			<DCCReference Include="..\ALPC_LPC_Define.Pas"/>
 			<DCCReference Include="..\ALPC_Server.Pas"/>
@@ -114,6 +116,7 @@
 					</VersionInfoKeys>
 					<Excluded_Packages>
 						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\tmsded2010.bpl">TMS Component Pack design time support</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\Curl4Pascal.bpl">(untitled)</Excluded_Packages>
 					</Excluded_Packages>
 				</Delphi.Personality>
 			</BorlandProject>
